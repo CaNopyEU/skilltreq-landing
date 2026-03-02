@@ -1,0 +1,17 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PricingTable from '../../components/PricingTable.astro';
+import { useTranslations } from '../../i18n/translations';
+
+const locale = 'sk';
+const t = useTranslations(locale);
+---
+
+<BaseLayout
+  title={t('pricing.meta.title')}
+  description={t('pricing.meta.description')}
+  locale={locale}
+  currentPath="/pricing"
+>
+  <PricingTable locale={locale} />
+</BaseLayout>

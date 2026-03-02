@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Features from '../../components/Features.astro';
+import { useTranslations } from '../../i18n/translations';
+
+const locale = 'sk';
+const t = useTranslations(locale);
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'Skilltreq',
+  applicationCategory: 'HealthApplication',
+  operatingSystem: 'Web',
+  description: t('meta.description'),
+  url: 'https://www.skilltreq.app',
+  offers: {
+    '@type': 'Offer',
+    price: '0',
+    priceCurrency: 'EUR',
+  },
+};
+---
+
+<BaseLayout
+  title={t('meta.title')}
+  description={t('meta.description')}
+  locale={locale}
+  currentPath="/"
+  jsonLd={jsonLd}
+>
+  <Hero locale={locale} />
+  <Features locale={locale} />
+</BaseLayout>

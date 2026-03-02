@@ -1,0 +1,118 @@
+@import 'tailwindcss';
+
+/* ─── Design Tokens ─── */
+
+:root {
+  --bg-page: #ffffff;
+  --bg-surface: #f8f7fc;
+  --bg-muted: #f0eef8;
+  --bg-hover: #e8e5f4;
+  --text-primary: #0a0a18;
+  --text-secondary: #3a3a58;
+  --text-body: #585880;
+  --text-muted: #8080a8;
+  --border: #e0ddef;
+  --accent: #7553ff;
+  --accent-hover: #6344e6;
+
+  /* Status colors */
+  --status-locked: #4a506a;
+  --status-in-progress: #3b82f6;
+  --status-completed: #22c55e;
+  --status-mastered: #f59e0b;
+}
+
+.dark {
+  --bg-page: #08080e;
+  --bg-surface: #0e0e1c;
+  --bg-muted: #15152a;
+  --bg-hover: #1c1c38;
+  --text-primary: #e4e4f0;
+  --text-secondary: #b0b0d0;
+  --text-body: #9090c0;
+  --text-muted: #7878b0;
+  --border: #1e1e3a;
+  --accent: #8b6fff;
+  --accent-hover: #7c5ef0;
+
+  /* Status colors */
+  --status-locked: #2f3342;
+  --status-in-progress: #5b9cf6;
+  --status-completed: #4ade80;
+  --status-mastered: #fbbf24;
+}
+
+/* ─── Tailwind v4 Theme ─── */
+
+@theme inline {
+  --color-page: var(--bg-page);
+  --color-surface: var(--bg-surface);
+  --color-muted: var(--bg-muted);
+  --color-hover: var(--bg-hover);
+  --color-primary: var(--text-primary);
+  --color-secondary: var(--text-secondary);
+  --color-body: var(--text-body);
+  --color-text-muted: var(--text-muted);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-status-locked: var(--status-locked);
+  --color-status-in-progress: var(--status-in-progress);
+  --color-status-completed: var(--status-completed);
+  --color-status-mastered: var(--status-mastered);
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ─── Base ─── */
+
+@layer base {
+  html {
+    font-family: system-ui, sans-serif;
+    background-color: var(--bg-page);
+    color: var(--text-body);
+  }
+
+  body {
+    min-height: 100dvh;
+  }
+}
+
+/* ─── Components ─── */
+
+@layer components {
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--accent);
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: background-color 0.15s;
+  }
+
+  .btn-primary:hover {
+    background-color: var(--accent-hover);
+  }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    color: var(--text-primary);
+    border: 1px solid var(--border);
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition:
+      background-color 0.15s,
+      border-color 0.15s;
+  }
+
+  .btn-secondary:hover {
+    background-color: var(--bg-hover);
+  }
+}

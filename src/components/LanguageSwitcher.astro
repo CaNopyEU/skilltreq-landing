@@ -1,0 +1,30 @@
+---
+import { locales, localeNames, getLocalizedPath, type Locale } from '../i18n/translations';
+
+interface Props {
+  locale: Locale;
+  currentPath: string;
+}
+
+const { locale, currentPath } = Astro.props;
+---
+
+<nav aria-label="Language switcher" class="flex items-center gap-1 text-sm">
+  {
+    locales.map((loc) => (
+      <a
+        href={getLocalizedPath(loc, currentPath)}
+        class:list={[
+          'rounded-md px-2 py-1 transition-colors',
+          loc === locale
+            ? 'bg-hover text-primary font-medium'
+            : 'text-text-muted hover:text-primary',
+        ]}
+        aria-current={loc === locale ? 'page' : undefined}
+        hreflang={loc}
+      >
+        {localeNames[loc]}
+      </a>
+    ))
+  }
+</nav>

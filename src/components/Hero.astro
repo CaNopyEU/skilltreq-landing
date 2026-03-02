@@ -1,0 +1,103 @@
+---
+import type { Locale } from '../i18n/translations';
+import { useTranslations } from '../i18n/translations';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = useTranslations(locale);
+---
+
+<section class="relative overflow-hidden py-20 sm:py-28 lg:py-36">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6">
+    <div class="mx-auto max-w-3xl text-center">
+      <h1 class="text-4xl font-bold tracking-tight text-primary sm:text-5xl lg:text-6xl">
+        {t('hero.headline')}
+      </h1>
+      <p class="mt-6 text-lg text-secondary sm:text-xl">
+        {t('hero.subtitle')}
+      </p>
+      <div class="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="https://www.skilltreq.app/login" class="btn-primary text-base">
+          {t('hero.cta')}
+        </a>
+        <a href={`/${locale}/pricing`} class="btn-secondary text-base">
+          {t('hero.secondary')}
+        </a>
+      </div>
+    </div>
+
+    <!-- Placeholder visual — skill tree preview -->
+    <div class="mx-auto mt-16 max-w-4xl">
+      <div class="overflow-hidden rounded-xl border border-border bg-surface p-8 shadow-sm">
+        <div class="flex items-center justify-center gap-3">
+          <div class="flex flex-col items-center gap-2">
+            <div
+              class="flex h-12 w-12 items-center justify-center rounded-lg bg-status-completed/20 text-sm font-medium text-status-completed"
+            >
+              ✓
+            </div>
+            <span class="text-xs text-text-muted">L-sit</span>
+          </div>
+          <div class="h-px w-8 bg-border"></div>
+          <div class="flex flex-col items-center gap-2">
+            <div
+              class="flex h-12 w-12 items-center justify-center rounded-lg bg-status-in-progress/20 text-sm font-medium text-status-in-progress"
+            >
+              ◐
+            </div>
+            <span class="text-xs text-text-muted">V-sit</span>
+          </div>
+          <div class="h-px w-8 bg-border"></div>
+          <div class="flex flex-col items-center gap-2">
+            <div
+              class="flex h-12 w-12 items-center justify-center rounded-lg bg-status-locked/20 text-sm font-medium text-status-locked"
+            >
+              ○
+            </div>
+            <span class="text-xs text-text-muted">Manna</span>
+          </div>
+        </div>
+        <div class="mt-6 flex items-center justify-center gap-3">
+          <div class="flex flex-col items-center gap-2">
+            <div
+              class="flex h-12 w-12 items-center justify-center rounded-lg bg-status-completed/20 text-sm font-medium text-status-completed"
+            >
+              ✓
+            </div>
+            <span class="text-xs text-text-muted">Tuck planche</span>
+          </div>
+          <div class="h-px w-8 bg-border"></div>
+          <div class="flex flex-col items-center gap-2">
+            <div
+              class="flex h-12 w-12 items-center justify-center rounded-lg bg-status-in-progress/20 text-sm font-medium text-status-in-progress"
+            >
+              ◐
+            </div>
+            <span class="text-xs text-text-muted">Adv. tuck</span>
+          </div>
+          <div class="h-px w-8 bg-border"></div>
+          <div class="flex flex-col items-center gap-2">
+            <div
+              class="flex h-12 w-12 items-center justify-center rounded-lg bg-status-locked/20 text-sm font-medium text-status-locked"
+            >
+              ○
+            </div>
+            <span class="text-xs text-text-muted">Straddle</span>
+          </div>
+          <div class="h-px w-8 bg-border"></div>
+          <div class="flex flex-col items-center gap-2">
+            <div
+              class="flex h-12 w-12 items-center justify-center rounded-lg bg-status-locked/20 text-sm font-medium text-status-locked"
+            >
+              ○
+            </div>
+            <span class="text-xs text-text-muted">Full planche</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

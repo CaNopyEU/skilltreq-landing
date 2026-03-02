@@ -1,0 +1,17 @@
+---
+import { getEntry, render } from 'astro:content';
+import LegalLayout from '../../layouts/LegalLayout.astro';
+
+const entry = await getEntry('legal', 'sk-terms');
+const { Content } = await render(entry);
+---
+
+<LegalLayout
+  title={entry.data.title}
+  description={entry.data.description}
+  locale="sk"
+  currentPath="/terms"
+  lastUpdated={entry.data.lastUpdated}
+>
+  <Content />
+</LegalLayout>
