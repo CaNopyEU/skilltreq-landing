@@ -38,6 +38,13 @@ const year = new Date().getFullYear().toString();
     <div class="mt-8 flex flex-col items-center gap-2 text-center text-sm text-text-muted">
       <p>{t('footer.tagline')}</p>
       <p>{t('footer.beta')}</p>
+      <p>
+        <a
+          href="mailto:hello@skilltreq.com"
+          class="text-text-muted transition-colors hover:text-primary"
+          >hello@skilltreq.com</a
+        >
+      </p>
       <p>{t('footer.copyright', { year })}</p>
     </div>
   </div>
