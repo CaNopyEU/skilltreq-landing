@@ -50,6 +50,21 @@ export default {
   'lang.sk': 'Slovenčina',
   'lang.cs': 'Čeština',
 
+  // PWA Install
+  'pwa.heading': 'Install as an app',
+  'pwa.subtitle': 'SkillTreq works as a progressive web app. Add it to your home screen for a native app experience — no app store needed.',
+  'pwa.ios.title': 'iPhone / iPad',
+  'pwa.ios.step1': 'Open skilltreq.app in Safari',
+  'pwa.ios.step2': 'Tap the Share button (square with arrow)',
+  'pwa.ios.step3': 'Scroll down and tap "Add to Home Screen"',
+  'pwa.android.title': 'Android',
+  'pwa.android.step1': 'Open skilltreq.app in Chrome',
+  'pwa.android.step2': 'Tap the three-dot menu',
+  'pwa.android.step3': 'Tap "Install app" or "Add to Home screen"',
+  'pwa.desktop.title': 'Desktop',
+  'pwa.desktop.step1': 'Open skilltreq.app in Chrome or Edge',
+  'pwa.desktop.step2': 'Click the install icon in the address bar',
+
   // Demo skill tree
   'demo.skill.dead-hang': 'Dead Hang',
   'demo.skill.active-hang': 'Active Hang',

@@ -50,6 +50,21 @@ export default {
   'lang.sk': 'Slovenčina',
   'lang.cs': 'Čeština',
 
+  // PWA Install
+  'pwa.heading': 'Nainstaluj si jako appku',
+  'pwa.subtitle': 'SkillTreq funguje jako progresivní webová appka. Přidej si ji na plochu pro zážitek jako z nativní appky — bez app storu.',
+  'pwa.ios.title': 'iPhone / iPad',
+  'pwa.ios.step1': 'Otevři skilltreq.app v Safari',
+  'pwa.ios.step2': 'Klepni na tlačítko Sdílet (čtverec se šipkou)',
+  'pwa.ios.step3': 'Posuň dolů a klepni na „Přidat na plochu"',
+  'pwa.android.title': 'Android',
+  'pwa.android.step1': 'Otevři skilltreq.app v Chrome',
+  'pwa.android.step2': 'Klepni na menu se třemi tečkami',
+  'pwa.android.step3': 'Klepni na „Nainstalovat aplikaci" nebo „Přidat na plochu"',
+  'pwa.desktop.title': 'Desktop',
+  'pwa.desktop.step1': 'Otevři skilltreq.app v Chrome nebo Edge',
+  'pwa.desktop.step2': 'Klikni na ikonu instalace v adresním řádku',
+
   // Demo skill tree
   'demo.skill.dead-hang': 'Mrtvý vis',
   'demo.skill.active-hang': 'Aktivní vis',
