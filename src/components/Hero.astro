@@ -1,6 +1,7 @@
 ---
 import type { Locale } from '../i18n/translations';
 import { useTranslations } from '../i18n/translations';
+import SkillTreeDemo from './demo/SkillTreeDemo.vue';
 
 interface Props {
   locale: Locale;
@@ -8,6 +9,39 @@ interface Props {
 
 const { locale } = Astro.props;
 const t = useTranslations(locale);
+
+// Build demo translations object for Vue island
+const demoKeys = [
+  'demo.skill.dead-hang',
+  'demo.skill.active-hang',
+  'demo.skill.pull-up',
+  'demo.skill.chest-to-bar',
+  'demo.skill.muscle-up',
+  'demo.skill.l-hang',
+  'demo.skill.push-up',
+  'demo.skill.diamond-pu',
+  'demo.skill.pike-pu',
+  'demo.skill.hspu',
+  'demo.skill.pseudo-planche-pu',
+  'demo.skill.planche-lean',
+  'demo.skill.plank',
+  'demo.skill.hollow-body',
+  'demo.skill.l-sit',
+  'demo.skill.v-sit',
+  'demo.skill.side-plank',
+  'demo.skill.human-flag',
+  'demo.status.locked',
+  'demo.status.unlocked',
+  'demo.status.in_progress',
+  'demo.status.completed',
+  'demo.status.mastered',
+  'demo.tooltip.cta',
+] as const;
+
+const demoTranslations: Record<string, string> = {};
+for (const key of demoKeys) {
+  demoTranslations[key] = t(key as any);
+}
 ---
 
 <section class="relative overflow-hidden py-20 sm:py-28 lg:py-36">
@@ -20,7 +54,11 @@ const t = useTranslations(locale);
         {t('hero.subtitle')}
       </p>
       <div class="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-        <a href="https://www.skilltreq.app/" class="btn-primary text-base" data-umami-event="cta-try-free">
+        <a
+          href="https://www.skilltreq.app/"
+          class="btn-primary text-base"
+          data-umami-event="cta-try-free"
+        >
           {t('hero.cta')}
         </a>
         <a href="#features" class="btn-secondary text-base">
@@ -29,8 +67,17 @@ const t = useTranslations(locale);
       </div>
     </div>
 
-    <!-- Hero screenshot -->
-    <div class="mx-auto mt-16 max-w-4xl">
+    <!-- Desktop: interactive demo -->
+    <div class="hidden md:block mx-auto mt-16 max-w-4xl">
+      <div
+        class="aspect-video rounded-xl border border-border shadow-lg overflow-hidden bg-surface"
+      >
+        <SkillTreeDemo client:visible translations={demoTranslations} />
+      </div>
+    </div>
+
+    <!-- Mobile: static screenshot (preserves LCP) -->
+    <div class="md:hidden mx-auto mt-16 max-w-4xl">
       <img
         src="/screenshots/hero-skill-tree.webp"
         alt="SkillTreq skill tree — dependency graph showing calisthenics skill progression"

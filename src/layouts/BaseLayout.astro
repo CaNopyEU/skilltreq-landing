@@ -45,9 +45,11 @@ const ogLocaleMap: Record<Locale, string> = {
     <meta property="og:url" content={canonicalUrl.href} />
     <meta property="og:site_name" content="SkillTreq" />
     <meta property="og:locale" content={ogLocaleMap[locale]} />
-    {locales.filter((l) => l !== locale).map((l) => (
-      <meta property="og:locale:alternate" content={ogLocaleMap[l]} />
-    ))}
+    {
+      locales
+        .filter((l) => l !== locale)
+        .map((l) => <meta property="og:locale:alternate" content={ogLocaleMap[l]} />)
+    }
 
     <meta property="og:image" content={new URL('/og-image.png', Astro.site).href} />
     <meta property="og:image:width" content="1200" />
@@ -80,7 +82,10 @@ const ogLocaleMap: Record<Locale, string> = {
 
     <!-- Analytics -->
     <link rel="preconnect" href="https://umami-skilltreq.vercel.app" />
-    <script defer src="https://umami-skilltreq.vercel.app/script.js" data-website-id="a5ba38f1-f6a3-423b-bbca-6cf44e14d3d9"></script>
+    <script
+      defer
+      src="https://umami-skilltreq.vercel.app/script.js"
+      data-website-id="a5ba38f1-f6a3-423b-bbca-6cf44e14d3d9"></script>
 
     <!-- Dark mode detection (inline to prevent FOUC) -->
     <script is:inline>

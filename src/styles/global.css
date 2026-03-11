@@ -21,9 +21,20 @@
 
   /* Status colors */
   --status-locked: #4a506a;
+  --status-unlocked: #9db5b2;
   --status-in-progress: #3b82f6;
   --status-completed: #22c55e;
   --status-mastered: #f59e0b;
+
+  /* Status glows */
+  --status-locked-glow: transparent;
+  --status-unlocked-glow: rgba(157, 181, 178, 0.15);
+  --status-in-progress-glow: rgba(59, 130, 246, 0.4);
+  --status-completed-glow: rgba(34, 197, 94, 0.35);
+  --status-mastered-glow: rgba(245, 158, 11, 0.4);
+
+  /* Node text */
+  --node-text: #171717;
 }
 
 .dark {
@@ -44,9 +55,20 @@
 
   /* Status colors */
   --status-locked: #2f3342;
+  --status-unlocked: #5a7a78;
   --status-in-progress: #5b9cf6;
   --status-completed: #4ade80;
   --status-mastered: #fbbf24;
+
+  /* Status glows */
+  --status-locked-glow: transparent;
+  --status-unlocked-glow: rgba(90, 122, 120, 0.2);
+  --status-in-progress-glow: rgba(91, 156, 246, 0.55);
+  --status-completed-glow: rgba(74, 222, 128, 0.45);
+  --status-mastered-glow: rgba(251, 191, 36, 0.55);
+
+  /* Node text */
+  --node-text: #ededed;
 }
 
 /* ─── Tailwind v4 Theme ─── */
@@ -66,6 +88,7 @@
   --color-accent: var(--accent);
   --color-accent-hover: var(--accent-hover);
   --color-status-locked: var(--status-locked);
+  --color-status-unlocked: var(--status-unlocked);
   --color-status-in-progress: var(--status-in-progress);
   --color-status-completed: var(--status-completed);
   --color-status-mastered: var(--status-mastered);
@@ -126,5 +149,16 @@
 
   .btn-secondary:hover {
     background-color: var(--bg-hover);
+  }
+}
+
+/* ─── Keyframes ─── */
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
   }
 }

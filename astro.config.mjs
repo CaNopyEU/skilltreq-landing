@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
+import vue from '@astrojs/vue';
 
 export default defineConfig({
   site: 'https://www.skilltreq.com',
@@ -15,7 +16,7 @@ export default defineConfig({
     },
   },
 
-  integrations: [sitemap()],
+  integrations: [sitemap(), vue()],
 
   vite: {
     plugins: [tailwindcss()],
