@@ -1,19 +1,19 @@
 ---
 title: Podmienky používania
-description: Podmienky a pravidlá používania služby Skilltreq.
+description: Podmienky a pravidlá používania služby SkillTreq.
 locale: sk
 lastUpdated: '2026-03-01'
 ---
 
 ## Prijatie podmienok
 
-Vytvorením účtu alebo používaním Skilltreq súhlasíte s týmito Podmienkami používania. Ak nesúhlasíte, službu nepoužívajte.
+Vytvorením účtu alebo používaním SkillTreq súhlasíte s týmito Podmienkami používania. Ak nesúhlasíte, službu nepoužívajte.
 
 ## Váš účet
 
 - Zodpovedáte za bezpečnosť svojho účtu
 - Pri vytváraní účtu musíte poskytnúť presné informácie
-- Na používanie Skilltreq musíte mať aspoň 16 rokov
+- Na používanie SkillTreq musíte mať aspoň 16 rokov
 - Jedna osoba nesmie mať viac ako jeden bezplatný účet
 
 ## Prijateľné používanie
@@ -34,7 +34,7 @@ Zaväzujete sa, že nebudete:
 
 ## Dostupnosť služby
 
-- Skilltreq je poskytovaný "tak ako je" bez záruky akéhokoľvek druhu
+- SkillTreq je poskytovaný "tak ako je" bez záruky akéhokoľvek druhu
 - Negarantujeme konkrétnu dostupnosť ani uptime, najmä pre bezplatnú verziu
 - Službu môžeme kedykoľvek upraviť, pozastaviť alebo ukončiť s primeraným upozornením
 - Vynaložíme primerané úsilie na informovanie používateľov o významných zmenách
@@ -48,7 +48,7 @@ Zaväzujete sa, že nebudete:
 
 ## Obmedzenie zodpovednosti
 
-V maximálnom rozsahu povolenom zákonom Skilltreq a jeho tvorcovia nenesú zodpovednosť za akékoľvek nepriame, náhodné, špeciálne alebo následné škody vyplývajúce z používania služby.
+V maximálnom rozsahu povolenom zákonom SkillTreq a jeho tvorcovia nenesú zodpovednosť za akékoľvek nepriame, náhodné, špeciálne alebo následné škody vyplývajúce z používania služby.
 
 ## Zmeny týchto podmienok
 

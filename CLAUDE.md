@@ -47,12 +47,14 @@ npm run format:check  # Prettier check (CI)
 
 ## Pages
 
-| Route      | Purpose                                          | Format          |
-| ---------- | ------------------------------------------------ | --------------- |
-| `/`        | Landing page — hero, features, CTA, social proof | Astro component |
-| `/privacy` | Privacy Policy                                   | Markdown        |
-| `/terms`   | Terms of Service                                 | Markdown        |
-| `/pricing` | Free / Pro / Coach tier comparison               | Astro component |
+| Route      | Purpose                                          | Format          | Status        |
+| ---------- | ------------------------------------------------ | --------------- | ------------- |
+| `/`        | Landing page — hero, features, CTA, social proof | Astro component | Beta          |
+| `/privacy` | Privacy Policy                                   | Markdown        | Beta          |
+| `/terms`   | Terms of Service                                 | Markdown        | Beta          |
+| `/pricing` | Free / Pro / Coach tier comparison               | Astro component | **Post-Beta** |
+
+**Beta launch scope: `/`, `/privacy`, `/terms` only. `/pricing` sa implementuje až s Phase 16 (Monetizácia) po Beta validácii.**
 
 All pages must exist in all three locales (`/en/`, `/sk/`, `/cs/`). Default locale (`en`) may serve from root `/` with redirects.
 
@@ -94,7 +96,7 @@ Skilltreq is built as **"an app that acts like a good coach"** — it shows real
 
 - "See your skills as a dependency tree. Know exactly what to train next."
 - "Log workouts, track personal records, follow structured plans."
-- "Free forever. Pro when you need more."
+- "Free during Beta. No credit card, no trial — just start."
 
 ---
 
@@ -110,90 +112,87 @@ Skilltreq is built as **"an app that acts like a good coach"** — it shows real
 
 ## Design System
 
-The landing site shares the app's visual identity. All values sourced from the app's `assets/css/main.css`.
+> **Source of truth: [`../skilltreq/DESIGN_SYSTEM.md`](../skilltreq/DESIGN_SYSTEM.md)**
+> Pred implementáciou akéhokoľvek komponentu si prečítaj celý DESIGN_SYSTEM.md z hlavnej appky.
 
-### Colors
+Landing stránka zdieľa vizuálnu identitu appky. Tokeny sú skopírované z `assets/css/main.css` a **musia zostať v sync**.
 
-**The site must support light and dark mode** (respect `prefers-color-scheme`, with manual toggle).
+### Pravidlá (rovnaké ako v appke)
 
-#### Light mode
+- **Nikdy hardcoded hex/rgb** — vždy CSS vars (`var(--bg-surface)`) alebo Tailwind tokeny (`bg-surface`)
+- **Odvodené farby cez `color-mix()`** — nie `rgba()` s hardcoded hodnotami
+- **Všetky veľkosti v `rem`** — výnimka: `1px` borders
+- **Dark mode povinný** — každý komponent musí fungovať v oboch témach
+- **Dark mode via `.dark` class na `<html>`** — rovnaký mechanizmus ako appka
 
-| Token              | Value     | Usage              |
-| ------------------ | --------- | ------------------ |
-| `--bg-page`        | `#ffffff` | Page background    |
-| `--bg-surface`     | `#f8f7fc` | Cards, sections    |
-| `--bg-muted`       | `#f0eef8` | Subtle backgrounds |
-| `--bg-hover`       | `#e8e5f4` | Hover states       |
-| `--text-primary`   | `#0a0a18` | Headings           |
-| `--text-secondary` | `#3a3a58` | Subheadings        |
-| `--text-body`      | `#585880` | Body text          |
-| `--text-muted`     | `#8080a8` | Captions, hints    |
-| `--border`         | `#e0ddef` | Borders            |
-| `--accent`         | `#7553ff` | CTA buttons, links |
-| `--accent-hover`   | `#6344e6` | CTA hover          |
+### Farby — aktuálne tokeny (Geist-inspired, čisté neutrály)
 
-#### Dark mode
+#### Backgrounds
 
-| Token              | Value     | Usage              |
-| ------------------ | --------- | ------------------ |
-| `--bg-page`        | `#08080e` | Page background    |
-| `--bg-surface`     | `#0e0e1c` | Cards, sections    |
-| `--bg-muted`       | `#15152a` | Subtle backgrounds |
-| `--bg-hover`       | `#1c1c38` | Hover states       |
-| `--text-primary`   | `#e4e4f0` | Headings           |
-| `--text-secondary` | `#b0b0d0` | Subheadings        |
-| `--text-body`      | `#9090c0` | Body text          |
-| `--text-muted`     | `#7878b0` | Captions, hints    |
-| `--border`         | `#1e1e3a` | Borders            |
-| `--accent`         | `#8b6fff` | CTA buttons, links |
-| `--accent-hover`   | `#7c5ef0` | CTA hover          |
+| CSS var        | Light     | Dark      | Usage              |
+| -------------- | --------- | --------- | ------------------ |
+| `--bg-page`    | `#ffffff` | `#000000` | Page background    |
+| `--bg-surface` | `#fafafa` | `#111111` | Cards, sections    |
+| `--bg-muted`   | `#f5f5f5` | `#1a1a1a` | Subtle backgrounds |
+| `--bg-hover`   | `#ebebeb` | `#232323` | Hover states       |
 
-#### Status colors (for feature showcases)
+#### Text
 
-| Status      | Light     | Dark      |
-| ----------- | --------- | --------- |
-| Locked      | `#4a506a` | `#2f3342` |
-| In Progress | `#3b82f6` | `#5b9cf6` |
-| Completed   | `#22c55e` | `#4ade80` |
-| Mastered    | `#f59e0b` | `#fbbf24` |
+| CSS var            | Light     | Dark      | Usage           |
+| ------------------ | --------- | --------- | --------------- |
+| `--text-primary`   | `#0a0a0a` | `#ededed` | Headings        |
+| `--text-secondary` | `#404040` | `#b4b4b4` | Subheadings     |
+| `--text-body`      | `#666666` | `#8f8f8f` | Body text       |
+| `--text-muted`     | `#8f8f8f` | `#6e6e6e` | Captions, hints |
+| `--text-faint`     | `#b4b4b4` | `#525252` | Subtle labels   |
 
-### Typography
+#### Borders
 
-- **Font**: System-ui, sans-serif (matches app — no custom font loading)
-- **Scale**: Use Tailwind's default scale (`text-sm` through `text-5xl`)
-- **All sizing in `rem`** — never hardcoded `px` (except 1px borders)
+| CSS var          | Light     | Dark      | Usage           |
+| ---------------- | --------- | --------- | --------------- |
+| `--border`       | `#e5e5e5` | `#2e2e2e` | Primary borders |
+| `--border-muted` | `#d4d4d4` | `#3a3a3a` | Subtle lines    |
+
+#### Accent & Danger
+
+| CSS var          | Light                      | Dark                       | Usage              |
+| ---------------- | -------------------------- | -------------------------- | ------------------ |
+| `--accent`       | `#7553ff`                  | `#8b6fff`                  | CTA buttons, links |
+| `--accent-hover` | `#6344e6`                  | `#7c5ef0`                  | CTA hover          |
+| `--accent-glow`  | `rgba(117, 83, 255, 0.35)` | `rgba(139, 111, 255, 0.4)` | Hover glow         |
+
+#### Status colors (pre feature showcases)
+
+| Status      | CSS var                | Light     | Dark      |
+| ----------- | ---------------------- | --------- | --------- |
+| Locked      | `--status-locked`      | `#4a506a` | `#2f3342` |
+| In Progress | `--status-in-progress` | `#3b82f6` | `#5b9cf6` |
+| Completed   | `--status-completed`   | `#22c55e` | `#4ade80` |
+| Mastered    | `--status-mastered`    | `#f59e0b` | `#fbbf24` |
+
+### Typografia
+
+- **Font**: `'Geist Variable', system-ui, sans-serif` — self-hosted cez `@fontsource-variable/geist`
+- **Scale**: Tailwind default (`text-sm` → `text-5xl`)
+- **Weights**: `font-normal` (400) / `font-medium` (500) / `font-semibold` (600) / `font-bold` (700)
 
 ### Logo
 
-- SVG icon: blue rounded square (`#3b82f6`) with white "ST" text
-- Copy from app's `/public/icon.svg`
-- Use as favicon and in header
+- SVG icon: modrý zaoblený štvorec (`#3b82f6`) s bielym "ST" textom
+- Skopírovať z appky: `/public/icon.svg`
+- Použiť ako favicon a v headeri
 
 ### Buttons
 
-```css
-/* Primary CTA */
-.btn-primary {
-  background: var(--accent);
-  color: #ffffff;
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.5rem;
-  font-weight: 600;
-  transition: background 0.15s;
-}
-.btn-primary:hover {
-  background: var(--accent-hover);
-}
+Rovnaké triedy ako v appke (`.btn-primary`, `.btn-secondary`) — skopírovať definície z `assets/css/main.css`:
 
-/* Secondary */
-.btn-secondary {
-  background: transparent;
-  color: var(--text-primary);
-  border: 1px solid var(--border);
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.5rem;
-  font-weight: 500;
-}
+```css
+/* Primary CTA — purple raised, glow on hover */
+.btn-primary { background: var(--accent); color: #ffffff; ... }
+.btn-primary:hover { background: var(--accent-hover); box-shadow: 0 4px 16px var(--accent-glow); }
+
+/* Secondary — flat outlined */
+.btn-secondary { background: var(--bg-surface); border: 1px solid var(--border); ... }
 ```
 
 ---
@@ -220,15 +219,18 @@ The landing site shares the app's visual identity. All values sourced from the a
 
 ### Footer
 
-- Links: Privacy, Terms, Pricing
+- Links: Privacy, Terms, Ko-fi (support link) — **bez Pricing pri Beta**
 - Language switcher (EN / SK / CS)
 - "Built for athletes who track, not grind."
+- Jedna veta: "Skilltreq is free during Beta. Paid plans coming later."
 
 ---
 
 ## Pricing Page Structure
 
-Three tiers based on decided monetization model:
+> ⚠️ **Post-Beta only** — `/pricing` sa neimplementuje pri Beta launchi. Pridáva sa s Phase 16 (Monetizácia) až po validácii že používatelia chcú platiť.
+
+Three tiers based on decided monetization model (pre Phase 16 implementation reference):
 
 |                   | Free     | Pro (~4–5 €/mo) | Coach (~12–15 €/mo) |
 | ----------------- | -------- | --------------- | ------------------- |
@@ -246,6 +248,7 @@ Three tiers based on decided monetization model:
 - CTA per tier → app login/signup
 - "Free forever" messaging for free tier — no trial, no credit card
 - Final prices TBD — use placeholders until confirmed
+- `PricingTable.astro` komponent sa nevytvára pred Phase 16
 
 ---
 

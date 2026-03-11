@@ -1,19 +1,19 @@
 ---
 title: Terms of Service
-description: Terms and conditions for using Skilltreq.
+description: Terms and conditions for using SkillTreq.
 locale: en
 lastUpdated: '2026-03-01'
 ---
 
 ## Acceptance of terms
 
-By creating an account or using Skilltreq, you agree to these Terms of Service. If you do not agree, do not use the service.
+By creating an account or using SkillTreq, you agree to these Terms of Service. If you do not agree, do not use the service.
 
 ## Your account
 
 - You are responsible for maintaining the security of your account
 - You must provide accurate information when creating your account
-- You must be at least 16 years old to use Skilltreq
+- You must be at least 16 years old to use SkillTreq
 - One person may not maintain more than one free account
 
 ## Acceptable use
@@ -34,7 +34,7 @@ You agree not to:
 
 ## Service availability
 
-- Skilltreq is provided "as is" without warranty of any kind
+- SkillTreq is provided "as is" without warranty of any kind
 - We do not guarantee any specific uptime or availability, especially for the free tier
 - We may modify, suspend, or discontinue the service at any time with reasonable notice
 - We will make reasonable efforts to notify users of significant changes
@@ -48,7 +48,7 @@ You agree not to:
 
 ## Limitation of liability
 
-To the maximum extent permitted by law, Skilltreq and its creators shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of the service.
+To the maximum extent permitted by law, SkillTreq and its creators shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of the service.
 
 ## Changes to these terms
 

@@ -1,13 +1,13 @@
 ---
 title: Privacy Policy
-description: How Skilltreq collects, uses, and protects your personal data.
+description: How SkillTreq collects, uses, and protects your personal data.
 locale: en
 lastUpdated: '2026-03-01'
 ---
 
 ## What data we collect
 
-When you use Skilltreq, we collect the following information:
+When you use SkillTreq, we collect the following information:
 
 - **Account information**: Email address and basic profile data from your OAuth provider (GitHub or Google)
 - **Workout data**: Exercise logs, sets, reps, holds, and personal records you enter
@@ -22,7 +22,7 @@ When you use Skilltreq, we collect the following information:
 
 ## Third-party services
 
-Skilltreq uses the following third-party services:
+SkillTreq uses the following third-party services:
 
 - **GitHub OAuth** — for account authentication
 - **Google OAuth** — for account authentication

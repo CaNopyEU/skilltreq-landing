@@ -1,13 +1,13 @@
 ---
 title: Ochrana súkromia
-description: Ako Skilltreq zbiera, používa a chráni vaše osobné údaje.
+description: Ako SkillTreq zbiera, používa a chráni vaše osobné údaje.
 locale: sk
 lastUpdated: '2026-03-01'
 ---
 
 ## Aké údaje zbierame
 
-Pri používaní Skilltreq zbierame nasledujúce informácie:
+Pri používaní SkillTreq zbierame nasledujúce informácie:
 
 - **Údaje o účte**: E-mailová adresa a základné profilové údaje z vášho OAuth providera (GitHub alebo Google)
 - **Tréningové údaje**: Záznamy cvičení, série, opakovania, výdrže a osobné rekordy, ktoré zadáte
@@ -22,7 +22,7 @@ Pri používaní Skilltreq zbierame nasledujúce informácie:
 
 ## Služby tretích strán
 
-Skilltreq používa nasledujúce služby tretích strán:
+SkillTreq používa nasledujúce služby tretích strán:
 
 - **GitHub OAuth** — na autentifikáciu účtu
 - **Google OAuth** — na autentifikáciu účtu
