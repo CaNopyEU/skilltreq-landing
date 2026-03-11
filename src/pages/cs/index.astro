@@ -30,6 +30,16 @@ const jsonLd = {
       logo: 'https://www.skilltreq.com/icon.svg',
       sameAs: [],
     },
+    {
+      '@type': 'WebSite',
+      name: 'SkillTreq',
+      url: 'https://www.skilltreq.com',
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: 'https://www.skilltreq.com/?q={search_term_string}',
+        'query-input': 'required name=search_term_string',
+      },
+    },
   ],
 };
 ---
