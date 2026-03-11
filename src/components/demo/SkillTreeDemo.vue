@@ -11,10 +11,18 @@ import type { NodeStatus, DemoMove, DemoProgress, DemoCategory } from './types';
 
 const props = defineProps<{
   translations: Record<string, string>;
+  compact?: boolean;
 }>();
 
+// Filter skills for compact mode (single branch — Pull)
+const activeSkills = computed(() => {
+  if (!props.compact) return skills;
+  const pullIds = new Set(skills.filter((s) => s.categoryId === 'pull').map((s) => s.id));
+  return skills.filter((s) => pullIds.has(s.id));
+});
+
 // Build maps for injection
-const skillsMap = computed(() => new Map<string, DemoMove>(skills.map((s) => [s.id, s])));
+const skillsMap = computed(() => new Map<string, DemoMove>(activeSkills.value.map((s) => [s.id, s])));
 const progressMap = computed(
   () => new Map<string, DemoProgress>(Object.entries(progress) as [string, DemoProgress][]),
 );
@@ -25,7 +33,7 @@ const categoriesMap = computed(
 // Compute effective status (locked -> unlocked when all prereqs met)
 const statusMap = computed(() => {
   const map = new Map<string, NodeStatus>();
-  for (const skill of skills) {
+  for (const skill of activeSkills.value) {
     const stored = progress[skill.id]?.status ?? 'locked';
     if (stored === 'locked' && skill.requires.length > 0) {
       const allPrereqsMet = skill.requires.every((reqId) => {
@@ -49,7 +57,7 @@ provide('statusMap', statusMap);
 provide('translations', translationsRef);
 
 // Graph layout
-const { nodes: layoutNodes, edges: layoutEdges } = buildLayout(skills, 'TB');
+const { nodes: layoutNodes, edges: layoutEdges } = buildLayout(activeSkills.value, 'TB');
 
 // Tooltip state
 const tooltip = ref<{

@@ -67,12 +67,21 @@ for (const key of demoKeys) {
       </div>
     </div>
 
-    <!-- Interactive skill tree demo -->
-    <div class="mx-auto mt-16 max-w-4xl">
+    <!-- Desktop: full tree -->
+    <div class="hidden md:block mx-auto mt-16 max-w-4xl">
       <div
         class="aspect-video rounded-xl border border-border shadow-lg overflow-hidden bg-surface"
       >
         <SkillTreeDemo client:visible translations={demoTranslations} />
+      </div>
+    </div>
+
+    <!-- Mobile: single branch, taller -->
+    <div class="md:hidden mx-auto mt-12 max-w-sm">
+      <div
+        class="aspect-[3/4] rounded-xl border border-border shadow-lg overflow-hidden bg-surface"
+      >
+        <SkillTreeDemo client:visible translations={demoTranslations} compact />
       </div>
     </div>
   </div>
