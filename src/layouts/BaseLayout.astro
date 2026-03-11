@@ -65,6 +65,9 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
     <!-- JSON-LD -->
     {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
 
+    <!-- Analytics -->
+    <script defer src="https://umami-skilltreq.vercel.app/script.js" data-website-id="a5ba38f1-f6a3-423b-bbca-6cf44e14d3d9"></script>
+
     <!-- Dark mode detection (inline to prevent FOUC) -->
     <script is:inline>
       (function () {
