@@ -9,17 +9,28 @@ const t = useTranslations(locale);
 
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'SoftwareApplication',
-  name: 'SkillTreq',
-  applicationCategory: 'HealthApplication',
-  operatingSystem: 'Web',
-  description: t('meta.description'),
-  url: 'https://www.skilltreq.app',
-  offers: {
-    '@type': 'Offer',
-    price: '0',
-    priceCurrency: 'EUR',
-  },
+  '@graph': [
+    {
+      '@type': 'SoftwareApplication',
+      name: 'SkillTreq',
+      applicationCategory: 'HealthApplication',
+      operatingSystem: 'Web',
+      description: t('meta.description'),
+      url: 'https://www.skilltreq.app',
+      offers: {
+        '@type': 'Offer',
+        price: '0',
+        priceCurrency: 'EUR',
+      },
+    },
+    {
+      '@type': 'Organization',
+      name: 'SkillTreq',
+      url: 'https://www.skilltreq.com',
+      logo: 'https://www.skilltreq.com/icon.svg',
+      sameAs: [],
+    },
+  ],
 };
 ---
 

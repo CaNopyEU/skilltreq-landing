@@ -15,6 +15,12 @@ interface Props {
 
 const { title, description, locale, currentPath, jsonLd } = Astro.props;
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
+
+const ogLocaleMap: Record<Locale, string> = {
+  en: 'en_US',
+  sk: 'sk_SK',
+  cs: 'cs_CZ',
+};
 ---
 
 <!doctype html>
@@ -23,6 +29,8 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/icon.svg" />
+    <meta name="theme-color" content="#7553ff" />
 
     <meta name="google-site-verification" content="UuY6QP9iT_YR7usZgqLheoSSzqDWLv0m8-DY4gOQ3IA" />
 
@@ -36,7 +44,10 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalUrl.href} />
     <meta property="og:site_name" content="SkillTreq" />
-    <meta property="og:locale" content={locale} />
+    <meta property="og:locale" content={ogLocaleMap[locale]} />
+    {locales.filter((l) => l !== locale).map((l) => (
+      <meta property="og:locale:alternate" content={ogLocaleMap[l]} />
+    ))}
 
     <meta property="og:image" content={new URL('/og-image.png', Astro.site).href} />
     <meta property="og:image:width" content="1200" />
@@ -68,6 +79,7 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
     {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
 
     <!-- Analytics -->
+    <link rel="preconnect" href="https://umami-skilltreq.vercel.app" />
     <script defer src="https://umami-skilltreq.vercel.app/script.js" data-website-id="a5ba38f1-f6a3-423b-bbca-6cf44e14d3d9"></script>
 
     <!-- Dark mode detection (inline to prevent FOUC) -->
