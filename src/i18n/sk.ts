@@ -5,12 +5,16 @@ export default {
     'Sleduj svoje zručnosti ako strom závislostí. Loguj tréningy, sleduj plány a viď reálny progres.',
 
   // Nav
+  'nav.skipToContent': 'Preskočiť na obsah',
   'nav.home': 'Domov',
   'nav.privacy': 'Ochrana súkromia',
   'nav.terms': 'Podmienky používania',
 
   // Hero
   'hero.headline': 'Tvoje zručnosti ako strom závislostí.',
+  'hero.headline.pre': 'Tvoje zručnosti ako ',
+  'hero.headline.accent': 'strom závislostí',
+  'hero.headline.post': '.',
   'hero.subtitle':
     'Sleduj svoje zručnosti ako strom závislostí. Štruktúrované plány, logovanie tréningov a reálne dáta — bez gamifikácie.',
   'hero.cta': 'Začni zadarmo',
@@ -41,6 +45,7 @@ export default {
   'footer.copyright': '© {year} SkillTreq. Všetky práva vyhradené.',
 
   // Theme
+  'theme.toggle': 'Téma',
   'theme.light': 'Svetlý',
   'theme.dark': 'Tmavý',
   'theme.system': 'Systém',

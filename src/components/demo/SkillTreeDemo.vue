@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, provide, onMounted, onUnmounted } from 'vue';
+import { ref, computed, provide, onMounted, onUnmounted, markRaw } from 'vue';
 import { VueFlow } from '@vue-flow/core';
 import '@vue-flow/core/dist/style.css';
 import '@vue-flow/core/dist/theme-default.css';
@@ -8,6 +8,9 @@ import DemoSkillEdge from './DemoSkillEdge.vue';
 import { buildLayout } from './useGraphLayout';
 import { skills, progress, categories } from './demoData';
 import type { NodeStatus, DemoMove, DemoProgress, DemoCategory } from './types';
+
+const nodeTypes = { 'demo-node': markRaw(DemoSkillNode) };
+const edgeTypes = { 'demo-edge': markRaw(DemoSkillEdge) };
 
 const props = defineProps<{
   translations: Record<string, string>;
@@ -136,8 +139,8 @@ onUnmounted(() => {
     <VueFlow
       :nodes="layoutNodes"
       :edges="layoutEdges"
-      :node-types="{ 'demo-node': DemoSkillNode }"
-      :edge-types="{ 'demo-edge': DemoSkillEdge }"
+      :node-types="nodeTypes"
+      :edge-types="edgeTypes"
       fit-view-on-init
       :nodes-draggable="false"
       :nodes-connectable="false"

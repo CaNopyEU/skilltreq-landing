@@ -47,13 +47,13 @@ for (const key of demoKeys) {
 <section class="relative overflow-hidden py-20 sm:py-28 lg:py-36">
   <div class="mx-auto max-w-6xl px-4 sm:px-6">
     <div class="mx-auto max-w-3xl text-center">
-      <h1 class="text-4xl font-bold tracking-tight text-primary sm:text-5xl lg:text-6xl">
-        {t('hero.headline')}
+      <h1 class="hero-enter text-4xl font-bold tracking-tight text-primary sm:text-5xl lg:text-6xl" style="--delay: 0ms">
+        {t('hero.headline.pre')}<span class="text-gradient">{t('hero.headline.accent')}</span>{t('hero.headline.post')}
       </h1>
-      <p class="mt-6 text-lg text-secondary sm:text-xl">
+      <p class="hero-enter mt-6 text-lg text-secondary sm:text-xl" style="--delay: 120ms">
         {t('hero.subtitle')}
       </p>
-      <div class="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+      <div class="hero-enter mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center" style="--delay: 240ms">
         <a
           href="https://www.skilltreq.app/"
           class="btn-primary text-base"
@@ -68,20 +68,41 @@ for (const key of demoKeys) {
     </div>
 
     <!-- Desktop: full tree -->
-    <div class="hidden md:block mx-auto mt-16 max-w-4xl">
+    <div class="hero-enter relative hidden md:block mx-auto mt-16 max-w-4xl" style="--delay: 400ms">
+      <div class="demo-glow"></div>
+
+      <!-- Floating badges -->
+      <div class="demo-badge" style="top: -0.75rem; left: -2rem; --delay: 600ms; --float-delay: 0s">
+        <span class="demo-badge-dot" style="background: var(--status-mastered)"></span>
+        {t('demo.status.mastered')}
+      </div>
+      <div class="demo-badge" style="top: 1.5rem; right: -2.5rem; --delay: 700ms; --float-delay: 1s">
+        <span class="demo-badge-dot" style="background: var(--status-in-progress)"></span>
+        {t('demo.status.in_progress')}
+      </div>
+      <div class="demo-badge" style="bottom: 2rem; left: -2.75rem; --delay: 800ms; --float-delay: 0.5s">
+        <span class="demo-badge-dot" style="background: var(--status-completed)"></span>
+        {t('demo.status.completed')}
+      </div>
+      <div class="demo-badge" style="bottom: -0.5rem; right: -1.5rem; --delay: 900ms; --float-delay: 1.5s">
+        <span class="demo-badge-dot" style="background: var(--status-locked)"></span>
+        {t('demo.status.locked')}
+      </div>
+
       <div
-        class="aspect-video rounded-xl border border-border shadow-lg overflow-hidden bg-surface"
+        class="relative z-[1] aspect-video rounded-xl border border-border shadow-lg overflow-hidden bg-surface"
       >
-        <SkillTreeDemo client:visible translations={demoTranslations} />
+        <SkillTreeDemo client:only="vue" translations={demoTranslations} />
       </div>
     </div>
 
     <!-- Mobile: single branch, taller -->
-    <div class="md:hidden mx-auto mt-12 max-w-sm">
+    <div class="hero-enter relative md:hidden mx-auto mt-12 max-w-sm" style="--delay: 400ms">
+      <div class="demo-glow"></div>
       <div
-        class="aspect-[3/4] rounded-xl border border-border shadow-lg overflow-hidden bg-surface"
+        class="relative z-[1] aspect-[3/4] rounded-xl border border-border shadow-lg overflow-hidden bg-surface"
       >
-        <SkillTreeDemo client:visible translations={demoTranslations} compact />
+        <SkillTreeDemo client:only="vue" translations={demoTranslations} compact />
       </div>
     </div>
   </div>

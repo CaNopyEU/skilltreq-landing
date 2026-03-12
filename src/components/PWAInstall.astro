@@ -13,7 +13,7 @@ const platforms = [
   {
     id: 'ios',
     title: t('pwa.ios.title'),
-    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>`,
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>`,
     steps: [
       t('pwa.ios.step1'),
       t('pwa.ios.step2'),
@@ -23,7 +23,7 @@ const platforms = [
   {
     id: 'android',
     title: t('pwa.android.title'),
-    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>`,
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>`,
     steps: [
       t('pwa.android.step1'),
       t('pwa.android.step2'),
@@ -33,7 +33,7 @@ const platforms = [
   {
     id: 'desktop',
     title: t('pwa.desktop.title'),
-    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>`,
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>`,
     steps: [
       t('pwa.desktop.step1'),
       t('pwa.desktop.step2'),
@@ -44,7 +44,7 @@ const platforms = [
 
 <section class="py-20 sm:py-28">
   <div class="mx-auto max-w-6xl px-4 sm:px-6">
-    <div class="mx-auto max-w-2xl text-center">
+    <div data-reveal class="mx-auto max-w-2xl text-center">
       <h2 class="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
         {t('pwa.heading')}
       </h2>
@@ -55,8 +55,8 @@ const platforms = [
 
     <div class="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
       {
-        platforms.map((platform) => (
-          <div class="rounded-xl border border-border bg-page p-6">
+        platforms.map((platform, i) => (
+          <div data-reveal style={`--delay: ${i * 100}ms`} class="rounded-xl border border-border bg-page p-6">
             <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-accent/10 text-accent">
               <Fragment set:html={platform.icon} />
             </div>

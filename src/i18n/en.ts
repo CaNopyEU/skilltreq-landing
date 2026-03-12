@@ -5,12 +5,16 @@ export default {
     'Track your skills as a dependency tree. Log workouts, follow training plans, and see real progress.',
 
   // Nav
+  'nav.skipToContent': 'Skip to content',
   'nav.home': 'Home',
   'nav.privacy': 'Privacy Policy',
   'nav.terms': 'Terms of Service',
 
   // Hero
   'hero.headline': 'Your skills as a dependency tree.',
+  'hero.headline.pre': 'Your skills as a ',
+  'hero.headline.accent': 'dependency tree',
+  'hero.headline.post': '.',
   'hero.subtitle':
     'Track your skills as a dependency tree. Structured plans, workout logging, and real data — not gamification.',
   'hero.cta': 'Try free',
@@ -41,6 +45,7 @@ export default {
   'footer.copyright': '© {year} SkillTreq. All rights reserved.',
 
   // Theme
+  'theme.toggle': 'Theme',
   'theme.light': 'Light',
   'theme.dark': 'Dark',
   'theme.system': 'System',

@@ -13,31 +13,31 @@ const features = [
   {
     title: t('features.skillTree.title'),
     description: t('features.skillTree.description'),
-    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M6 21V9a9 9 0 0 0 9 9"/></svg>`,
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M6 21V9a9 9 0 0 0 9 9"/></svg>`,
     screenshot: '/screenshots/feature-skill-tree.webp',
   },
   {
     title: t('features.plans.title'),
     description: t('features.plans.description'),
-    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>`,
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>`,
     screenshot: '/screenshots/feature-training-plans.webp',
   },
   {
     title: t('features.logging.title'),
     description: t('features.logging.description'),
-    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>`,
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>`,
     screenshot: '/screenshots/feature-workout-logging.webp',
   },
   {
     title: t('features.progress.title'),
     description: t('features.progress.description'),
-    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>`,
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>`,
     screenshot: '/screenshots/feature-progress-tracking.webp',
   },
   {
     title: t('features.coach.title'),
     description: t('features.coach.description'),
-    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
     screenshot: '/screenshots/feature-coach-system.webp',
   },
 ] as const;
@@ -45,22 +45,24 @@ const features = [
 
 <section id="features" class="bg-surface py-20 sm:py-28">
   <div class="mx-auto max-w-6xl px-4 sm:px-6">
-    <h2 class="text-center text-3xl font-bold tracking-tight text-primary sm:text-4xl">
+    <h2 data-reveal class="text-center text-3xl font-bold tracking-tight text-primary sm:text-4xl">
       {t('features.heading')}
     </h2>
 
     <div class="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
       {
-        features.map((feature) => (
-          <div class="overflow-hidden rounded-xl border border-border bg-page transition-colors hover:border-accent/30">
-            <img
-              src={feature.screenshot}
-              alt={feature.title}
-              width="800"
-              height="450"
-              loading="lazy"
-              class="w-full border-b border-border"
-            />
+        features.map((feature, i) => (
+          <div data-reveal style={`--delay: ${i * 100}ms`} class="group overflow-hidden rounded-xl border border-border bg-page transition-all duration-300 hover:border-accent/30 hover:-translate-y-1 hover:shadow-lg">
+            <div class="overflow-hidden border-b border-border">
+              <img
+                src={feature.screenshot}
+                alt={feature.title}
+                width="800"
+                height="450"
+                loading="lazy"
+                class="w-full transition-transform duration-300 group-hover:scale-[1.03]"
+              />
+            </div>
             <div class="p-6">
               <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-accent/10 text-accent">
                 <Fragment set:html={feature.icon} />
