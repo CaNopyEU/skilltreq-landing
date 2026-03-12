@@ -35,6 +35,7 @@ const borderColor = computed(() => {
 });
 
 const isMastered = computed(() => status.value === 'mastered');
+const isInProgress = computed(() => status.value === 'in_progress');
 const isLocked = computed(() => status.value === 'locked');
 const isUnlocked = computed(() => status.value === 'unlocked');
 
@@ -74,6 +75,7 @@ const displayName = computed(() => {
     class="demo-skill-node"
     :class="{
       'demo-skill-node--mastered': isMastered,
+      'demo-skill-node--in-progress': isInProgress,
       'demo-skill-node--unlocked': isUnlocked,
     }"
     :style="{
@@ -169,6 +171,26 @@ const displayName = computed(() => {
   height: 3px;
   z-index: 2;
   pointer-events: none;
+}
+
+/* In-progress glow pulse */
+.demo-skill-node--in-progress {
+  animation: node-pulse 2.5s ease-in-out infinite;
+}
+
+@keyframes node-pulse {
+  0%, 100% {
+    box-shadow:
+      0 0 0 1px var(--status-in-progress-glow),
+      0 0 14px var(--status-in-progress-glow),
+      inset 0 0 8px var(--status-in-progress-glow);
+  }
+  50% {
+    box-shadow:
+      0 0 0 2px var(--status-in-progress-glow),
+      0 0 22px var(--status-in-progress-glow),
+      inset 0 0 12px var(--status-in-progress-glow);
+  }
 }
 
 /* Hide handle dots */

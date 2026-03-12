@@ -7,6 +7,7 @@ import type { NodeStatus } from './types';
 const props = defineProps<EdgeProps>();
 const statusMap = inject<Ref<Map<string, NodeStatus>>>('statusMap')!;
 const graphIsPaused = inject<Ref<boolean>>('graphIsPaused', ref(false));
+const compact = inject<Ref<boolean>>('compact', ref(false));
 
 const pathData = computed(
   () =>
@@ -167,10 +168,10 @@ const mpathId = computed(() => `ep-${props.id}`);
     />
 
     <!-- Electric particle -- edges flowing into in_progress skills -->
-    <template v-if="isActive && !graphIsPaused">
+    <template v-if="isActive && !graphIsPaused && !compact">
       <!-- Trailing aura -->
       <circle r="5" :fill="strokeColor" fill-opacity="0.08">
-        <animateMotion :dur="energyDuration" repeatCount="indefinite" rotate="auto">
+        <animateMotion :dur="energyDuration" repeatCount="indefinite" begin="0s">
           <mpath :href="`#${mpathId}`" />
         </animateMotion>
       </circle>
@@ -183,7 +184,7 @@ const mpathId = computed(() => `ep-${props.id}`);
           dur="0.4s"
           repeatCount="indefinite"
         />
-        <animateMotion :dur="energyDuration" repeatCount="indefinite" rotate="auto">
+        <animateMotion :dur="energyDuration" repeatCount="indefinite" begin="0s">
           <mpath :href="`#${mpathId}`" />
         </animateMotion>
       </circle>
@@ -196,7 +197,7 @@ const mpathId = computed(() => `ep-${props.id}`);
           dur="0.4s"
           repeatCount="indefinite"
         />
-        <animateMotion :dur="energyDuration" repeatCount="indefinite" rotate="auto">
+        <animateMotion :dur="energyDuration" repeatCount="indefinite" begin="0s">
           <mpath :href="`#${mpathId}`" />
         </animateMotion>
       </circle>

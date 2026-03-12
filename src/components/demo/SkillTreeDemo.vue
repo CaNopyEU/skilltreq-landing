@@ -58,6 +58,7 @@ provide('progressMap', progressMap);
 provide('categoriesMap', categoriesMap);
 provide('statusMap', statusMap);
 provide('translations', translationsRef);
+provide('compact', computed(() => !!props.compact));
 
 // Graph layout
 const { nodes: layoutNodes, edges: layoutEdges } = buildLayout(activeSkills.value, 'TB');
