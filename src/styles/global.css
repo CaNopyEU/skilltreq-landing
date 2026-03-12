@@ -240,6 +240,21 @@
   animation-delay: var(--delay, 0ms);
 }
 
+/* LCP-safe variant: no opacity animation so Lighthouse can detect LCP */
+.hero-enter-lcp {
+  animation: slide-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: var(--delay, 0ms);
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(1.5rem);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
 /* ─── Scroll reveal ─── */
 
 [data-reveal] {
@@ -336,6 +351,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .hero-enter,
+  .hero-enter-lcp,
   [data-reveal] {
     opacity: 1 !important;
     transform: none !important;
