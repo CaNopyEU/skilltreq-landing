@@ -195,7 +195,11 @@
 /* ─── Gradient text ─── */
 
 .text-gradient {
-  background: linear-gradient(135deg, var(--accent), color-mix(in srgb, var(--accent) 60%, #ec4899));
+  background: linear-gradient(
+    135deg,
+    var(--accent),
+    color-mix(in srgb, var(--accent) 60%, #ec4899)
+  );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -335,9 +339,7 @@
   animation:
     fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards,
     float 4s ease-in-out infinite;
-  animation-delay:
-    var(--delay, 600ms),
-    var(--float-delay, 0s);
+  animation-delay: var(--delay, 600ms), var(--float-delay, 0s);
 }
 
 .demo-badge-dot {

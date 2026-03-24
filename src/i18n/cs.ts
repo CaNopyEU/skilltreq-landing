@@ -57,7 +57,8 @@ export default {
 
   // PWA Install
   'pwa.heading': 'Nainstaluj si jako appku',
-  'pwa.subtitle': 'SkillTreq funguje jako progresivní webová appka. Přidej si ji na plochu pro zážitek jako z nativní appky — bez app storu.',
+  'pwa.subtitle':
+    'SkillTreq funguje jako progresivní webová appka. Přidej si ji na plochu pro zážitek jako z nativní appky — bez app storu.',
   'pwa.ios.title': 'iPhone / iPad',
   'pwa.ios.step1': 'Otevři skilltreq.app v Safari',
   'pwa.ios.step2': 'Klepni na tlačítko Sdílet (čtverec se šipkou)',

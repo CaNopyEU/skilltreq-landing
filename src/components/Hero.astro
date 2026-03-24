@@ -47,13 +47,21 @@ for (const key of demoKeys) {
 <section class="relative overflow-hidden py-20 sm:py-28 lg:py-36">
   <div class="mx-auto max-w-6xl px-4 sm:px-6">
     <div class="mx-auto max-w-3xl text-center">
-      <h1 class="hero-enter-lcp text-4xl font-bold tracking-tight text-primary sm:text-5xl lg:text-6xl" style="--delay: 0ms">
-        {t('hero.headline.pre')}<span class="text-gradient">{t('hero.headline.accent')}</span>{t('hero.headline.post')}
+      <h1
+        class="hero-enter-lcp text-4xl font-bold tracking-tight text-primary sm:text-5xl lg:text-6xl"
+        style="--delay: 0ms"
+      >
+        {t('hero.headline.pre')}<span class="text-gradient">{t('hero.headline.accent')}</span>{
+          t('hero.headline.post')
+        }
       </h1>
       <p class="hero-enter mt-6 text-lg text-secondary sm:text-xl" style="--delay: 120ms">
         {t('hero.subtitle')}
       </p>
-      <div class="hero-enter mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center" style="--delay: 240ms">
+      <div
+        class="hero-enter mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center"
+        style="--delay: 240ms"
+      >
         <a
           href="https://www.skilltreq.app/"
           class="btn-primary text-base"
@@ -76,15 +84,24 @@ for (const key of demoKeys) {
         <span class="demo-badge-dot" style="background: var(--status-mastered)"></span>
         {t('demo.status.mastered')}
       </div>
-      <div class="demo-badge" style="top: 1.5rem; right: -2.5rem; --delay: 700ms; --float-delay: 1s">
+      <div
+        class="demo-badge"
+        style="top: 1.5rem; right: -2.5rem; --delay: 700ms; --float-delay: 1s"
+      >
         <span class="demo-badge-dot" style="background: var(--status-in-progress)"></span>
         {t('demo.status.in_progress')}
       </div>
-      <div class="demo-badge" style="bottom: 2rem; left: -2.75rem; --delay: 800ms; --float-delay: 0.5s">
+      <div
+        class="demo-badge"
+        style="bottom: 2rem; left: -2.75rem; --delay: 800ms; --float-delay: 0.5s"
+      >
         <span class="demo-badge-dot" style="background: var(--status-completed)"></span>
         {t('demo.status.completed')}
       </div>
-      <div class="demo-badge" style="bottom: -0.5rem; right: -1.5rem; --delay: 900ms; --float-delay: 1.5s">
+      <div
+        class="demo-badge"
+        style="bottom: -0.5rem; right: -1.5rem; --delay: 900ms; --float-delay: 1.5s"
+      >
         <span class="demo-badge-dot" style="background: var(--status-locked)"></span>
         {t('demo.status.locked')}
       </div>

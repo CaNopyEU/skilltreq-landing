@@ -25,7 +25,9 @@ const activeSkills = computed(() => {
 });
 
 // Build maps for injection
-const skillsMap = computed(() => new Map<string, DemoMove>(activeSkills.value.map((s) => [s.id, s])));
+const skillsMap = computed(
+  () => new Map<string, DemoMove>(activeSkills.value.map((s) => [s.id, s])),
+);
 const progressMap = computed(
   () => new Map<string, DemoProgress>(Object.entries(progress) as [string, DemoProgress][]),
 );
@@ -58,7 +60,10 @@ provide('progressMap', progressMap);
 provide('categoriesMap', categoriesMap);
 provide('statusMap', statusMap);
 provide('translations', translationsRef);
-provide('compact', computed(() => !!props.compact));
+provide(
+  'compact',
+  computed(() => !!props.compact),
+);
 
 // Graph layout
 const { nodes: layoutNodes, edges: layoutEdges } = buildLayout(activeSkills.value, 'TB');

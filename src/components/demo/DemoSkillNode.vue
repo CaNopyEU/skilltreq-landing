@@ -179,7 +179,8 @@ const displayName = computed(() => {
 }
 
 @keyframes node-pulse {
-  0%, 100% {
+  0%,
+  100% {
     box-shadow:
       0 0 0 1px var(--status-in-progress-glow),
       0 0 14px var(--status-in-progress-glow),

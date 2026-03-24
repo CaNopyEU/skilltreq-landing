@@ -57,7 +57,8 @@ export default {
 
   // PWA Install
   'pwa.heading': 'Install as an app',
-  'pwa.subtitle': 'SkillTreq works as a progressive web app. Add it to your home screen for a native app experience — no app store needed.',
+  'pwa.subtitle':
+    'SkillTreq works as a progressive web app. Add it to your home screen for a native app experience — no app store needed.',
   'pwa.ios.title': 'iPhone / iPad',
   'pwa.ios.step1': 'Open skilltreq.app in Safari',
   'pwa.ios.step2': 'Tap the Share button (square with arrow)',

@@ -20,7 +20,11 @@ export default defineConfig({
     sitemap({
       filter: (page) =>
         // Exclude redirect-only pages from sitemap
-        !['https://www.skilltreq.com/', 'https://www.skilltreq.com/privacy/', 'https://www.skilltreq.com/terms/'].includes(page),
+        ![
+          'https://www.skilltreq.com/',
+          'https://www.skilltreq.com/privacy/',
+          'https://www.skilltreq.com/terms/',
+        ].includes(page),
     }),
     vue(),
   ],
