@@ -16,7 +16,14 @@ export default defineConfig({
     },
   },
 
-  integrations: [sitemap(), vue()],
+  integrations: [
+    sitemap({
+      filter: (page) =>
+        // Exclude redirect-only pages from sitemap
+        !['https://www.skilltreq.com/', 'https://www.skilltreq.com/privacy/', 'https://www.skilltreq.com/terms/'].includes(page),
+    }),
+    vue(),
+  ],
 
   vite: {
     plugins: [tailwindcss()],
