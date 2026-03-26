@@ -38,6 +38,25 @@ export default {
   'features.coach.description':
     'Manage clients, assign plans, and monitor their activity. Built for real coaches, not influencers.',
 
+  // Blog
+  'nav.blog': 'Blog',
+  'blog.title': 'Blog',
+  'blog.description':
+    'Development updates, guides, and announcements from the SkillTreq team.',
+  'blog.readMore': 'Read more',
+  'blog.allPosts': 'All posts',
+  'blog.noPosts': 'No posts yet. Check back soon.',
+  'blog.type.devlog': 'Devlog',
+  'blog.type.guide': 'Guide',
+  'blog.type.roadmap': 'Roadmap',
+  'blog.type.announcement': 'Announcement',
+  'blog.tags': 'Tags',
+  'blog.publishedOn': 'Published on {date}',
+  'blog.by': 'by {author}',
+  'blog.linkedChanges': 'What changed',
+  'blog.backToList': 'Back to blog',
+  'blog.rss': 'RSS Feed',
+
   // Footer
   'footer.tagline': 'Built for athletes who track, not grind.',
   'footer.beta': 'SkillTreq is free during Beta. Paid plans coming later.',

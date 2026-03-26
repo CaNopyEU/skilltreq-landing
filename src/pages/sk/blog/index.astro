@@ -1,0 +1,75 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { useTranslations } from '../../../i18n/translations';
+
+const locale = 'sk';
+const t = useTranslations(locale);
+
+const posts = (await getCollection('blog', ({ data }) => data.locale === locale)).sort(
+  (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
+);
+
+const localeFormat: Record<string, string> = { en: 'en-US', sk: 'sk-SK', cs: 'cs-CZ' };
+const formatDate = (d: string) =>
+  new Date(d + 'T00:00:00').toLocaleDateString(localeFormat[locale] || 'en-US', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+  });
+
+const typeColorMap: Record<string, string> = {
+  devlog: 'var(--status-in-progress)',
+  guide: 'var(--status-completed)',
+  roadmap: 'var(--status-mastered)',
+  announcement: 'var(--accent)',
+};
+---
+
+<BaseLayout title={t('blog.title')} description={t('blog.description')} locale={locale} currentPath="/blog/">
+  <section class="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-24">
+    <header class="mb-12">
+      <h1 class="text-3xl font-bold tracking-tight text-primary sm:text-4xl">{t('blog.title')}</h1>
+      <p class="mt-3 text-secondary">{t('blog.description')}</p>
+      <a href={`/${locale}/blog/rss.xml`} class="mt-2 inline-block text-sm text-text-muted hover:text-accent">
+        {t('blog.rss')} ↗
+      </a>
+    </header>
+
+    {posts.length === 0 ? (
+      <p class="text-text-muted">{t('blog.noPosts')}</p>
+    ) : (
+      <div class="space-y-8">
+        {posts.map((post) => (
+          <article class="group rounded-lg border border-border bg-surface p-6 transition-colors hover:border-border-muted">
+            <a href={`/${locale}/blog/${post.data.slug}/`} class="block">
+              <div class="mb-2 flex flex-wrap items-center gap-2">
+                <span
+                  class="inline-block rounded-full px-2.5 py-0.5 text-xs font-medium text-white"
+                  style={`background: ${typeColorMap[post.data.type]}`}
+                >
+                  {t(`blog.type.${post.data.type}` as any)}
+                </span>
+                <time datetime={post.data.date} class="text-xs text-text-muted">
+                  {formatDate(post.data.date)}
+                </time>
+                {post.data.readingTime && (
+                  <span class="text-xs text-text-muted">{post.data.readingTime}</span>
+                )}
+              </div>
+              <h2 class="text-xl font-semibold text-primary group-hover:text-accent transition-colors">
+                {post.data.title}
+              </h2>
+              <p class="mt-2 text-sm text-body">{post.data.description}</p>
+              <div class="mt-3 flex flex-wrap gap-2">
+                {post.data.tags.map((tag: string) => (
+                  <span class="text-xs text-text-muted">#{tag}</span>
+                ))}
+              </div>
+            </a>
+          </article>
+        ))}
+      </div>
+    )}
+  </section>
+</BaseLayout>

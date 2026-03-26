@@ -38,6 +38,25 @@ export default {
   'features.coach.description':
     'Spravuj klienty, přiděluj plány a sleduj jejich aktivitu. Postaveno pro reálné trenéry, ne influencery.',
 
+  // Blog
+  'nav.blog': 'Blog',
+  'blog.title': 'Blog',
+  'blog.description':
+    'Novinky z vývoje, návody a oznámení od týmu SkillTreq.',
+  'blog.readMore': 'Číst více',
+  'blog.allPosts': 'Všechny články',
+  'blog.noPosts': 'Zatím žádné články. Vrať se brzy.',
+  'blog.type.devlog': 'Devlog',
+  'blog.type.guide': 'Návod',
+  'blog.type.roadmap': 'Roadmapa',
+  'blog.type.announcement': 'Oznámení',
+  'blog.tags': 'Značky',
+  'blog.publishedOn': 'Publikováno {date}',
+  'blog.by': 'od {author}',
+  'blog.linkedChanges': 'Co se změnilo',
+  'blog.backToList': 'Zpět na blog',
+  'blog.rss': 'RSS kanál',
+
   // Footer
   'footer.tagline': 'Pro sportovce, kteří trénují, ne grindí.',
   'footer.beta': 'SkillTreq je zdarma během Bety. Placené plány přijdou později.',

@@ -1,0 +1,103 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import type { Locale } from '../i18n/translations';
+import { useTranslations } from '../i18n/translations';
+
+interface Props {
+  title: string;
+  description: string;
+  locale: Locale;
+  currentPath: string;
+  date: string;
+  author: string;
+  type: 'devlog' | 'guide' | 'roadmap' | 'announcement';
+  tags: string[];
+  readingTime?: string;
+  linkedChanges?: { ref: string; repo: string; description: string }[];
+}
+
+const {
+  title,
+  description,
+  locale,
+  currentPath,
+  date,
+  author,
+  type,
+  tags,
+  readingTime,
+  linkedChanges,
+} = Astro.props;
+
+const t = useTranslations(locale);
+
+const localeFormat: Record<string, string> = { en: 'en-US', sk: 'sk-SK', cs: 'cs-CZ' };
+const formattedDate = new Date(date + 'T00:00:00').toLocaleDateString(localeFormat[locale] || 'en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+
+const typeColorMap: Record<string, string> = {
+  devlog: 'var(--status-in-progress)',
+  guide: 'var(--status-completed)',
+  roadmap: 'var(--status-mastered)',
+  announcement: 'var(--accent)',
+};
+---
+
+<BaseLayout title={title} description={description} locale={locale} currentPath={currentPath} ogType="article">
+  <article class="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-24">
+    <header class="mb-10">
+      <a
+        href={`/${locale}/blog/`}
+        class="mb-4 inline-flex items-center gap-1 text-sm text-text-muted transition-colors hover:text-accent"
+      >
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="shrink-0">
+          <path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        {t('blog.backToList')}
+      </a>
+
+      <div class="mb-3 flex flex-wrap items-center gap-2">
+        <span
+          class="inline-block rounded-full px-2.5 py-0.5 text-xs font-medium text-white"
+          style={`background: ${typeColorMap[type]}`}
+        >
+          {t(('blog.type.' + type) as any)}
+        </span>
+        {tags.map((tag) => (
+          <span class="text-xs text-text-muted">#{tag}</span>
+        ))}
+      </div>
+
+      <h1 class="text-3xl font-bold tracking-tight text-primary sm:text-4xl">{title}</h1>
+
+      <div class="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-text-muted">
+        <time datetime={date}>{t('blog.publishedOn', { date: formattedDate })}</time>
+        <span>{t('blog.by', { author })}</span>
+        {readingTime && <span>{readingTime}</span>}
+      </div>
+    </header>
+
+    <div class="prose">
+      <slot />
+    </div>
+
+    {linkedChanges && linkedChanges.length > 0 && (
+      <details class="mt-12 rounded-lg border border-border bg-surface p-4">
+        <summary class="cursor-pointer text-sm font-medium text-secondary">
+          {t('blog.linkedChanges')}
+        </summary>
+        <ul class="mt-3 space-y-1.5 text-sm text-text-muted">
+          {linkedChanges.map((change) => (
+            <li class="flex items-start gap-2">
+              <code class="shrink-0 text-xs">{change.ref.slice(0, 7)}</code>
+              <span>{change.description}</span>
+            </li>
+          ))}
+        </ul>
+      </details>
+    )}
+  </article>
+</BaseLayout>

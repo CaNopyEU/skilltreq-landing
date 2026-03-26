@@ -11,9 +11,10 @@ interface Props {
   locale: Locale;
   currentPath: string;
   jsonLd?: Record<string, unknown>;
+  ogType?: string;
 }
 
-const { title, description, locale, currentPath, jsonLd } = Astro.props;
+const { title, description, locale, currentPath, jsonLd, ogType = 'website' } = Astro.props;
 const t = useTranslations(locale);
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
 
@@ -41,7 +42,7 @@ const ogLocaleMap: Record<Locale, string> = {
     <link rel="canonical" href={canonicalUrl.href} />
 
     <!-- Open Graph -->
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalUrl.href} />

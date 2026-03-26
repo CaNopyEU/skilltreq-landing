@@ -13,6 +13,7 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@astrojs/rss": "^4.0.17",
     "@astrojs/sitemap": "^3.3.0",
     "@astrojs/vue": "^5.1.4",
     "@dagrejs/dagre": "^2.0.4",

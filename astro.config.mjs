@@ -24,6 +24,7 @@ export default defineConfig({
           'https://www.skilltreq.com/',
           'https://www.skilltreq.com/privacy/',
           'https://www.skilltreq.com/terms/',
+          'https://www.skilltreq.com/blog/',
         ].includes(page),
     }),
     vue(),
@@ -31,5 +32,8 @@ export default defineConfig({
 
   vite: {
     plugins: [tailwindcss()],
+    server: {
+      allowedHosts: ['skilltreq-landing.home.lan'],
+    },
   },
 });
