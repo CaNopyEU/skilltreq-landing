@@ -1,15 +1,15 @@
 ---
-title: "Vitajte na blogu SkillTreq"
-description: "Predstavujeme blog SkillTreq — novinky z vývoja, návody a pohľad do zákulisia."
+title: 'Vitajte na blogu SkillTreq'
+description: 'Predstavujeme blog SkillTreq — novinky z vývoja, návody a pohľad do zákulisia.'
 locale: sk
-date: "2026-03-26"
-author: "SkillTreq Team"
+date: '2026-03-26'
+author: 'SkillTreq Team'
 type: announcement
 tags:
   - oznámenie
   - vývoj
-slug: "hello-world"
-readingTime: "2 min"
+slug: 'hello-world'
+readingTime: '2 min'
 no_hype_language: true
 no_gamification: true
 no_fake_urgency: true

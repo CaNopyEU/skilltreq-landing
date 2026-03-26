@@ -41,8 +41,7 @@ export default {
   // Blog
   'nav.blog': 'Blog',
   'blog.title': 'Blog',
-  'blog.description':
-    'Development updates, guides, and announcements from the SkillTreq team.',
+  'blog.description': 'Development updates, guides, and announcements from the SkillTreq team.',
   'blog.readMore': 'Read more',
   'blog.allPosts': 'All posts',
   'blog.noPosts': 'No posts yet. Check back soon.',

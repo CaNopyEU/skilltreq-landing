@@ -41,8 +41,7 @@ export default {
   // Blog
   'nav.blog': 'Blog',
   'blog.title': 'Blog',
-  'blog.description':
-    'Novinky z vývoje, návody a oznámení od týmu SkillTreq.',
+  'blog.description': 'Novinky z vývoje, návody a oznámení od týmu SkillTreq.',
   'blog.readMore': 'Číst více',
   'blog.allPosts': 'Všechny články',
   'blog.noPosts': 'Zatím žádné články. Vrať se brzy.',

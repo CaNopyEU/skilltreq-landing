@@ -1,15 +1,15 @@
 ---
-title: "Welcome to the SkillTreq Blog"
-description: "Introducing the SkillTreq blog — development updates, guides, and behind-the-scenes insights."
+title: 'Welcome to the SkillTreq Blog'
+description: 'Introducing the SkillTreq blog — development updates, guides, and behind-the-scenes insights.'
 locale: en
-date: "2026-03-26"
-author: "SkillTreq Team"
+date: '2026-03-26'
+author: 'SkillTreq Team'
 type: announcement
 tags:
   - announcement
   - development
-slug: "hello-world"
-readingTime: "2 min"
+slug: 'hello-world'
+readingTime: '2 min'
 no_hype_language: true
 no_gamification: true
 no_fake_urgency: true
