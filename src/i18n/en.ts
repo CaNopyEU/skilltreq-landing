@@ -89,6 +89,21 @@ export default {
   'pwa.desktop.step1': 'Open skilltreq.app in Chrome or Edge',
   'pwa.desktop.step2': 'Click the install icon in the address bar',
 
+  // Goal Picker
+  'goals.heading': 'What do you want to achieve?',
+  'goals.subheading': 'Pick a goal and see your roadmap to get there.',
+  'goals.cta.default': 'Try free',
+  'goals.cta.selected': 'Start training {goal}',
+  'goals.roadmap.title': 'Your path to {goal}',
+  'goals.goal.muscle-up': 'Muscle-up',
+  'goals.goal.handstand': 'Handstand',
+  'goals.goal.planche': 'Planche',
+  'goals.goal.front-lever': 'Front Lever',
+  'goals.goal.human-flag': 'Human Flag',
+  'goals.goal.front-split': 'Front Split',
+  'goals.goal.aerial-cartwheel': 'Aerial Cartwheel',
+  'goals.goal.juggling': 'Juggling',
+
   // Demo skill tree
   'demo.skill.dead-hang': 'Dead Hang',
   'demo.skill.active-hang': 'Active Hang',

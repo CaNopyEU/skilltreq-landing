@@ -89,6 +89,21 @@ export default {
   'pwa.desktop.step1': 'Otevři skilltreq.app v Chrome nebo Edge',
   'pwa.desktop.step2': 'Klikni na ikonu instalace v adresním řádku',
 
+  // Goal Picker
+  'goals.heading': 'Čeho chceš dosáhnout?',
+  'goals.subheading': 'Vyber si cíl a uvidíš cestu k němu.',
+  'goals.cta.default': 'Začni zdarma',
+  'goals.cta.selected': 'Začni trénovat {goal}',
+  'goals.roadmap.title': 'Tvoje cesta k {goal}',
+  'goals.goal.muscle-up': 'Muscle-up',
+  'goals.goal.handstand': 'Stojka',
+  'goals.goal.planche': 'Planche',
+  'goals.goal.front-lever': 'Front Lever',
+  'goals.goal.human-flag': 'Human Flag',
+  'goals.goal.front-split': 'Přední špagát',
+  'goals.goal.aerial-cartwheel': 'Letové kolečko',
+  'goals.goal.juggling': 'Žonglování',
+
   // Demo skill tree
   'demo.skill.dead-hang': 'Mrtvý vis',
   'demo.skill.active-hang': 'Aktivní vis',

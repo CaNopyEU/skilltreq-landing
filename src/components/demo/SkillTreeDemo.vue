@@ -15,6 +15,7 @@ const edgeTypes = { 'demo-edge': markRaw(DemoSkillEdge) };
 const props = defineProps<{
   translations: Record<string, string>;
   compact?: boolean;
+  highlightedNodeIds?: string[];
 }>();
 
 // Filter skills for compact mode (single branch — Pull)
@@ -63,6 +64,10 @@ provide('translations', translationsRef);
 provide(
   'compact',
   computed(() => !!props.compact),
+);
+provide(
+  'highlightedNodeIds',
+  computed(() => props.highlightedNodeIds ?? []),
 );
 
 // Graph layout
@@ -211,6 +216,21 @@ onUnmounted(() => {
 .demo-tree-container :deep(.vue-flow__controls),
 .demo-tree-container :deep(.vue-flow__attribution) {
   display: none;
+}
+
+/* Edge trace animation (stroke-dashoffset reveal) */
+.demo-tree-container :deep(.edge-trace) {
+  stroke-dasharray: var(--edge-length);
+  stroke-dashoffset: var(--edge-length);
+  animation: edge-draw 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation-delay: var(--trace-delay, 0ms);
+  filter: drop-shadow(0 0 4px var(--accent-glow));
+}
+
+@keyframes edge-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 /* Tooltip */

@@ -1,0 +1,55 @@
+---
+import type { Locale } from '../i18n/translations';
+import { useTranslations } from '../i18n/translations';
+import GoalPicker from './goal-picker/GoalPicker.vue';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = useTranslations(locale);
+
+const APP_BASE_URL = 'https://www.skilltreq.app';
+
+const goalKeys = [
+  'goals.heading',
+  'goals.subheading',
+  'goals.cta.default',
+  'goals.cta.selected',
+  'goals.roadmap.title',
+  'goals.goal.muscle-up',
+  'goals.goal.handstand',
+  'goals.goal.planche',
+  'goals.goal.front-lever',
+  'goals.goal.human-flag',
+  'goals.goal.front-split',
+  'goals.goal.aerial-cartwheel',
+  'goals.goal.juggling',
+] as const;
+
+const translations: Record<string, string> = {};
+for (const key of goalKeys) {
+  translations[key] = t(key as any);
+}
+---
+
+<section id="goals" class="py-20 sm:py-28">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6">
+    <h2 data-reveal class="text-center text-3xl font-bold tracking-tight text-primary sm:text-4xl">
+      {t('goals.heading' as any)}
+    </h2>
+    <p data-reveal class="mx-auto mt-4 max-w-2xl text-center text-lg text-body" style="--delay: 100ms">
+      {t('goals.subheading' as any)}
+    </p>
+
+    <div data-reveal class="mt-12" style="--delay: 200ms">
+      <GoalPicker
+        client:visible
+        translations={translations}
+        locale={locale}
+        appBaseUrl={APP_BASE_URL}
+      />
+    </div>
+  </div>
+</section>

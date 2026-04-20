@@ -8,6 +8,7 @@ const props = defineProps<EdgeProps>();
 const statusMap = inject<Ref<Map<string, NodeStatus>>>('statusMap')!;
 const graphIsPaused = inject<Ref<boolean>>('graphIsPaused', ref(false));
 const compact = inject<Ref<boolean>>('compact', ref(false));
+const highlightedNodeIds = inject<Ref<string[]>>('highlightedNodeIds', ref([]));
 
 const pathData = computed(
   () =>
@@ -60,7 +61,24 @@ const strokeWidth = computed(() => {
   return 1;
 });
 
+const isHighlightActive = computed(() => highlightedNodeIds.value.length > 0);
+const isEdgeHighlighted = computed(() => {
+  if (!isHighlightActive.value) return false;
+  const ids = highlightedNodeIds.value;
+  return ids.includes(props.source) && ids.includes(props.target);
+});
+
+// Staggered edge trace delay — based on source node's position in path
+const edgeTraceDelay = computed(() => {
+  if (!isEdgeHighlighted.value) return '0ms';
+  const sourceIndex = highlightedNodeIds.value.indexOf(props.source);
+  return `${(sourceIndex >= 0 ? sourceIndex : 0) * 120 + 60}ms`;
+});
+
 const strokeOpacity = computed(() => {
+  if (isHighlightActive.value) {
+    return isEdgeHighlighted.value ? 0.9 : 0.06;
+  }
   if (variant.value === 'locked_dashed') return 0.25;
   if (variant.value === 'locked_solid') return 0.4;
   if (variant.value === 'available') return 0.65;
@@ -167,8 +185,23 @@ const mpathId = computed(() => `ep-${props.id}`);
       :stroke-dasharray="strokeDashArray"
     />
 
+    <!-- Highlighted path trace overlay -->
+    <path
+      v-if="isEdgeHighlighted"
+      :d="pathData"
+      fill="none"
+      stroke="var(--accent)"
+      stroke-width="2.5"
+      stroke-linecap="round"
+      class="edge-trace"
+      :style="{
+        '--edge-length': `${edgeDistance}px`,
+        '--trace-delay': edgeTraceDelay,
+      }"
+    />
+
     <!-- Electric particle -- edges flowing into in_progress skills -->
-    <template v-if="isActive && !graphIsPaused && !compact">
+    <template v-if="isActive && !graphIsPaused && !compact && !isEdgeHighlighted">
       <!-- Trailing aura -->
       <circle r="5" :fill="strokeColor" fill-opacity="0.08">
         <animateMotion :dur="energyDuration" repeatCount="indefinite" begin="0s">

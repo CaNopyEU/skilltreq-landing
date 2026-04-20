@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, inject, type Ref } from 'vue';
+import { computed, inject, ref, type Ref } from 'vue';
 import { Handle, type NodeProps } from '@vue-flow/core';
 import type { NodeStatus, DemoMove, DemoProgress, DemoCategory } from './types';
 
@@ -10,6 +10,7 @@ const progressMap = inject<Ref<Map<string, DemoProgress>>>('progressMap')!;
 const categoriesMap = inject<Ref<Map<string, DemoCategory>>>('categoriesMap')!;
 const statusMap = inject<Ref<Map<string, NodeStatus>>>('statusMap')!;
 const translationsMap = inject<Ref<Record<string, string>>>('translations')!;
+const highlightedNodeIds = inject<Ref<string[]>>('highlightedNodeIds', ref([]));
 
 const skillId = computed(() => props.data.skillId as string);
 const skill = computed(() => skillsMap.value.get(skillId.value)!);
@@ -40,6 +41,9 @@ const isLocked = computed(() => status.value === 'locked');
 const isUnlocked = computed(() => status.value === 'unlocked');
 
 const glowShadow = computed(() => {
+  if (isHighlightActive.value && isHighlighted.value) {
+    return `0 0 0 2px var(--accent), 0 0 16px var(--accent-glow), inset 0 0 8px var(--accent-glow)`;
+  }
   if (isUnlocked.value) {
     return `0 0 0 1px var(--status-unlocked-glow), 0 0 10px var(--status-unlocked-glow)`;
   }
@@ -48,10 +52,34 @@ const glowShadow = computed(() => {
   return `0 0 0 1px ${v}, 0 0 14px ${v}, inset 0 0 8px ${v}`;
 });
 
+const isHighlightActive = computed(() => highlightedNodeIds.value.length > 0);
+const isHighlighted = computed(() => highlightedNodeIds.value.includes(skillId.value));
+const pathIndex = computed(() => highlightedNodeIds.value.indexOf(skillId.value));
+const isGoalTarget = computed(
+  () => isHighlighted.value && pathIndex.value === highlightedNodeIds.value.length - 1,
+);
+
+// Staggered ignition delay (120ms per step)
+const igniteDelay = computed(() => (pathIndex.value >= 0 ? `${pathIndex.value * 120}ms` : '0ms'));
+
 const nodeOpacity = computed(() => {
+  if (isHighlightActive.value) {
+    return isHighlighted.value ? 1 : 0.15;
+  }
   if (isUnlocked.value) return 0.85;
   if (isLocked.value) return 0.6;
   return 1;
+});
+
+// Non-highlighted nodes recede (scale down + desaturate)
+const nodeTransform = computed(() => {
+  if (isHighlightActive.value && !isHighlighted.value) return 'scale(0.92)';
+  return 'scale(1)';
+});
+
+const nodeFilter = computed(() => {
+  if (isHighlightActive.value && !isHighlighted.value) return 'blur(0.5px) saturate(0.3)';
+  return 'none';
 });
 
 const totalSteps = computed(() => skill.value.progressions);
@@ -77,12 +105,17 @@ const displayName = computed(() => {
       'demo-skill-node--mastered': isMastered,
       'demo-skill-node--in-progress': isInProgress,
       'demo-skill-node--unlocked': isUnlocked,
+      'demo-skill-node--highlighted': isHighlighted,
+      'demo-skill-node--goal-target': isGoalTarget,
     }"
     :style="{
       background: bgColor,
       borderColor,
       boxShadow: glowShadow,
       opacity: nodeOpacity,
+      transform: nodeTransform,
+      filter: nodeFilter,
+      '--ignite-delay': igniteDelay,
     }"
   >
     <Handle type="target" :position="props.targetPosition" />
@@ -118,9 +151,11 @@ const displayName = computed(() => {
   box-sizing: border-box;
   overflow: hidden;
   transition:
-    transform 0.15s ease,
-    opacity 0.15s ease,
-    box-shadow 0.15s ease;
+    transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+    opacity 0.4s ease,
+    box-shadow 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+    filter 0.4s ease;
+  transition-delay: var(--ignite-delay, 0ms);
 }
 
 .demo-skill-node:hover {
@@ -171,6 +206,29 @@ const displayName = computed(() => {
   height: 3px;
   z-index: 2;
   pointer-events: none;
+}
+
+/* Highlighted node — accent border */
+.demo-skill-node--highlighted {
+  border-color: var(--accent) !important;
+}
+
+/* Goal target — ignite flash on selection */
+.demo-skill-node--goal-target {
+  animation: ignite-flash 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  animation-delay: var(--ignite-delay, 0ms);
+}
+
+@keyframes ignite-flash {
+  0% {
+    box-shadow: 0 0 0 2px var(--accent), 0 0 16px var(--accent-glow);
+  }
+  40% {
+    box-shadow: 0 0 0 4px var(--accent), 0 0 32px var(--accent-glow), inset 0 0 16px var(--accent-glow);
+  }
+  100% {
+    box-shadow: 0 0 0 2px var(--accent), 0 0 20px var(--accent-glow), inset 0 0 10px var(--accent-glow);
+  }
 }
 
 /* In-progress glow pulse */

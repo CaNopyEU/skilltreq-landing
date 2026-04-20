@@ -1,7 +1,7 @@
 ---
 import type { Locale } from '../i18n/translations';
 import { useTranslations } from '../i18n/translations';
-import SkillTreeDemo from './demo/SkillTreeDemo.vue';
+import HeroDemo from './demo/HeroDemo.vue';
 
 interface Props {
   locale: Locale;
@@ -10,8 +10,11 @@ interface Props {
 const { locale } = Astro.props;
 const t = useTranslations(locale);
 
-// Build demo translations object for Vue island
-const demoKeys = [
+const APP_BASE_URL = 'https://www.skilltreq.app';
+
+// Build translations object for Vue island (demo + goal picker keys)
+const translationKeys = [
+  // Demo skill names
   'demo.skill.dead-hang',
   'demo.skill.active-hang',
   'demo.skill.pull-up',
@@ -30,17 +33,30 @@ const demoKeys = [
   'demo.skill.v-sit',
   'demo.skill.side-plank',
   'demo.skill.human-flag',
+  // Demo statuses
   'demo.status.locked',
   'demo.status.unlocked',
   'demo.status.in_progress',
   'demo.status.completed',
   'demo.status.mastered',
   'demo.tooltip.cta',
+  // Goal picker
+  'goals.cta.default',
+  'goals.cta.selected',
+  'goals.roadmap.title',
+  'goals.goal.muscle-up',
+  'goals.goal.handstand',
+  'goals.goal.planche',
+  'goals.goal.front-lever',
+  'goals.goal.human-flag',
+  'goals.goal.front-split',
+  'goals.goal.aerial-cartwheel',
+  'goals.goal.juggling',
 ] as const;
 
-const demoTranslations: Record<string, string> = {};
-for (const key of demoKeys) {
-  demoTranslations[key] = t(key as any);
+const translations: Record<string, string> = {};
+for (const key of translationKeys) {
+  translations[key] = t(key as any);
 }
 ---
 
@@ -58,68 +74,65 @@ for (const key of demoKeys) {
       <p class="hero-enter mt-6 text-lg text-secondary sm:text-xl" style="--delay: 120ms">
         {t('hero.subtitle')}
       </p>
-      <div
-        class="hero-enter mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center"
-        style="--delay: 240ms"
-      >
-        <a
-          href="https://www.skilltreq.app/"
-          class="btn-primary text-base"
-          data-umami-event="cta-try-free"
-        >
-          {t('hero.cta')}
-        </a>
-        <a href="#features" class="btn-secondary text-base">
-          {t('hero.secondary')}
-        </a>
-      </div>
+
+      <!-- Goal picker prompt -->
+      <p class="hero-enter mt-8 text-sm font-medium text-text-muted" style="--delay: 200ms">
+        {t('goals.heading' as any)}
+      </p>
     </div>
 
-    <!-- Desktop: full tree -->
-    <div class="hero-enter relative hidden md:block mx-auto mt-16 max-w-4xl" style="--delay: 400ms">
+    <!-- Desktop: full tree with goal picker -->
+    <div class="hero-enter relative hidden md:block mx-auto mt-8 max-w-4xl" style="--delay: 300ms">
       <div class="demo-glow"></div>
 
       <!-- Floating badges -->
-      <div class="demo-badge" style="top: -0.75rem; left: -2rem; --delay: 600ms; --float-delay: 0s">
+      <div class="demo-badge" style="top: -0.75rem; left: -2rem; --delay: 500ms; --float-delay: 0s">
         <span class="demo-badge-dot" style="background: var(--status-mastered)"></span>
         {t('demo.status.mastered')}
       </div>
       <div
         class="demo-badge"
-        style="top: 1.5rem; right: -2.5rem; --delay: 700ms; --float-delay: 1s"
+        style="top: 1.5rem; right: -2.5rem; --delay: 600ms; --float-delay: 1s"
       >
         <span class="demo-badge-dot" style="background: var(--status-in-progress)"></span>
         {t('demo.status.in_progress')}
       </div>
       <div
         class="demo-badge"
-        style="bottom: 2rem; left: -2.75rem; --delay: 800ms; --float-delay: 0.5s"
+        style="bottom: 2rem; left: -2.75rem; --delay: 700ms; --float-delay: 0.5s"
       >
         <span class="demo-badge-dot" style="background: var(--status-completed)"></span>
         {t('demo.status.completed')}
       </div>
       <div
         class="demo-badge"
-        style="bottom: -0.5rem; right: -1.5rem; --delay: 900ms; --float-delay: 1.5s"
+        style="bottom: -0.5rem; right: -1.5rem; --delay: 800ms; --float-delay: 1.5s"
       >
         <span class="demo-badge-dot" style="background: var(--status-locked)"></span>
         {t('demo.status.locked')}
       </div>
 
-      <div
-        class="relative z-[1] aspect-video rounded-xl border border-border shadow-lg overflow-hidden bg-surface"
-      >
-        <SkillTreeDemo client:only="vue" translations={demoTranslations} />
+      <div class="relative z-[1]">
+        <HeroDemo
+          client:only="vue"
+          translations={translations}
+          locale={locale}
+          appBaseUrl={APP_BASE_URL}
+        />
       </div>
     </div>
 
-    <!-- Mobile: single branch, taller -->
-    <div class="hero-enter relative md:hidden mx-auto mt-12 max-w-sm" style="--delay: 400ms">
+    <!-- Mobile: compact tree with goal picker -->
+    <div class="hero-enter relative md:hidden mx-auto mt-8 max-w-sm" style="--delay: 300ms">
       <div class="demo-glow"></div>
-      <div
-        class="relative z-[1] aspect-[3/4] rounded-xl border border-border shadow-lg overflow-hidden bg-surface"
-      >
-        <SkillTreeDemo client:only="vue" translations={demoTranslations} compact />
+      <div class="relative z-[1]">
+        <HeroDemo
+          client:only="vue"
+          translations={translations}
+          locale={locale}
+          appBaseUrl={APP_BASE_URL}
+          compact
+        />
       </div>
     </div>
   </div>
