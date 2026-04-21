@@ -49,7 +49,11 @@ const ctaText = computed(() => {
 
     <Transition name="roadmap-reveal">
       <div v-if="selectedGoal" class="goal-picker__roadmap">
-        <GoalRoadmap :path="selectedGoal.path" :goal-name="goalName(selectedGoal.slug)" :translations="translations" />
+        <GoalRoadmap
+          :path="selectedGoal.path"
+          :goal-name="goalName(selectedGoal.slug)"
+          :translations="translations"
+        />
       </div>
     </Transition>
 

@@ -9,7 +9,9 @@ defineProps<{
 <template>
   <div class="roadmap">
     <p class="roadmap__title">
-      {{ (translations['goals.roadmap.title'] || 'Your path to {goal}').replace('{goal}', goalName) }}
+      {{
+        (translations['goals.roadmap.title'] || 'Your path to {goal}').replace('{goal}', goalName)
+      }}
     </p>
 
     <ol class="roadmap__steps">
@@ -83,8 +85,15 @@ defineProps<{
 }
 
 @keyframes goal-dot-pulse {
-  0%, 100% { box-shadow: 0 0 0 3px var(--accent-glow); }
-  50% { box-shadow: 0 0 0 6px var(--accent-glow), 0 0 12px var(--accent-glow); }
+  0%,
+  100% {
+    box-shadow: 0 0 0 3px var(--accent-glow);
+  }
+  50% {
+    box-shadow:
+      0 0 0 6px var(--accent-glow),
+      0 0 12px var(--accent-glow);
+  }
 }
 
 .roadmap__line {
@@ -101,7 +110,9 @@ defineProps<{
 }
 
 @keyframes line-draw {
-  to { transform: scaleY(1); }
+  to {
+    transform: scaleY(1);
+  }
 }
 
 .roadmap__label {

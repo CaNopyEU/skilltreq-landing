@@ -1,10 +1,10 @@
 export interface LandingGoal {
-  slug: string
-  image: string
-  libraryId: string
-  path: string[]
+  slug: string;
+  image: string;
+  libraryId: string;
+  path: string[];
   /** Node IDs that exist in the calisthenics demo tree — for path highlighting */
-  demoNodeIds: string[]
+  demoNodeIds: string[];
 }
 
 export const FEATURED_GOALS: LandingGoal[] = [
@@ -64,6 +64,6 @@ export const FEATURED_GOALS: LandingGoal[] = [
     path: ['One Ball Throws', 'Two Ball Exchange', 'Three Ball Cascade'],
     demoNodeIds: [],
   },
-]
+];
 
-export const GOAL_BY_SLUG = new Map(FEATURED_GOALS.map((g) => [g.slug, g]))
+export const GOAL_BY_SLUG = new Map(FEATURED_GOALS.map((g) => [g.slug, g]));

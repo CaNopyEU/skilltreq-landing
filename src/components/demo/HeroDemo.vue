@@ -138,7 +138,9 @@ const ctaText = computed(() => {
 .goal-chip--selected {
   border-color: var(--accent);
   background: color-mix(in srgb, var(--accent) 8%, var(--bg-surface));
-  box-shadow: 0 0 0 1px var(--accent), 0 2px 8px var(--accent-glow);
+  box-shadow:
+    0 0 0 1px var(--accent),
+    0 2px 8px var(--accent-glow);
   animation: chip-bounce 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
@@ -153,14 +155,26 @@ const ctaText = computed(() => {
 }
 
 @keyframes chip-bounce {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.08); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 @keyframes chip-ring-pulse {
-  0% { transform: scale(1); opacity: 0.6; }
-  100% { transform: scale(1.8); opacity: 0; }
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
 }
 
 .goal-chip__image {
@@ -198,7 +212,9 @@ const ctaText = computed(() => {
 .hero-demo__tree {
   width: 100%;
   height: 100%;
-  transition: opacity 0.4s ease, filter 0.4s ease;
+  transition:
+    opacity 0.4s ease,
+    filter 0.4s ease;
 }
 
 .hero-demo__tree--dimmed {
@@ -256,23 +272,46 @@ const ctaText = computed(() => {
 }
 
 @keyframes cta-glow-pulse {
-  0%, 100% { box-shadow: 0 4px 16px var(--accent-glow); }
-  50% { box-shadow: 0 4px 32px color-mix(in srgb, var(--accent) 50%, transparent); }
+  0%,
+  100% {
+    box-shadow: 0 4px 16px var(--accent-glow);
+  }
+  50% {
+    box-shadow: 0 4px 32px color-mix(in srgb, var(--accent) 50%, transparent);
+  }
 }
 
 /* ── CTA text crossfade ── */
-.cta-morph-enter-active { transition: opacity 0.2s ease, transform 0.2s ease; }
-.cta-morph-leave-active { transition: opacity 0.15s ease, transform 0.15s ease; }
-.cta-morph-enter-from { opacity: 0; transform: translateY(0.375rem); }
-.cta-morph-leave-to { opacity: 0; transform: translateY(-0.375rem); }
+.cta-morph-enter-active {
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+.cta-morph-leave-active {
+  transition:
+    opacity 0.15s ease,
+    transform 0.15s ease;
+}
+.cta-morph-enter-from {
+  opacity: 0;
+  transform: translateY(0.375rem);
+}
+.cta-morph-leave-to {
+  opacity: 0;
+  transform: translateY(-0.375rem);
+}
 
 /* ── Roadmap overlay transitions ── */
 .roadmap-slide-enter-active {
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
 }
 
 .roadmap-slide-leave-active {
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
 }
 
 .roadmap-slide-enter-from,

@@ -221,13 +221,21 @@ const displayName = computed(() => {
 
 @keyframes ignite-flash {
   0% {
-    box-shadow: 0 0 0 2px var(--accent), 0 0 16px var(--accent-glow);
+    box-shadow:
+      0 0 0 2px var(--accent),
+      0 0 16px var(--accent-glow);
   }
   40% {
-    box-shadow: 0 0 0 4px var(--accent), 0 0 32px var(--accent-glow), inset 0 0 16px var(--accent-glow);
+    box-shadow:
+      0 0 0 4px var(--accent),
+      0 0 32px var(--accent-glow),
+      inset 0 0 16px var(--accent-glow);
   }
   100% {
-    box-shadow: 0 0 0 2px var(--accent), 0 0 20px var(--accent-glow), inset 0 0 10px var(--accent-glow);
+    box-shadow:
+      0 0 0 2px var(--accent),
+      0 0 20px var(--accent-glow),
+      inset 0 0 10px var(--accent-glow);
   }
 }
 
