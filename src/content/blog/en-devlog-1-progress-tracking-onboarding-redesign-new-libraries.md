@@ -18,7 +18,7 @@ tags:
 - training
 - libraries
 - security
-title: 'Devlog #1: Progress Tracking, Onboarding Redesign, and Six New Skill Libraries'
+title: 'Devlog #2: Progress Tracking, Onboarding Redesign, and Six New Skill Libraries'
 type: devlog
 ---
 

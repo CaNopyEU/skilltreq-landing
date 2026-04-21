@@ -2,7 +2,7 @@
 title: 'Vitajte na blogu SkillTreq'
 description: 'Predstavujeme blog SkillTreq — novinky z vývoja, návody a pohľad do zákulisia.'
 locale: sk
-date: '2026-03-26'
+date: '2026-03-01'
 author: 'SkillTreq Team'
 type: announcement
 tags:

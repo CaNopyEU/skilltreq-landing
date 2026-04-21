@@ -16,7 +16,7 @@ tags:
 - trénink
 - knihovny
 - bezpečnost
-title: 'Devlog #1: Sledování pokroku, redesign onboardingu a šest nových knihoven dovedností'
+title: 'Devlog #2: Sledování pokroku, redesign onboardingu a šest nových knihoven dovedností'
 type: devlog
 ---
 

@@ -2,7 +2,7 @@
 title: 'Welcome to the SkillTreq Blog'
 description: 'Introducing the SkillTreq blog — development updates, guides, and behind-the-scenes insights.'
 locale: en
-date: '2026-03-26'
+date: '2026-03-01'
 author: 'SkillTreq Team'
 type: announcement
 tags:

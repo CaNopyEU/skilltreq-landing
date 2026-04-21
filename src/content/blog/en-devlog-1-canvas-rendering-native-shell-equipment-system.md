@@ -19,7 +19,7 @@ tags:
 - ai
 - body-map
 - devlog
-title: 'Devlog #1: Canvas Rendering, Native Shell, and the Equipment System'
+title: 'Devlog #3: Canvas Rendering, Native Shell, and the Equipment System'
 type: devlog
 ---
 

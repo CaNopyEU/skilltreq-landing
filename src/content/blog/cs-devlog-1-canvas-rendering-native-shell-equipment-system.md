@@ -19,7 +19,7 @@ tags:
 - ai
 - mapa-těla
 - devlog
-title: 'Devlog #1: Vykreslování na canvas, nativní shell a systém vybavení'
+title: 'Devlog #3: Vykreslování na canvas, nativní shell a systém vybavení'
 type: devlog
 ---
 

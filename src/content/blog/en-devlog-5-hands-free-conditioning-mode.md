@@ -17,7 +17,7 @@ tags:
 - hands-free
 - audio
 - phase-33
-title: 'Devlog #5: Hands-Free Conditioning Mode'
+title: 'Devlog #4: Hands-Free Conditioning Mode'
 type: devlog
 ---
 

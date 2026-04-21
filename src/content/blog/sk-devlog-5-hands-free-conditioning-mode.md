@@ -16,7 +16,7 @@ tags:
 - hands-free
 - zvuk
 - fáza-33
-title: 'Devlog #5: Hands-free režim pre kondičný tréning'
+title: 'Devlog #4: Hands-free režim pre kondičný tréning'
 type: devlog
 ---
 

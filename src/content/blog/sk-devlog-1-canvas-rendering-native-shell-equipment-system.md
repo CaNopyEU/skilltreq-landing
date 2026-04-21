@@ -19,7 +19,7 @@ tags:
 - ai
 - mapa-tela
 - devlog
-title: 'Devlog #1: Canvas renderovanie, natívny shell a systém vybavenia'
+title: 'Devlog #3: Canvas renderovanie, natívny shell a systém vybavenia'
 type: devlog
 ---
 
