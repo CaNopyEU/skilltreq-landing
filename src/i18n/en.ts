@@ -104,6 +104,12 @@ export default {
   'goals.goal.aerial-cartwheel': 'Aerial Cartwheel',
   'goals.goal.juggling': 'Juggling',
 
+  // Library Request
+  'libraryRequest.heading': 'Every skill has a path.',
+  'libraryRequest.description':
+    'Calisthenics, flexibility, acrobatics, and more — we\'re building skill libraries across movement disciplines. Don\'t see yours yet?',
+  'libraryRequest.cta': 'Request a library',
+
   // Demo skill tree
   'demo.skill.dead-hang': 'Dead Hang',
   'demo.skill.active-hang': 'Active Hang',

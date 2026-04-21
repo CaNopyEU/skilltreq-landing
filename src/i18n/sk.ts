@@ -104,6 +104,12 @@ export default {
   'goals.goal.aerial-cartwheel': 'Letové koleso',
   'goals.goal.juggling': 'Žonglovanie',
 
+  // Library Request
+  'libraryRequest.heading': 'Každý skill má svoju cestu.',
+  'libraryRequest.description':
+    'Kalistenika, flexibilita, akrobacia a ďalšie — budujeme knižnice zručností naprieč pohybovými disciplínami. Nevidíš svoju?',
+  'libraryRequest.cta': 'Požiadaj o knižnicu',
+
   // Demo skill tree
   'demo.skill.dead-hang': 'Mŕtvy vis',
   'demo.skill.active-hang': 'Aktívny vis',
