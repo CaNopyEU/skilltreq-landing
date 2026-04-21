@@ -1,0 +1,26 @@
+# SkillTreq
+
+> SkillTreq is a free skill tracker that visualizes bodyweight skills as a dependency tree. Users can see prerequisites, log workouts, follow training plans, and track real progress. Available as a progressive web app at skilltreq.app.
+
+SkillTreq is designed for calisthenics athletes, acrobats, and anyone training bodyweight skills. Instead of gamification or streak-based motivation, it focuses on structured data and honest progress tracking.
+
+Key features:
+
+- **Skill Tree**: Skills displayed as a dependency graph. Each skill has prerequisites — users see exactly what to train next.
+- **Training Calendar**: Structured training plans with scheduled workouts.
+- **Active Workout**: Step-by-step guided sessions with timer, reps, and holds.
+- **Progress Tracking**: Activity heatmap, skill stats, and personal records.
+- **Coach System**: Client management, plan assignment, and activity monitoring for coaches.
+
+SkillTreq is free during Beta. No credit card, no trial. Available in English, Slovak, and Czech.
+
+- Website: https://www.skilltreq.com
+- App: https://www.skilltreq.app
+- Contact: hello@skilltreq.com
+
+## Pages
+
+- [Home](https://www.skilltreq.com/en/): Landing page with feature overview and interactive demo
+- [Privacy Policy](https://www.skilltreq.com/en/privacy/): Privacy policy
+- [Terms of Service](https://www.skilltreq.com/en/terms/): Terms of service
+- [Blog](https://www.skilltreq.com/en/blog/): Development updates and guides
