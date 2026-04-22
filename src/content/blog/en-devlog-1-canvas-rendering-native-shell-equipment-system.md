@@ -13,12 +13,12 @@ no_hype_language: true
 readingTime: 5 min
 slug: devlog-1-canvas-rendering-native-shell-equipment-system
 tags:
-- cytoscape
-- capacitor
-- equipment
-- ai
-- body-map
-- devlog
+  - cytoscape
+  - capacitor
+  - equipment
+  - ai
+  - body-map
+  - devlog
 title: 'Devlog #3: Canvas Rendering, Native Shell, and the Equipment System'
 type: devlog
 ---

@@ -12,12 +12,12 @@ no_hype_language: true
 readingTime: 5 min
 slug: devlog-1-from-skill-tree-viewer-to-gym-ready-training-app
 tags:
-- devlog
-- trénink
-- výkon
-- mobil
-- design-system
-- backend
+  - devlog
+  - trénink
+  - výkon
+  - mobil
+  - design-system
+  - backend
 title: 'Devlog #1: Od prohlížeče skill tree k tréninkové aplikaci připravené na gym'
 type: devlog
 ---

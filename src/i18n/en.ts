@@ -107,7 +107,7 @@ export default {
   // Library Request
   'libraryRequest.heading': 'Every skill has a path.',
   'libraryRequest.description':
-    'Calisthenics, flexibility, acrobatics, and more — we\'re building skill libraries across movement disciplines. Don\'t see yours yet?',
+    "Calisthenics, flexibility, acrobatics, and more — we're building skill libraries across movement disciplines. Don't see yours yet?",
   'libraryRequest.cta': 'Request a library',
 
   // Demo skill tree

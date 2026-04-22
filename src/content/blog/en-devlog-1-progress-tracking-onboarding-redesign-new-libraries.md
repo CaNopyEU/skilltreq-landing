@@ -13,11 +13,11 @@ no_hype_language: true
 readingTime: 5 min
 slug: devlog-1-progress-tracking-onboarding-redesign-new-libraries
 tags:
-- progress
-- onboarding
-- training
-- libraries
-- security
+  - progress
+  - onboarding
+  - training
+  - libraries
+  - security
 title: 'Devlog #2: Progress Tracking, Onboarding Redesign, and Six New Skill Libraries'
 type: devlog
 ---

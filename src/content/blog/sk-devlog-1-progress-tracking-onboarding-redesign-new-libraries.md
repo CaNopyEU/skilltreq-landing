@@ -11,11 +11,11 @@ no_hype_language: true
 readingTime: 5 min
 slug: devlog-1-progress-tracking-onboarding-redesign-new-libraries
 tags:
-- progres
-- onboarding
-- tréning
-- knižnice
-- bezpečnosť
+  - progres
+  - onboarding
+  - tréning
+  - knižnice
+  - bezpečnosť
 title: 'Devlog #2: Sledovanie progresu, redizajn onboardingu a šesť nových knižníc zručností'
 type: devlog
 ---

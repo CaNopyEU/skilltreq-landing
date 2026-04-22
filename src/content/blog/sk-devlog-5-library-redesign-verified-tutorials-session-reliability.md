@@ -12,11 +12,11 @@ no_hype_language: true
 readingTime: 3 min
 slug: devlog-5-library-redesign-verified-tutorials-session-reliability
 tags:
-- frontend
-- ux
-- tréning
-- obsah
-- seo
+  - frontend
+  - ux
+  - tréning
+  - obsah
+  - seo
 title: 'Devlog #5: Redizajn knižnice, overené tutoriály a stabilita tréningov'
 type: devlog
 ---

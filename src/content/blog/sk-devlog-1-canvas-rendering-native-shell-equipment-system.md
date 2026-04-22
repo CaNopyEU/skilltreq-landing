@@ -13,12 +13,12 @@ no_hype_language: true
 readingTime: 5 min
 slug: devlog-1-canvas-rendering-native-shell-equipment-system
 tags:
-- cytoscape
-- capacitor
-- vybavenie
-- ai
-- mapa-tela
-- devlog
+  - cytoscape
+  - capacitor
+  - vybavenie
+  - ai
+  - mapa-tela
+  - devlog
 title: 'Devlog #3: Canvas renderovanie, natívny shell a systém vybavenia'
 type: devlog
 ---

@@ -12,11 +12,11 @@ no_hype_language: true
 readingTime: 3 min
 slug: devlog-5-library-redesign-verified-tutorials-session-reliability
 tags:
-- frontend
-- ux
-- training
-- content
-- seo
+  - frontend
+  - ux
+  - training
+  - content
+  - seo
 title: 'Devlog #5: Library Redesign, Verified Tutorials, and Session Reliability'
 type: devlog
 ---

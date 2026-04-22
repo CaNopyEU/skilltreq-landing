@@ -12,11 +12,11 @@ no_hype_language: true
 readingTime: 3 min
 slug: devlog-5-hands-free-conditioning-mode
 tags:
-- training
-- conditioning
-- hands-free
-- audio
-- phase-33
+  - training
+  - conditioning
+  - hands-free
+  - audio
+  - phase-33
 title: 'Devlog #4: Hands-Free Conditioning Mode'
 type: devlog
 ---

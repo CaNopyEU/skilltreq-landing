@@ -11,11 +11,11 @@ no_hype_language: true
 readingTime: 3 min
 slug: devlog-5-hands-free-conditioning-mode
 tags:
-- tréning
-- kondičný tréning
-- hands-free
-- zvuk
-- fáza-33
+  - tréning
+  - kondičný tréning
+  - hands-free
+  - zvuk
+  - fáza-33
 title: 'Devlog #4: Hands-free režim pre kondičný tréning'
 type: devlog
 ---
