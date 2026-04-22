@@ -4,6 +4,8 @@ import Footer from '../components/Footer.astro';
 import type { Locale } from '../i18n/translations';
 import { locales, getLocalizedPath, useTranslations } from '../i18n/translations';
 import '../styles/global.css';
+import geistLatinFont from '@fontsource-variable/geist/files/geist-latin-wght-normal.woff2?url';
+import geistLatinExtFont from '@fontsource-variable/geist/files/geist-latin-ext-wght-normal.woff2?url';
 
 interface Props {
   title: string;
@@ -34,6 +36,10 @@ const ogLocaleMap: Record<Locale, string> = {
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="theme-color" content="#7553ff" />
+
+    <!-- Font preload — start downloading before CSS is parsed -->
+    <link rel="preload" as="font" type="font/woff2" href={geistLatinFont} crossorigin />
+    <link rel="preload" as="font" type="font/woff2" href={geistLatinExtFont} crossorigin />
 
     <meta name="google-site-verification" content="UuY6QP9iT_YR7usZgqLheoSSzqDWLv0m8-DY4gOQ3IA" />
 

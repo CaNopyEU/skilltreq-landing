@@ -449,6 +449,23 @@
   flex-shrink: 0;
 }
 
+/* ─── Hero demo skeleton (prevents CLS before Vue hydrates) ─── */
+
+.hero-demo-skeleton {
+  /* Reserve space: goal chips + 16:9 visual + CTA + gaps */
+  min-height: calc(2.5rem + 1rem + (56rem * 9 / 16) + 1rem + 3rem);
+}
+
+.hero-demo-skeleton--mobile {
+  /* Mobile: goal chips wrap + 3:4 visual + CTA + gaps */
+  min-height: calc(5rem + 1rem + (24rem * 4 / 3) + 1rem + 3rem);
+}
+
+/* Remove min-height once Vue has rendered content */
+.hero-demo-skeleton:has(.hero-demo) {
+  min-height: 0;
+}
+
 /* ─── Respect reduced motion ─── */
 
 @media (prefers-reduced-motion: reduce) {
