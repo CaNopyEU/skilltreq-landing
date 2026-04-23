@@ -122,6 +122,8 @@ function tooltipProgress(skillId: string): string | null {
 }
 
 function tooltipDescription(skillId: string): string | null {
+  const key = `demo.desc.${skillId}`;
+  if (props.translations[key]) return props.translations[key];
   return skillsMap.value.get(skillId)?.description ?? null;
 }
 
