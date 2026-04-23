@@ -129,23 +129,30 @@ const totalLibraries = 29;
     <!-- Discipline grid -->
     <div data-reveal class="mx-auto mt-10 max-w-3xl" style="--delay: 100ms">
       <div class="discipline-grid">
-        {disciplines.map((d) => (
-          <div class="discipline-chip" style={`--chip-color: ${d.color}`}>
-            <div class="discipline-chip__icon" set:html={d.icon} />
-            <div class="discipline-chip__info">
-              <span class="discipline-chip__name">{t(`discipline.${d.id}` as any)}</span>
-              <span class="discipline-chip__count">
-                {(t('discipline.skillCount' as any) as string).replace('{count}', String(d.skills))}
-              </span>
+        {
+          disciplines.map((d) => (
+            <div class="discipline-chip" style={`--chip-color: ${d.color}`}>
+              <div class="discipline-chip__icon" set:html={d.icon} />
+              <div class="discipline-chip__info">
+                <span class="discipline-chip__name">{t(`discipline.${d.id}` as any)}</span>
+                <span class="discipline-chip__count">
+                  {(t('discipline.skillCount' as any) as string).replace(
+                    '{count}',
+                    String(d.skills),
+                  )}
+                </span>
+              </div>
             </div>
-          </div>
-        ))}
+          ))
+        }
       </div>
 
       <p class="mt-6 text-center text-sm text-body">
-        {(t('libraryRequest.stats' as any) as string)
-          .replace('{skills}', String(totalSkills))
-          .replace('{libraries}', String(totalLibraries))}
+        {
+          (t('libraryRequest.stats' as any) as string)
+            .replace('{skills}', String(totalSkills))
+            .replace('{libraries}', String(totalLibraries))
+        }
       </p>
     </div>
 
@@ -192,7 +199,9 @@ const totalLibraries = 29;
     border-radius: 0.5rem;
     border: 1px solid var(--border);
     background: var(--bg-surface);
-    transition: border-color 0.15s, transform 0.15s;
+    transition:
+      border-color 0.15s,
+      transform 0.15s;
   }
 
   .discipline-chip:hover {

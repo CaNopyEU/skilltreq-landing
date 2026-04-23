@@ -394,7 +394,12 @@ onUnmounted(() => {
 .goal-chip__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.1) 60%, transparent 100%);
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.1) 60%,
+    transparent 100%
+  );
   pointer-events: none;
 }
 

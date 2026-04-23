@@ -229,8 +229,7 @@ export const DEMO_LIBRARIES: DemoLibrary[] = [
         categoryId: 'tmb-cartwheels',
         requires: ['tmb-cartwheel'],
         progressions: 2,
-        description:
-          'Cartwheel with only one hand touching the ground. Builds aerial awareness.',
+        description: 'Cartwheel with only one hand touching the ground. Builds aerial awareness.',
       },
       {
         id: 'tmb-aerial',
