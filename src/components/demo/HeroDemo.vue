@@ -212,6 +212,7 @@ onUnmounted(() => {
         @click="selectGoal(goal)"
       >
         <img :src="goal.image" :alt="goalName(goal.slug)" class="goal-chip__image" />
+        <span class="goal-chip__overlay" />
         <span class="goal-chip__name">{{ goalName(goal.slug) }}</span>
       </button>
     </div>
@@ -235,11 +236,7 @@ onUnmounted(() => {
 
       <!-- Roadmap overlay (mobile: always, desktop: when no tree highlight) -->
       <Transition name="roadmap-slide">
-        <div
-          v-if="showRoadmapOverlay"
-          :key="selectedGoal?.slug"
-          class="hero-demo__roadmap-overlay"
-        >
+        <div v-if="showRoadmapOverlay" :key="selectedGoal?.slug" class="hero-demo__roadmap-overlay">
           <GoalRoadmap
             :path="selectedGoal!.path"
             :goal-name="goalName(selectedGoal!.slug)"
@@ -351,52 +348,74 @@ onUnmounted(() => {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.375rem;
-  min-height: 2rem;
+  gap: 0.625rem;
+  min-height: 7.5rem;
 }
 
 .goal-chip {
   position: relative;
   display: flex;
-  align-items: center;
-  gap: 0.25rem;
-  padding: 0.25rem 0.625rem 0.25rem 0.25rem;
-  border-radius: 2rem;
+  align-items: flex-end;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 0.625rem;
   border: 1px solid var(--border-muted);
   background: var(--bg-muted);
   cursor: pointer;
-  font-size: 0.6875rem;
+  overflow: hidden;
+  padding: 0;
   transition:
     border-color 0.15s,
-    background 0.15s,
-    box-shadow 0.15s;
+    box-shadow 0.15s,
+    transform 0.15s;
 }
 
 .goal-chip:hover {
   border-color: var(--accent);
+  transform: translateY(-2px);
 }
 
 .goal-chip--selected {
   border-color: var(--accent);
-  background: color-mix(in srgb, var(--accent) 10%, var(--bg-muted));
-  box-shadow: 0 0 0 1px var(--accent);
+  box-shadow:
+    0 0 0 1px var(--accent),
+    0 2px 12px var(--accent-glow);
 }
 
 .goal-chip__image {
-  width: 1.25rem;
-  height: 1.25rem;
-  border-radius: 50%;
-  object-fit: cover;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #000000;
+}
+
+.goal-chip__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.1) 60%, transparent 100%);
+  pointer-events: none;
 }
 
 .goal-chip__name {
-  font-weight: 500;
-  color: var(--text-secondary);
-  white-space: nowrap;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 0.25rem 0.375rem;
+  font-weight: 600;
+  font-size: 0.6875rem;
+  line-height: 1.3;
+  color: #ffffff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .goal-chip--selected .goal-chip__name {
-  color: var(--text-primary);
+  color: #ffffff;
 }
 
 /* ── Visual area ── */

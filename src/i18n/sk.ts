@@ -117,11 +117,70 @@ export default {
   'goals.goal.mills-mess': 'Mills Mess',
   'goals.goal.behind-the-back': 'Za chrbát',
 
+  // Calisthenics demo skills
+  'demo.skill.ring-support': 'Support',
+  'demo.skill.ring-dip': 'Ring Dip',
+  'demo.skill.ring-push-up': 'Ring PU',
+  'demo.skill.ring-pppu': 'PPPU',
+  'demo.skill.tuck-planche': 'Tuck Planche',
+  'demo.skill.ring-row': 'Ring Row',
+  'demo.skill.ring-pull-up': 'Zhyb',
+  'demo.skill.ring-mu': 'Muscle-up',
+  // Mobility demo skills
+  'demo.skill.90-90-stretch': '90/90',
+  'demo.skill.pigeon-pose': 'Holub',
+  'demo.skill.hip-pails-rails': 'Hip P/R',
+  'demo.skill.front-split': 'Predný špagát',
+  'demo.skill.cat-cow': 'Cat-Cow',
+  'demo.skill.jefferson-curl': 'Jeff Curl',
+  'demo.skill.shoulder-cars': 'Rameno CARs',
+  'demo.skill.full-bridge': 'Mostík',
+  // Acrobatics demo skills
+  'demo.skill.tmb-cartwheel': 'Koleso',
+  'demo.skill.tmb-one-hand-cw': '1R Koleso',
+  'demo.skill.tmb-aerial': 'Letové',
+  'demo.skill.tmb-round-off': 'Round-off',
+  'demo.skill.tmb-bridge': 'Mostík',
+  'demo.skill.tmb-bhs': 'BHS',
+  'demo.skill.tmb-back-tuck': 'Salto',
+  // Kickboxing demo skills
+  'demo.skill.kb-stance': 'Postoj',
+  'demo.skill.kb-jab': 'Jab',
+  'demo.skill.kb-cross': 'Cross',
+  'demo.skill.kb-hook': 'Hook',
+  'demo.skill.kb-jch': 'J-C-H',
+  'demo.skill.kb-front-kick': 'Predný kop',
+  'demo.skill.kb-roundhouse': 'Roundhouse',
+
+  // Demo library
+  'demo.library.kickboxing': 'Kickbox',
+
+  // New goals
+  'goals.goal.planche': 'Planche',
+  'goals.goal.backflip': 'Salto vzad',
+  'goals.goal.roundhouse-kick': 'Roundhouse kop',
+  'goals.goal.jab-cross-hook': 'Jab-Cross-Hook',
+
   // Library Request
   'libraryRequest.heading': 'Každý skill má svoju cestu.',
   'libraryRequest.description':
-    'Kalistenika, flexibilita, akrobacia a ďalšie — budujeme knižnice zručností naprieč pohybovými disciplínami. Nevidíš svoju?',
+    'Budujeme knižnice zručností naprieč pohybovými disciplínami. Nevidíš svoju?',
   'libraryRequest.cta': 'Požiadaj o knižnicu',
+  'libraryRequest.stats': '{skills} skillov v {libraries} knižniciach — a stále pribúdajú.',
+
+  // Discipline groups
+  'discipline.calisthenics': 'Kalistenika',
+  'discipline.rings': 'Kruhy',
+  'discipline.tumbling': 'Tumbling',
+  'discipline.tricking': 'Tricking',
+  'discipline.mobility': 'Mobilita',
+  'discipline.kickboxing': 'Kickbox',
+  'discipline.gym': 'Posilka',
+  'discipline.juggling': 'Žonglovanie',
+  'discipline.flow-arts': 'Flow Arts',
+  'discipline.jump-rope': 'Švihadlo',
+  'discipline.ukemi': 'Ukemi',
+  'discipline.skillCount': '{count} skillov',
 
   // Demo skill tree
   'demo.skill.dead-hang': 'Mŕtvy vis',

@@ -20,9 +20,7 @@ const props = defineProps<{
 }>();
 
 // Build maps for injection
-const skillsMap = computed(
-  () => new Map<string, DemoMove>(props.skills.map((s) => [s.id, s])),
-);
+const skillsMap = computed(() => new Map<string, DemoMove>(props.skills.map((s) => [s.id, s])));
 const progressMap = computed(
   () => new Map<string, DemoProgress>(Object.entries(props.progress) as [string, DemoProgress][]),
 );

@@ -117,11 +117,70 @@ export default {
   'goals.goal.mills-mess': 'Mills Mess',
   'goals.goal.behind-the-back': 'Behind the Back',
 
+  // Calisthenics demo skills
+  'demo.skill.ring-support': 'Support',
+  'demo.skill.ring-dip': 'Ring Dip',
+  'demo.skill.ring-push-up': 'Ring PU',
+  'demo.skill.ring-pppu': 'PPPU',
+  'demo.skill.tuck-planche': 'Tuck Planche',
+  'demo.skill.ring-row': 'Ring Row',
+  'demo.skill.ring-pull-up': 'Pull-up',
+  'demo.skill.ring-mu': 'Muscle-up',
+  // Mobility demo skills
+  'demo.skill.90-90-stretch': '90/90',
+  'demo.skill.pigeon-pose': 'Pigeon',
+  'demo.skill.hip-pails-rails': 'Hip P/R',
+  'demo.skill.front-split': 'Front Split',
+  'demo.skill.cat-cow': 'Cat-Cow',
+  'demo.skill.jefferson-curl': 'Jeff Curl',
+  'demo.skill.shoulder-cars': 'Shldr CARs',
+  'demo.skill.full-bridge': 'Bridge',
+  // Acrobatics demo skills
+  'demo.skill.tmb-cartwheel': 'Cartwheel',
+  'demo.skill.tmb-one-hand-cw': '1H Cartwheel',
+  'demo.skill.tmb-aerial': 'Aerial',
+  'demo.skill.tmb-round-off': 'Round-off',
+  'demo.skill.tmb-bridge': 'Bridge',
+  'demo.skill.tmb-bhs': 'BHS',
+  'demo.skill.tmb-back-tuck': 'Backflip',
+  // Kickboxing demo skills
+  'demo.skill.kb-stance': 'Stance',
+  'demo.skill.kb-jab': 'Jab',
+  'demo.skill.kb-cross': 'Cross',
+  'demo.skill.kb-hook': 'Hook',
+  'demo.skill.kb-jch': 'J-C-H',
+  'demo.skill.kb-front-kick': 'Front Kick',
+  'demo.skill.kb-roundhouse': 'Roundhouse',
+
+  // Demo library
+  'demo.library.kickboxing': 'Kickboxing',
+
+  // New goals
+  'goals.goal.planche': 'Planche',
+  'goals.goal.backflip': 'Backflip',
+  'goals.goal.roundhouse-kick': 'Roundhouse Kick',
+  'goals.goal.jab-cross-hook': 'Jab-Cross-Hook',
+
   // Library Request
   'libraryRequest.heading': 'Every skill has a path.',
   'libraryRequest.description':
-    "Calisthenics, flexibility, acrobatics, and more — we're building skill libraries across movement disciplines. Don't see yours yet?",
+    "We're building skill libraries across movement disciplines. Don't see yours?",
   'libraryRequest.cta': 'Request a library',
+  'libraryRequest.stats': '{skills} skills across {libraries} libraries — and growing.',
+
+  // Discipline groups
+  'discipline.calisthenics': 'Calisthenics',
+  'discipline.rings': 'Rings',
+  'discipline.tumbling': 'Tumbling',
+  'discipline.tricking': 'Tricking',
+  'discipline.mobility': 'Mobility',
+  'discipline.kickboxing': 'Kickboxing',
+  'discipline.gym': 'Gym / Strength',
+  'discipline.juggling': 'Juggling',
+  'discipline.flow-arts': 'Flow Arts',
+  'discipline.jump-rope': 'Jump Rope',
+  'discipline.ukemi': 'Ukemi',
+  'discipline.skillCount': '{count} skills',
 
   // Demo skill tree
   'demo.skill.dead-hang': 'Dead Hang',
