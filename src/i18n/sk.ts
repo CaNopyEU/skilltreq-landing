@@ -97,25 +97,15 @@ export default {
   'goals.roadmap.title': 'Tvoja cesta k {goal}',
   'goals.goal.muscle-up': 'Muscle-up',
   'goals.goal.handstand': 'Stojka',
-  'goals.goal.planche': 'Planche',
   'goals.goal.front-lever': 'Front Lever',
   'goals.goal.human-flag': 'Human Flag',
   'goals.goal.front-split': 'Predný špagát',
   'goals.goal.aerial-cartwheel': 'Letové koleso',
-  'goals.goal.juggling': 'Žonglovanie',
 
   // Demo libraries
   'demo.library.calisthenics': 'Kalistenika',
   'demo.library.mobility': 'Mobilita',
   'demo.library.acrobatics': 'Akrobacia',
-  'demo.library.juggling': 'Žonglovanie',
-
-  // Goal names
-  'goals.goal.l-sit': 'L-sit',
-  'goals.goal.jefferson-curl': 'Jefferson Curl',
-  'goals.goal.bridge': 'Mostík',
-  'goals.goal.mills-mess': 'Mills Mess',
-  'goals.goal.behind-the-back': 'Za chrbát',
 
   // Calisthenics demo skills
   'demo.skill.ring-support': 'Support',
@@ -155,8 +145,9 @@ export default {
   // Demo library
   'demo.library.kickboxing': 'Kickbox',
 
-  // New goals
+  // Goals
   'goals.goal.planche': 'Planche',
+  'goals.goal.bridge': 'Mostík',
   'goals.goal.backflip': 'Salto vzad',
   'goals.goal.roundhouse-kick': 'Roundhouse kop',
   'goals.goal.jab-cross-hook': 'Jab-Cross-Hook',
@@ -182,25 +173,7 @@ export default {
   'discipline.ukemi': 'Ukemi',
   'discipline.skillCount': '{count} skillov',
 
-  // Demo skill tree
-  'demo.skill.dead-hang': 'Mŕtvy vis',
-  'demo.skill.active-hang': 'Aktívny vis',
-  'demo.skill.pull-up': 'Zhyb',
-  'demo.skill.chest-to-bar': 'Zhyb k hrudníku',
-  'demo.skill.muscle-up': 'Muscle-up',
-  'demo.skill.l-hang': 'L-vis',
-  'demo.skill.push-up': 'Klik',
-  'demo.skill.diamond-pu': 'Diamantový klik',
-  'demo.skill.pike-pu': 'Pike klik',
-  'demo.skill.hspu': 'HSPU',
-  'demo.skill.pseudo-planche-pu': 'PPPU',
-  'demo.skill.planche-lean': 'Planche náklon',
-  'demo.skill.plank': 'Plank',
-  'demo.skill.hollow-body': 'Hollow Body',
-  'demo.skill.l-sit': 'L-sit',
-  'demo.skill.v-sit': 'V-sit',
-  'demo.skill.side-plank': 'Bočný plank',
-  'demo.skill.human-flag': 'Human Flag',
+  // Demo statuses
   'demo.status.locked': 'Zamknuté',
   'demo.status.unlocked': 'Odomknuté',
   'demo.status.in_progress': 'Prebieha',

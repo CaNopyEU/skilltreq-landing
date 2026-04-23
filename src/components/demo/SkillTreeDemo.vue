@@ -166,6 +166,8 @@ onUnmounted(() => {
       fit-view-on-init
       :nodes-draggable="false"
       :nodes-connectable="false"
+      :nodes-focusable="false"
+      :edges-focusable="false"
       :edges-updatable="false"
       :pan-on-drag="false"
       :pan-on-scroll="false"

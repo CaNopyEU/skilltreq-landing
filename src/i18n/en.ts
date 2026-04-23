@@ -97,25 +97,15 @@ export default {
   'goals.roadmap.title': 'Your path to {goal}',
   'goals.goal.muscle-up': 'Muscle-up',
   'goals.goal.handstand': 'Handstand',
-  'goals.goal.planche': 'Planche',
   'goals.goal.front-lever': 'Front Lever',
   'goals.goal.human-flag': 'Human Flag',
   'goals.goal.front-split': 'Front Split',
   'goals.goal.aerial-cartwheel': 'Aerial Cartwheel',
-  'goals.goal.juggling': 'Juggling',
 
   // Demo libraries
   'demo.library.calisthenics': 'Calisthenics',
   'demo.library.mobility': 'Mobility',
   'demo.library.acrobatics': 'Acrobatics',
-  'demo.library.juggling': 'Juggling',
-
-  // Goal names
-  'goals.goal.l-sit': 'L-sit',
-  'goals.goal.jefferson-curl': 'Jefferson Curl',
-  'goals.goal.bridge': 'Bridge',
-  'goals.goal.mills-mess': 'Mills Mess',
-  'goals.goal.behind-the-back': 'Behind the Back',
 
   // Calisthenics demo skills
   'demo.skill.ring-support': 'Support',
@@ -155,8 +145,9 @@ export default {
   // Demo library
   'demo.library.kickboxing': 'Kickboxing',
 
-  // New goals
+  // Goals
   'goals.goal.planche': 'Planche',
+  'goals.goal.bridge': 'Bridge',
   'goals.goal.backflip': 'Backflip',
   'goals.goal.roundhouse-kick': 'Roundhouse Kick',
   'goals.goal.jab-cross-hook': 'Jab-Cross-Hook',
@@ -182,25 +173,7 @@ export default {
   'discipline.ukemi': 'Ukemi',
   'discipline.skillCount': '{count} skills',
 
-  // Demo skill tree
-  'demo.skill.dead-hang': 'Dead Hang',
-  'demo.skill.active-hang': 'Active Hang',
-  'demo.skill.pull-up': 'Pull-up',
-  'demo.skill.chest-to-bar': 'C2B Pull-up',
-  'demo.skill.muscle-up': 'Muscle-up',
-  'demo.skill.l-hang': 'L-hang',
-  'demo.skill.push-up': 'Push-up',
-  'demo.skill.diamond-pu': 'Diamond PU',
-  'demo.skill.pike-pu': 'Pike PU',
-  'demo.skill.hspu': 'HSPU',
-  'demo.skill.pseudo-planche-pu': 'PPPU',
-  'demo.skill.planche-lean': 'Planche Lean',
-  'demo.skill.plank': 'Plank',
-  'demo.skill.hollow-body': 'Hollow Body',
-  'demo.skill.l-sit': 'L-sit',
-  'demo.skill.v-sit': 'V-sit',
-  'demo.skill.side-plank': 'Side Plank',
-  'demo.skill.human-flag': 'Human Flag',
+  // Demo statuses
   'demo.status.locked': 'Locked',
   'demo.status.unlocked': 'Unlocked',
   'demo.status.in_progress': 'In Progress',
