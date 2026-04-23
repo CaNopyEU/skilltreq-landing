@@ -104,6 +104,19 @@ export default {
   'goals.goal.aerial-cartwheel': 'Aerial Cartwheel',
   'goals.goal.juggling': 'Juggling',
 
+  // Demo libraries
+  'demo.library.calisthenics': 'Calisthenics',
+  'demo.library.mobility': 'Mobility',
+  'demo.library.acrobatics': 'Acrobatics',
+  'demo.library.juggling': 'Juggling',
+
+  // Goal names
+  'goals.goal.l-sit': 'L-sit',
+  'goals.goal.jefferson-curl': 'Jefferson Curl',
+  'goals.goal.bridge': 'Bridge',
+  'goals.goal.mills-mess': 'Mills Mess',
+  'goals.goal.behind-the-back': 'Behind the Back',
+
   // Library Request
   'libraryRequest.heading': 'Every skill has a path.',
   'libraryRequest.description':

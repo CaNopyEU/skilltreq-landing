@@ -104,6 +104,19 @@ export default {
   'goals.goal.aerial-cartwheel': 'Letové kolečko',
   'goals.goal.juggling': 'Žonglování',
 
+  // Demo libraries
+  'demo.library.calisthenics': 'Kalisteniky',
+  'demo.library.mobility': 'Mobilita',
+  'demo.library.acrobatics': 'Akrobacie',
+  'demo.library.juggling': 'Žonglování',
+
+  // Goal names
+  'goals.goal.l-sit': 'L-sit',
+  'goals.goal.jefferson-curl': 'Jefferson Curl',
+  'goals.goal.bridge': 'Mostek',
+  'goals.goal.mills-mess': 'Mills Mess',
+  'goals.goal.behind-the-back': 'Za záda',
+
   // Library Request
   'libraryRequest.heading': 'Každý skill má svou cestu.',
   'libraryRequest.description':

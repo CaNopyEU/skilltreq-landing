@@ -18,7 +18,6 @@ const prog = computed(() => progressMap.value.get(skillId.value)!);
 const category = computed(() => categoriesMap.value.get(skill.value.categoryId));
 const status = computed(() => statusMap.value.get(skillId.value) ?? 'locked');
 
-const categoryHex = computed(() => category.value?.color ?? '#6b7280');
 const statusCssVar = computed(() => `var(--status-${status.value.replace('_', '-')})`);
 
 const bgColor = computed(() => {
@@ -128,8 +127,6 @@ const displayName = computed(() => {
 
     <div class="demo-skill-node__name">{{ displayName }}</div>
 
-    <div class="demo-skill-node__category-bar" :style="{ backgroundColor: categoryHex }"></div>
-
     <Handle type="source" :position="props.sourcePosition" />
   </div>
 </template>
@@ -188,7 +185,6 @@ const displayName = computed(() => {
 }
 
 .demo-skill-node__name {
-  padding-top: 0.625rem;
   position: relative;
   z-index: 1;
   flex: 1;
@@ -196,16 +192,6 @@ const displayName = computed(() => {
   text-overflow: ellipsis;
   white-space: nowrap;
   color: var(--node-text);
-}
-
-.demo-skill-node__category-bar {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  z-index: 2;
-  pointer-events: none;
 }
 
 /* Highlighted node — accent border */

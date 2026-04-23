@@ -6,7 +6,6 @@ import '@vue-flow/core/dist/theme-default.css';
 import DemoSkillNode from './DemoSkillNode.vue';
 import DemoSkillEdge from './DemoSkillEdge.vue';
 import { buildLayout } from './useGraphLayout';
-import { skills, progress, categories } from './demoData';
 import type { NodeStatus, DemoMove, DemoProgress, DemoCategory } from './types';
 
 const nodeTypes = { 'demo-node': markRaw(DemoSkillNode) };
@@ -14,36 +13,31 @@ const edgeTypes = { 'demo-edge': markRaw(DemoSkillEdge) };
 
 const props = defineProps<{
   translations: Record<string, string>;
-  compact?: boolean;
+  skills: DemoMove[];
+  progress: Record<string, DemoProgress>;
+  categories: DemoCategory[];
   highlightedNodeIds?: string[];
 }>();
 
-// Filter skills for compact mode (single branch — Pull)
-const activeSkills = computed(() => {
-  if (!props.compact) return skills;
-  const pullIds = new Set(skills.filter((s) => s.categoryId === 'pull').map((s) => s.id));
-  return skills.filter((s) => pullIds.has(s.id));
-});
-
 // Build maps for injection
 const skillsMap = computed(
-  () => new Map<string, DemoMove>(activeSkills.value.map((s) => [s.id, s])),
+  () => new Map<string, DemoMove>(props.skills.map((s) => [s.id, s])),
 );
 const progressMap = computed(
-  () => new Map<string, DemoProgress>(Object.entries(progress) as [string, DemoProgress][]),
+  () => new Map<string, DemoProgress>(Object.entries(props.progress) as [string, DemoProgress][]),
 );
 const categoriesMap = computed(
-  () => new Map<string, DemoCategory>(categories.map((c) => [c.id, c])),
+  () => new Map<string, DemoCategory>(props.categories.map((c) => [c.id, c])),
 );
 
 // Compute effective status (locked -> unlocked when all prereqs met)
 const statusMap = computed(() => {
   const map = new Map<string, NodeStatus>();
-  for (const skill of activeSkills.value) {
-    const stored = progress[skill.id]?.status ?? 'locked';
+  for (const skill of props.skills) {
+    const stored = props.progress[skill.id]?.status ?? 'locked';
     if (stored === 'locked' && skill.requires.length > 0) {
       const allPrereqsMet = skill.requires.every((reqId) => {
-        const reqStatus = progress[reqId]?.status;
+        const reqStatus = props.progress[reqId]?.status;
         return reqStatus === 'completed' || reqStatus === 'mastered';
       });
       map.set(skill.id, allPrereqsMet ? 'unlocked' : 'locked');
@@ -63,15 +57,17 @@ provide('statusMap', statusMap);
 provide('translations', translationsRef);
 provide(
   'compact',
-  computed(() => !!props.compact),
+  computed(() => false),
 );
 provide(
   'highlightedNodeIds',
   computed(() => props.highlightedNodeIds ?? []),
 );
 
-// Graph layout
-const { nodes: layoutNodes, edges: layoutEdges } = buildLayout(activeSkills.value, 'TB');
+// Graph layout (reactive — recomputes when skills change)
+const layout = computed(() => buildLayout(props.skills, 'TB'));
+const layoutNodes = computed(() => layout.value.nodes);
+const layoutEdges = computed(() => layout.value.edges);
 
 // Tooltip state
 const tooltip = ref<{
@@ -79,6 +75,7 @@ const tooltip = ref<{
   x: number;
   y: number;
   skillId: string;
+  flipDown: boolean;
 } | null>(null);
 
 function onNodeClick(event: { node: { id: string }; event: MouseEvent }) {
@@ -91,11 +88,16 @@ function onNodeClick(event: { node: { id: string }; event: MouseEvent }) {
     ?.getBoundingClientRect();
   if (!rect) return;
 
+  const x = event.event.clientX - rect.left;
+  const y = event.event.clientY - rect.top;
+  // Flip tooltip below node if too close to top (tooltip is ~180px tall)
+  const nearTop = y < 180;
   tooltip.value = {
     visible: true,
-    x: event.event.clientX - rect.left,
-    y: event.event.clientY - rect.top - 10,
+    x,
+    y: nearTop ? y + 30 : y - 10,
     skillId,
+    flipDown: nearTop,
   };
 }
 
@@ -119,6 +121,17 @@ function tooltipProgress(skillId: string): string | null {
   const prog = progressMap.value.get(skillId);
   if (!skill || !prog || prog.currentStep === 0) return null;
   return `${prog.currentStep}/${skill.progressions}`;
+}
+
+function tooltipDescription(skillId: string): string | null {
+  return skillsMap.value.get(skillId)?.description ?? null;
+}
+
+function tooltipProgression(skillId: string): string | null {
+  const status = statusMap.value.get(skillId);
+  // Don't show "Next" for completed/mastered skills
+  if (status === 'completed' || status === 'mastered') return null;
+  return skillsMap.value.get(skillId)?.progressionPreview ?? null;
 }
 
 // IntersectionObserver to pause animations off-screen
@@ -171,17 +184,24 @@ onUnmounted(() => {
       <div
         v-if="tooltip?.visible"
         class="demo-tooltip"
+        :class="{ 'demo-tooltip--flip': tooltip.flipDown }"
         :style="{
           left: `${tooltip.x}px`,
           top: `${tooltip.y}px`,
         }"
       >
         <div class="demo-tooltip__name">{{ tooltipSkillName(tooltip.skillId) }}</div>
+        <div v-if="tooltipDescription(tooltip.skillId)" class="demo-tooltip__desc">
+          {{ tooltipDescription(tooltip.skillId) }}
+        </div>
         <div class="demo-tooltip__status">
           {{ tooltipStatusLabel(tooltip.skillId) }}
           <span v-if="tooltipProgress(tooltip.skillId)" class="demo-tooltip__progress">
             {{ tooltipProgress(tooltip.skillId) }}
           </span>
+        </div>
+        <div v-if="tooltipProgression(tooltip.skillId)" class="demo-tooltip__next">
+          Next: {{ tooltipProgression(tooltip.skillId) }}
         </div>
         <a
           href="https://www.skilltreq.app/"
@@ -248,6 +268,10 @@ onUnmounted(() => {
   text-align: center;
 }
 
+.demo-tooltip--flip {
+  transform: translate(-50%, 0);
+}
+
 .demo-tooltip__name {
   font-weight: 600;
   font-size: 0.875rem;
@@ -255,9 +279,24 @@ onUnmounted(() => {
   margin-bottom: 0.25rem;
 }
 
+.demo-tooltip__desc {
+  font-size: 0.6875rem;
+  color: var(--text-body);
+  line-height: 1.4;
+  margin-bottom: 0.375rem;
+  max-width: 14rem;
+}
+
 .demo-tooltip__status {
   font-size: 0.75rem;
   color: var(--text-secondary);
+  margin-bottom: 0.25rem;
+}
+
+.demo-tooltip__next {
+  font-size: 0.6875rem;
+  color: var(--text-muted);
+  font-style: italic;
   margin-bottom: 0.375rem;
 }
 

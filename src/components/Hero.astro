@@ -14,25 +14,18 @@ const APP_BASE_URL = 'https://www.skilltreq.app';
 
 // Build translations object for Vue island (demo + goal picker keys)
 const translationKeys = [
-  // Demo skill names
+  // Demo libraries
+  'demo.library.calisthenics',
+  'demo.library.mobility',
+  'demo.library.acrobatics',
+  'demo.library.juggling',
+  // Demo skill names (calisthenics — kept for node tooltips)
   'demo.skill.dead-hang',
   'demo.skill.active-hang',
   'demo.skill.pull-up',
   'demo.skill.chest-to-bar',
   'demo.skill.muscle-up',
   'demo.skill.l-hang',
-  'demo.skill.push-up',
-  'demo.skill.diamond-pu',
-  'demo.skill.pike-pu',
-  'demo.skill.hspu',
-  'demo.skill.pseudo-planche-pu',
-  'demo.skill.planche-lean',
-  'demo.skill.plank',
-  'demo.skill.hollow-body',
-  'demo.skill.l-sit',
-  'demo.skill.v-sit',
-  'demo.skill.side-plank',
-  'demo.skill.human-flag',
   // Demo statuses
   'demo.status.locked',
   'demo.status.unlocked',
@@ -45,13 +38,13 @@ const translationKeys = [
   'goals.cta.selected',
   'goals.roadmap.title',
   'goals.goal.muscle-up',
-  'goals.goal.handstand',
-  'goals.goal.planche',
-  'goals.goal.front-lever',
-  'goals.goal.human-flag',
+  'goals.goal.l-sit',
   'goals.goal.front-split',
+  'goals.goal.jefferson-curl',
   'goals.goal.aerial-cartwheel',
-  'goals.goal.juggling',
+  'goals.goal.bridge',
+  'goals.goal.mills-mess',
+  'goals.goal.behind-the-back',
 ] as const;
 
 const translations: Record<string, string> = {};

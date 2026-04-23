@@ -7,6 +7,8 @@ export interface DemoMove {
   categoryId: string;
   requires: string[];
   progressions: number; // total steps count
+  description?: string; // short skill description for tooltip
+  progressionPreview?: string; // name of first progression step
 }
 
 export interface DemoProgress {
@@ -18,4 +20,14 @@ export interface DemoCategory {
   id: string;
   name: string;
   color: string;
+}
+
+export interface DemoLibrary {
+  id: string;
+  name: string;
+  image: string;
+  categories: DemoCategory[];
+  skills: DemoMove[];
+  progress: Record<string, DemoProgress>;
+  defaultGoalSlug: string;
 }
