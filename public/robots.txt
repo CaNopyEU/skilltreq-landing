@@ -1,4 +1,10 @@
 User-agent: *
 Allow: /
 
+# Content usage preferences for AI/automated agents (https://contentsignals.org/).
+# search=yes   — allow indexing for search results
+# ai-input=yes — allow AI assistants to read and cite this page when answering users
+# ai-train=no  — do not use this content to train or fine-tune AI models
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+
 Sitemap: https://www.skilltreq.com/sitemap-index.xml
