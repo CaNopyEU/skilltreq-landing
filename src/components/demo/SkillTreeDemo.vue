@@ -21,7 +21,7 @@ const props = defineProps<{
 }>();
 
 const tooltipCtaUrl = computed(
-  () => `${props.appBaseUrl}/login?utm_source=landing&utm_medium=cta&utm_campaign=tree-tooltip`
+  () => `${props.appBaseUrl}/login?utm_source=landing&utm_medium=cta&utm_campaign=tree-tooltip`,
 );
 
 // Build maps for injection
