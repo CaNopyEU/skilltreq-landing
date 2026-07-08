@@ -91,7 +91,6 @@ export default {
 
   // Goal Picker
   'goals.heading': 'What do you want to achieve?',
-  'goals.subheading': 'Pick a goal and see your roadmap to get there.',
   'goals.cta.default': 'Try free',
   'goals.cta.selected': 'Start training {goal}',
   'goals.roadmap.title': 'Your path to {goal}',

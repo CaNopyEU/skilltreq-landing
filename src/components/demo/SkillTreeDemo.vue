@@ -17,7 +17,12 @@ const props = defineProps<{
   progress: Record<string, DemoProgress>;
   categories: DemoCategory[];
   highlightedNodeIds?: string[];
+  appBaseUrl: string;
 }>();
+
+const tooltipCtaUrl = computed(
+  () => `${props.appBaseUrl}/login?utm_source=landing&utm_medium=cta&utm_campaign=tree-tooltip`
+);
 
 // Build maps for injection
 const skillsMap = computed(() => new Map<string, DemoMove>(props.skills.map((s) => [s.id, s])));
@@ -205,11 +210,7 @@ onUnmounted(() => {
         <div v-if="tooltipProgression(tooltip.skillId)" class="demo-tooltip__next">
           Next: {{ tooltipProgression(tooltip.skillId) }}
         </div>
-        <a
-          href="https://www.skilltreq.app/"
-          class="demo-tooltip__cta"
-          data-umami-event="cta-try-free"
-        >
+        <a :href="tooltipCtaUrl" class="demo-tooltip__cta" data-umami-event="cta-try-free">
           {{ translations['demo.tooltip.cta'] || 'Try in app' }} &rarr;
         </a>
       </div>

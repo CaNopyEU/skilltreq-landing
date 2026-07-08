@@ -74,9 +74,11 @@ const showRoadmapOverlay = computed(() => {
   return !hasTreeHighlight.value;
 });
 
+const UTM = 'utm_source=landing&utm_medium=cta';
+
 const ctaUrl = computed(() => {
-  if (!selectedGoal.value) return `${props.appBaseUrl}/login`;
-  return `${props.appBaseUrl}/start?goal=${selectedGoal.value.slug}&locale=${props.locale}`;
+  if (!selectedGoal.value) return `${props.appBaseUrl}/login?${UTM}&utm_campaign=hero-login`;
+  return `${props.appBaseUrl}/start?goal=${selectedGoal.value.slug}&locale=${props.locale}&${UTM}&utm_campaign=hero-goal`;
 });
 
 const ctaText = computed(() => {
@@ -231,6 +233,7 @@ onUnmounted(() => {
           :progress="activeLibrary.progress"
           :categories="activeLibrary.categories"
           :highlighted-node-ids="highlightedNodeIds"
+          :app-base-url="appBaseUrl"
         />
       </div>
 

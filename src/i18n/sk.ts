@@ -91,7 +91,6 @@ export default {
 
   // Goal Picker
   'goals.heading': 'Čo chceš dosiahnuť?',
-  'goals.subheading': 'Vyber si cieľ a uvidíš cestu k nemu.',
   'goals.cta.default': 'Začni zadarmo',
   'goals.cta.selected': 'Začni trénovať {goal}',
   'goals.roadmap.title': 'Tvoja cesta k {goal}',

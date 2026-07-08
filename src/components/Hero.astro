@@ -10,7 +10,8 @@ interface Props {
 const { locale } = Astro.props;
 const t = useTranslations(locale);
 
-const APP_BASE_URL = 'https://www.skilltreq.app';
+// Overridable for staging/local builds (PUBLIC_APP_BASE_URL in .env)
+const APP_BASE_URL = import.meta.env.PUBLIC_APP_BASE_URL ?? 'https://www.skilltreq.app';
 
 // Build translations object for Vue island (demo + goal picker keys)
 const translationKeys = [
