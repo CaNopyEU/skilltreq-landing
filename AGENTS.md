@@ -11,7 +11,7 @@ This is the map for coding agents (Claude Code, Codex, etc.) working in this rep
 Static marketing, legal & pricing site for **Skilltreq** — a calisthenics & acrobatics skill tree training tracker. This is the public-facing website separate from the main application.
 
 | Concern                  | URL                 |
-| ------------------------- | ------------------- |
+| ------------------------ | ------------------- |
 | Landing site (this repo) | `www.skilltreq.com` |
 | Application              | `www.skilltreq.app` |
 
@@ -19,14 +19,14 @@ Static marketing, legal & pricing site for **Skilltreq** — a calisthenics & ac
 
 ## Stack
 
-| Layer     | Technology                                                  |
-| --------- | ------------------------------------------------------------ |
-| Framework | Astro (static output) + Vue islands                         |
-| Styling   | Tailwind CSS v4                                              |
-| Content   | Markdown via Astro content collections (legal pages, blog)  |
-| Hosting   | GitHub Pages                                                 |
-| CI/CD     | GitHub Actions                                               |
-| i18n      | Astro i18n routing (`/en/`, `/sk/`, `/cs/`)                  |
+| Layer     | Technology                                                 |
+| --------- | ---------------------------------------------------------- |
+| Framework | Astro (static output) + Vue islands                        |
+| Styling   | Tailwind CSS v4                                            |
+| Content   | Markdown via Astro content collections (legal pages, blog) |
+| Hosting   | GitHub Pages                                               |
+| CI/CD     | GitHub Actions                                             |
+| i18n      | Astro i18n routing (`/en/`, `/sk/`, `/cs/`)                |
 
 ---
 
@@ -52,13 +52,13 @@ npm run format:check  # Prettier check (CI)
 
 ## Pages
 
-| Route      | Purpose                                                      | Format            | Status        |
-| ---------- | -------------------------------------------------------------- | ------------------- | ------------- |
-| `/`        | Landing page — hero, features, CTA, social proof             | Astro component  | Beta          |
-| `/privacy` | Privacy Policy                                                | Markdown          | Beta          |
-| `/terms`   | Terms of Service                                              | Markdown          | Beta          |
-| `/blog`    | Devlogs / guides / announcements (content collection + RSS)  | Astro + Markdown | Live          |
-| `/pricing` | Free / Pro / Coach tier comparison                            | Astro component  | **Post-Beta** |
+| Route      | Purpose                                                     | Format           | Status        |
+| ---------- | ----------------------------------------------------------- | ---------------- | ------------- |
+| `/`        | Landing page — hero, features, CTA, social proof            | Astro component  | Beta          |
+| `/privacy` | Privacy Policy                                              | Markdown         | Beta          |
+| `/terms`   | Terms of Service                                            | Markdown         | Beta          |
+| `/blog`    | Devlogs / guides / announcements (content collection + RSS) | Astro + Markdown | Live          |
+| `/pricing` | Free / Pro / Coach tier comparison                          | Astro component  | **Post-Beta** |
 
 **Beta launch scope was `/`, `/privacy`, `/terms` only; `/blog` shipped later, post-Beta launch. `/pricing` sa implementuje až s Phase 16 (Monetizácia) po Beta validácii.**
 
