@@ -38,16 +38,22 @@ npm run dev           # Start Astro dev server (localhost:4321)
 npm run build         # Production build (static output)
 npm run preview       # Preview production build locally
 
-# Lint & Format
+# Lint, Format & Types
 npm run lint          # ESLint check
 npm run lint:fix      # ESLint auto-fix
 npm run format        # Prettier write
 npm run format:check  # Prettier check (CI)
+npm run typecheck     # astro check — known failing (24 errors), fix tracked in handoff
 ```
 
 > **Package manager: npm.** `package-lock.json` is the single committed lockfile (matches
 > `deploy.yml`'s `npm ci`, the proven production install path). `bun.lock` is gitignored — fine to
 > use locally, but don't commit it.
+
+> **`typecheck` (`astro check`)**: known failing (24 errors), fix tracked in handoff. All errors
+> are the same pattern in `src/pages/{en,sk,cs}/{privacy,terms}.astro` — `getEntry()` result used
+> without a defined-check (`entry` is possibly `undefined`). Not wired into the pre-commit hook or
+> CI yet; wire it in once fixed.
 
 ---
 
