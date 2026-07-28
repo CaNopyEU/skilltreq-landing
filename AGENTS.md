@@ -45,8 +45,9 @@ npm run format        # Prettier write
 npm run format:check  # Prettier check (CI)
 ```
 
-> Both `package-lock.json` and `bun.lock` are committed; CI uses `npm ci`, but `bun run <script>` works
-> the same locally since the scripts above are package-manager agnostic.
+> **Package manager: npm.** `package-lock.json` is the single committed lockfile (matches
+> `deploy.yml`'s `npm ci`, the proven production install path). `bun.lock` is gitignored — fine to
+> use locally, but don't commit it.
 
 ---
 
