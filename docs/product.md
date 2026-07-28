@@ -9,7 +9,7 @@ Skilltreq is built as **"an app that acts like a good coach"** — it shows real
 ### Brand voice
 
 | YES                             | NO                                  |
-| -------------------------------- | ------------------------------------ |
+| ------------------------------- | ----------------------------------- |
 | Honest, data-driven, calm       | Hype, fake urgency, "limited time!" |
 | "Track real progress"           | "Unlock your potential!"            |
 | "Quality data when you need it" | "Don't break your streak!"          |
@@ -36,7 +36,7 @@ Skilltreq is built as **"an app that acts like a good coach"** — it shows real
 ## Target Audience
 
 | Segment                           | Priority  | What they care about                              |
-| ---------------------------------- | --------- | -------------------------------------------------- |
+| --------------------------------- | --------- | ------------------------------------------------- |
 | Regulators (disciplined athletes) | Primary   | Structure, data, real progress tracking, no BS    |
 | Casual beginners                  | Secondary | Simple start, guided onboarding, not overwhelming |
 | Coaches / Instructors             | Tertiary  | Client management, plan assignment, activity feed |

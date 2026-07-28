@@ -38,7 +38,7 @@
 Three tiers based on decided monetization model (pre Phase 16 implementation reference):
 
 |                   | Free     | Pro (~4–5 €/mo) | Coach (~12–15 €/mo) |
-| ------------------- | -------- | ----------------- | ---------------------- |
+| ----------------- | -------- | --------------- | ------------------- |
 | Libraries         | All      | All             | All                 |
 | Training plans    | 1 active | Unlimited       | Unlimited           |
 | Templates         | 3 saved  | Unlimited       | Unlimited           |

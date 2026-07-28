@@ -5,7 +5,7 @@
 ## i18n
 
 | Locale  | Code | Status           |
-| ------- | ---- | ------------------ |
+| ------- | ---- | ---------------- |
 | English | `en` | Source of truth  |
 | Slovak  | `sk` | Full translation |
 | Czech   | `cs` | Full translation |

@@ -20,7 +20,7 @@ Landing stránka zdieľa vizuálnu identitu appky. Tokeny sú skopírované z `a
 #### Backgrounds
 
 | CSS var        | Light     | Dark      | Usage              |
-| --------------- | --------- | --------- | -------------------- |
+| -------------- | --------- | --------- | ------------------ |
 | `--bg-page`    | `#ffffff` | `#000000` | Page background    |
 | `--bg-surface` | `#fafafa` | `#111111` | Cards, sections    |
 | `--bg-muted`   | `#f5f5f5` | `#1a1a1a` | Subtle backgrounds |
@@ -29,7 +29,7 @@ Landing stránka zdieľa vizuálnu identitu appky. Tokeny sú skopírované z `a
 #### Text
 
 | CSS var            | Light     | Dark      | Usage           |
-| -------------------- | --------- | --------- | ----------------- |
+| ------------------ | --------- | --------- | --------------- |
 | `--text-primary`   | `#0a0a0a` | `#ededed` | Headings        |
 | `--text-secondary` | `#404040` | `#b4b4b4` | Subheadings     |
 | `--text-body`      | `#666666` | `#8f8f8f` | Body text       |
@@ -39,14 +39,14 @@ Landing stránka zdieľa vizuálnu identitu appky. Tokeny sú skopírované z `a
 #### Borders
 
 | CSS var          | Light     | Dark      | Usage           |
-| ------------------ | --------- | --------- | ----------------- |
+| ---------------- | --------- | --------- | --------------- |
 | `--border`       | `#e5e5e5` | `#2e2e2e` | Primary borders |
 | `--border-muted` | `#d4d4d4` | `#3a3a3a` | Subtle lines    |
 
 #### Accent & Danger
 
 | CSS var          | Light                      | Dark                       | Usage              |
-| ------------------ | --------------------------- | --------------------------- | -------------------- |
+| ---------------- | -------------------------- | -------------------------- | ------------------ |
 | `--accent`       | `#7553ff`                  | `#8b6fff`                  | CTA buttons, links |
 | `--accent-hover` | `#6344e6`                  | `#7c5ef0`                  | CTA hover          |
 | `--accent-glow`  | `rgba(117, 83, 255, 0.35)` | `rgba(139, 111, 255, 0.4)` | Hover glow         |
@@ -54,7 +54,7 @@ Landing stránka zdieľa vizuálnu identitu appky. Tokeny sú skopírované z `a
 #### Status colors (pre feature showcases)
 
 | Status      | CSS var                | Light     | Dark      |
-| ------------- | ------------------------- | --------- | --------- |
+| ----------- | ---------------------- | --------- | --------- |
 | Locked      | `--status-locked`      | `#4a506a` | `#2f3342` |
 | In Progress | `--status-in-progress` | `#3b82f6` | `#5b9cf6` |
 | Completed   | `--status-completed`   | `#22c55e` | `#4ade80` |
