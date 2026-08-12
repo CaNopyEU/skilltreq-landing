@@ -108,6 +108,16 @@ All pages must exist in all three locales (`/en/`, `/sk/`, `/cs/`). Root paths (
 
 ---
 
+## Skills
+
+Repo-local skills in `.claude/skills/`:
+
+| Skill    | What it does                                                                                                |
+| -------- | ----------------------------------------------------------------------------------------------------------- |
+| `devlog` | Write the next `Devlog #N` post (EN/SK/CS) from the app repo's git history since the last published devlog. |
+
+---
+
 ## Docs
 
 Product and content detail lives under `docs/` (moved out of this file to keep it a map, not a manual):
