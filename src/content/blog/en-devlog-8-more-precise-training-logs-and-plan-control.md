@@ -10,7 +10,7 @@ no_fake_urgency: true
 no_gamification: true
 no_hype_language: true
 readingTime: 4 min
-slug: devlog-18-more-precise-training-logs-and-plan-control
+slug: devlog-8-more-precise-training-logs-and-plan-control
 tags:
   - features
   - tech
@@ -19,7 +19,7 @@ tags:
   - accessibility
   - reliability
   - devlog
-title: 'Devlog #18: More precise training logs and plan control'
+title: 'Devlog #8: More precise training logs and plan control'
 type: devlog
 ---
 

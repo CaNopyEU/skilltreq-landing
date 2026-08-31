@@ -9,7 +9,7 @@ no_fake_urgency: true
 no_gamification: true
 no_hype_language: true
 readingTime: 4 min
-slug: devlog-18-more-precise-training-logs-and-plan-control
+slug: devlog-8-more-precise-training-logs-and-plan-control
 tags:
   - funkcie
   - technológie
@@ -18,7 +18,7 @@ tags:
   - prístupnosť
   - spoľahlivosť
   - devlog
-title: 'Devlog #18: Presnejšie tréningové záznamy a kontrola plánov'
+title: 'Devlog #8: Presnejšie tréningové záznamy a kontrola plánov'
 type: devlog
 ---
 
