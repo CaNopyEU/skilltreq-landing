@@ -59,17 +59,23 @@ npm run typecheck     # astro check — known failing (24 errors), fix tracked i
 
 ## Pages
 
-| Route      | Purpose                                                     | Format           | Status        |
-| ---------- | ----------------------------------------------------------- | ---------------- | ------------- |
-| `/`        | Landing page — hero, features, CTA, social proof            | Astro component  | Beta          |
-| `/privacy` | Privacy Policy                                              | Markdown         | Beta          |
-| `/terms`   | Terms of Service                                            | Markdown         | Beta          |
-| `/blog`    | Devlogs / guides / announcements (content collection + RSS) | Astro + Markdown | Live          |
-| `/pricing` | Free / Pro / Coach tier comparison                          | Astro component  | **Post-Beta** |
+| Route        | Purpose                                                     | Format           | Status        |
+| ------------ | ----------------------------------------------------------- | ---------------- | ------------- |
+| `/`          | Landing page — hero, features, CTA, social proof            | Astro component  | Beta          |
+| `/privacy`   | Privacy Policy                                              | Markdown         | Beta          |
+| `/terms`     | Terms of Service                                            | Markdown         | Beta          |
+| `/blog`      | Devlogs / guides / announcements (content collection + RSS) | Astro + Markdown | Live          |
+| `/changelog` | Terse per-week record of shipped changes (auto-generated)   | Astro + JSON     | Live          |
+| `/pricing`   | Free / Pro / Coach tier comparison                          | Astro component  | **Post-Beta** |
 
 **Beta launch scope was `/`, `/privacy`, `/terms` only; `/blog` shipped later, post-Beta launch. `/pricing` sa implementuje až s Phase 16 (Monetizácia) po Beta validácii.**
 
-All pages must exist in all three locales (`/en/`, `/sk/`, `/cs/`). Root paths (`/`, `/privacy`, `/terms`, `/blog`) are redirect stubs to the default locale (`en`).
+All pages must exist in all three locales (`/en/`, `/sk/`, `/cs/`). Root paths (`/`, `/privacy`, `/terms`, `/blog`, `/changelog`) are redirect stubs to the default locale (`en`).
+
+> **`/changelog` is machine-written.** `src/data/changelog.json` is overwritten by the
+> content engine's rolling `changelog/update` pull request — never edit it by hand. The
+> `changelog` collection's Zod schema in `src/content.config.ts` is the guard: bad data
+> fails `npm run build` instead of rendering broken HTML.
 
 ---
 

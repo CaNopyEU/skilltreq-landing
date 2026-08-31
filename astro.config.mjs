@@ -25,6 +25,7 @@ export default defineConfig({
           'https://www.skilltreq.com/privacy/',
           'https://www.skilltreq.com/terms/',
           'https://www.skilltreq.com/blog/',
+          'https://www.skilltreq.com/changelog/',
         ].includes(page),
     }),
     vue(),

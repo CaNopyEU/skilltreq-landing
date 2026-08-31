@@ -60,6 +60,17 @@ export default {
   'blog.filterEmpty': 'No posts match this tag.',
   'blog.filterClear': 'Clear filter',
 
+  // Changelog
+  'nav.changelog': 'Changelog',
+  'changelog.title': 'Changelog',
+  'changelog.description':
+    'A weekly record of changes shipped to SkillTreq — features and technical updates.',
+  'changelog.intro': 'Every user-facing and technical change we ship, grouped by week.',
+  'changelog.weekOf': 'Week of {date}',
+  'changelog.empty': 'No changes yet. Check back soon.',
+  'changelog.tag.features': 'Features',
+  'changelog.tag.tech': 'Technical',
+
   // Footer
   'footer.tagline': 'Built for athletes who track, not grind.',
   'footer.beta': 'SkillTreq is free during Beta. Paid plans coming later.',
