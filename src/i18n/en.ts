@@ -55,6 +55,10 @@ export default {
   'blog.linkedChanges': 'What changed',
   'blog.backToList': 'Back to blog',
   'blog.rss': 'RSS Feed',
+  'blog.filterLabel': 'Filter by tag',
+  'blog.filterAll': 'All',
+  'blog.filterEmpty': 'No posts match this tag.',
+  'blog.filterClear': 'Clear filter',
 
   // Footer
   'footer.tagline': 'Built for athletes who track, not grind.',
