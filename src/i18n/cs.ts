@@ -55,6 +55,10 @@ export default {
   'blog.linkedChanges': 'Co se změnilo',
   'blog.backToList': 'Zpět na blog',
   'blog.rss': 'RSS kanál',
+  'blog.filterLabel': 'Filtrovat podle značky',
+  'blog.filterAll': 'Vše',
+  'blog.filterEmpty': 'Této značce neodpovídá žádný článek.',
+  'blog.filterClear': 'Zrušit filtr',
 
   // Footer
   'footer.tagline': 'Pro sportovce, kteří trénují, ne grindí.',

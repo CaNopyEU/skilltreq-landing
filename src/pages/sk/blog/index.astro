@@ -2,6 +2,7 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 import { useTranslations } from '../../../i18n/translations';
+import BlogTagChips from '../../../components/BlogTagChips.astro';
 
 const locale = 'sk';
 const t = useTranslations(locale);
@@ -48,37 +49,48 @@ const typeColorMap: Record<string, string> = {
       posts.length === 0 ? (
         <p class="text-text-muted">{t('blog.noPosts')}</p>
       ) : (
-        <div class="space-y-8">
-          {posts.map((post) => (
-            <article class="group rounded-lg border border-border bg-surface p-6 transition-colors hover:border-border-muted">
-              <a href={`/${locale}/blog/${post.data.slug}/`} class="block">
-                <div class="mb-2 flex flex-wrap items-center gap-2">
-                  <span
-                    class="inline-block rounded-full px-2.5 py-0.5 text-xs font-medium text-white"
-                    style={`background: ${typeColorMap[post.data.type]}`}
-                  >
-                    {t(`blog.type.${post.data.type}` as any)}
-                  </span>
-                  <time datetime={post.data.date} class="text-xs text-text-muted">
-                    {formatDate(post.data.date)}
-                  </time>
-                  {post.data.readingTime && (
-                    <span class="text-xs text-text-muted">{post.data.readingTime}</span>
-                  )}
-                </div>
-                <h2 class="text-xl font-semibold text-primary group-hover:text-accent transition-colors">
-                  {post.data.title}
-                </h2>
-                <p class="mt-2 text-sm text-body">{post.data.description}</p>
+        <>
+          <BlogTagChips locale={locale} posts={posts} />
+          <div class="space-y-8">
+            {posts.map((post) => (
+              <article
+                class="group rounded-lg border border-border bg-surface p-6 transition-colors hover:border-border-muted"
+                data-tags={post.data.tags.join(' ')}
+              >
+                <a href={`/${locale}/blog/${post.data.slug}/`} class="block">
+                  <div class="mb-2 flex flex-wrap items-center gap-2">
+                    <span
+                      class="inline-block rounded-full px-2.5 py-0.5 text-xs font-medium text-white"
+                      style={`background: ${typeColorMap[post.data.type]}`}
+                    >
+                      {t(`blog.type.${post.data.type}` as any)}
+                    </span>
+                    <time datetime={post.data.date} class="text-xs text-text-muted">
+                      {formatDate(post.data.date)}
+                    </time>
+                    {post.data.readingTime && (
+                      <span class="text-xs text-text-muted">{post.data.readingTime}</span>
+                    )}
+                  </div>
+                  <h2 class="text-xl font-semibold text-primary group-hover:text-accent transition-colors">
+                    {post.data.title}
+                  </h2>
+                  <p class="mt-2 text-sm text-body">{post.data.description}</p>
+                </a>
                 <div class="mt-3 flex flex-wrap gap-2">
                   {post.data.tags.map((tag: string) => (
-                    <span class="text-xs text-text-muted">#{tag}</span>
+                    <a
+                      href={`/${locale}/blog/?tag=${encodeURIComponent(tag)}`}
+                      class="text-xs text-text-muted hover:text-accent transition-colors"
+                    >
+                      #{tag}
+                    </a>
                   ))}
                 </div>
-              </a>
-            </article>
-          ))}
-        </div>
+              </article>
+            ))}
+          </div>
+        </>
       )
     }
   </section>

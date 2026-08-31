@@ -1,0 +1,94 @@
+---
+import { useTranslations, type Locale } from '../i18n/translations';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  locale: Locale;
+  posts: CollectionEntry<'blog'>[];
+}
+
+const { locale, posts } = Astro.props;
+const t = useTranslations(locale);
+
+const tagCounts = new Map<string, number>();
+for (const post of posts) {
+  for (const tag of post.data.tags) {
+    tagCounts.set(tag, (tagCounts.get(tag) ?? 0) + 1);
+  }
+}
+const tags = [...tagCounts.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+---
+
+<nav aria-label={t('blog.filterLabel')} class="mb-8 flex flex-wrap gap-2">
+  <a
+    href={`/${locale}/blog/`}
+    data-tag-chip
+    data-tag=""
+    class="rounded-full border border-border px-3 py-1 text-xs font-medium text-text-muted transition-colors hover:text-primary"
+  >
+    {t('blog.filterAll')}
+  </a>
+  {
+    tags.map(([tag, count]) => (
+      <a
+        href={`/${locale}/blog/?tag=${encodeURIComponent(tag)}`}
+        data-tag-chip
+        data-tag={tag}
+        class="rounded-full border border-border px-3 py-1 text-xs font-medium text-text-muted transition-colors hover:text-primary"
+      >
+        #{tag} <span class="text-text-muted/70">({count})</span>
+      </a>
+    ))
+  }
+</nav>
+
+<p data-filter-empty class="mb-8 hidden text-sm text-text-muted">
+  {t('blog.filterEmpty')}
+  <a href={`/${locale}/blog/`} class="text-accent underline hover:text-accent-hover">
+    {t('blog.filterClear')}
+  </a>
+</p>
+
+<script>
+  function initTagFilter() {
+    const chips = document.querySelectorAll<HTMLAnchorElement>('[data-tag-chip]');
+    const articles = document.querySelectorAll<HTMLElement>('[data-tags]');
+    const emptyState = document.querySelector<HTMLElement>('[data-filter-empty]');
+
+    function apply() {
+      const activeTag = new URLSearchParams(location.search).get('tag') ?? '';
+
+      chips.forEach((chip) => {
+        const isActive = (chip.dataset.tag ?? '') === activeTag;
+        chip.classList.toggle('bg-hover', isActive);
+        chip.classList.toggle('text-primary', isActive);
+        chip.classList.toggle('font-medium', isActive);
+        chip.classList.toggle('text-text-muted', !isActive);
+      });
+
+      let visible = 0;
+      articles.forEach((article) => {
+        const tags = (article.dataset.tags ?? '').split(' ').filter(Boolean);
+        const matches = !activeTag || tags.includes(activeTag);
+        article.classList.toggle('hidden', !matches);
+        if (matches) visible += 1;
+      });
+
+      emptyState?.classList.toggle('hidden', !activeTag || visible > 0);
+    }
+
+    chips.forEach((chip) => {
+      chip.addEventListener('click', (event) => {
+        event.preventDefault();
+        const url = new URL(chip.href);
+        history.pushState({}, '', `${url.pathname}${url.search}`);
+        apply();
+      });
+    });
+
+    window.addEventListener('popstate', apply);
+    apply();
+  }
+
+  initTagFilter();
+</script>
