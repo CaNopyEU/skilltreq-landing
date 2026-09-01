@@ -60,6 +60,18 @@ export default {
   'blog.filterEmpty': 'Této značce neodpovídá žádný článek.',
   'blog.filterClear': 'Zrušit filtr',
 
+  // Changelog
+  'nav.changelog': 'Changelog',
+  'changelog.title': 'Changelog',
+  'changelog.description':
+    'Týdenní přehled změn nasazených do SkillTreq — funkce a technické úpravy.',
+  'changelog.intro':
+    'Každá změna, kterou nasadíme — funkce i technické úpravy — seřazená podle týdne.',
+  'changelog.weekOf': 'Týden od {date}',
+  'changelog.empty': 'Zatím žádné změny. Vrať se brzy.',
+  'changelog.tag.features': 'Funkce',
+  'changelog.tag.tech': 'Technické',
+
   // Footer
   'footer.tagline': 'Pro sportovce, kteří trénují, ne grindí.',
   'footer.beta': 'SkillTreq je zdarma během Bety. Placené plány přijdou později.',
