@@ -1,1 +1,310 @@
-[]
+[
+  {
+    "id": "2026-w36-1",
+    "week": "2026-W36",
+    "weekStart": "2026-08-31",
+    "date": "2026-08-31",
+    "tags": [
+      "tech"
+    ],
+    "text": {
+      "en": "The end-to-end suite now handles port selection, .env parsing, plus stale writes deterministically.",
+      "sk": "End-to-end testy teraz deterministicky spracúvajú výber portu, .env aj zastarané zápisy.",
+      "cs": "End-to-end testy nyní deterministicky zpracovávají výběr portu, .env i zastaralé zápisy."
+    }
+  },
+  {
+    "id": "2026-w35-19",
+    "week": "2026-W35",
+    "weekStart": "2026-08-24",
+    "date": "2026-08-30",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "Repository guards now skip nested worktrees during scans.",
+      "sk": "Kontroly repozitára teraz pri skenovaní vynechávajú vnorené worktree.",
+      "cs": "Kontroly repozitáře nyní při skenování vynechávají vnořené worktree."
+    }
+  },
+  {
+    "id": "2026-w35-20",
+    "week": "2026-W35",
+    "weekStart": "2026-08-24",
+    "date": "2026-08-30",
+    "tags": [
+      "tech"
+    ],
+    "text": {
+      "en": "Pull requests with failing end-to-end tests now receive automatic triage.",
+      "sk": "Pull requesty s neúspešnými end-to-end testami teraz dostávajú automatickú triáž.",
+      "cs": "Pull requesty s neúspěšnými end-to-end testy nyní dostávají automatickou triáž."
+    }
+  },
+  {
+    "id": "2026-w35-21",
+    "week": "2026-W35",
+    "weekStart": "2026-08-24",
+    "date": "2026-08-30",
+    "tags": [
+      "tech"
+    ],
+    "text": {
+      "en": "End-to-end failure triage now runs through the pull-request workflow.",
+      "sk": "Triáž zlyhaní end-to-end testov teraz prebieha cez workflow pull requestu.",
+      "cs": "Triáž selhání end-to-end testů nyní probíhá přes workflow pull requestu."
+    }
+  },
+  {
+    "id": "2026-w35-13",
+    "week": "2026-W35",
+    "weekStart": "2026-08-24",
+    "date": "2026-08-29",
+    "tags": [
+      "tech"
+    ],
+    "text": {
+      "en": "PR guidance now treats a green CI run as completion, not opening the PR.",
+      "sk": "Pokyny pre PR teraz považujú PR za dokončené po úspešnom CI, nie po jeho otvorení.",
+      "cs": "Pokyny pro PR nyní považují PR za dokončené po úspěšném CI, ne po jeho otevření."
+    }
+  },
+  {
+    "id": "2026-w35-14",
+    "week": "2026-W35",
+    "weekStart": "2026-08-24",
+    "date": "2026-08-29",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "Thirteen authenticated API endpoints now have rate limits.",
+      "sk": "Trinásť autentifikovaných API endpointov teraz používa limity požiadaviek.",
+      "cs": "Třináct autentizovaných API endpointů nyní používá limity požadavků."
+    }
+  },
+  {
+    "id": "2026-w35-15",
+    "week": "2026-W35",
+    "weekStart": "2026-08-24",
+    "date": "2026-08-29",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "Rules-lint now checks locale parity plus required entity existence.",
+      "sk": "Rules-lint teraz kontroluje zhodu lokalizácií aj existenciu požadovaných entít.",
+      "cs": "Rules-lint nyní kontroluje shodu lokalizací i existenci požadovaných entit."
+    }
+  },
+  {
+    "id": "2026-w35-16",
+    "week": "2026-W35",
+    "weekStart": "2026-08-24",
+    "date": "2026-08-29",
+    "tags": [
+      "tech"
+    ],
+    "text": {
+      "en": "UI feature work now includes a design-first refinement gate.",
+      "sk": "Práca na funkciách UI teraz zahŕňa revíznu bránu s prístupom design-first.",
+      "cs": "Práce na funkcích UI nyní zahrnuje revizní bránu s přístupem design-first."
+    }
+  },
+  {
+    "id": "2026-w35-17",
+    "week": "2026-W35",
+    "weekStart": "2026-08-24",
+    "date": "2026-08-29",
+    "tags": [
+      "tech"
+    ],
+    "text": {
+      "en": "End-to-end tests now run in CI instead of during pre-push checks.",
+      "sk": "End-to-end testy teraz bežia v CI namiesto kontrol pre odoslaním zmien.",
+      "cs": "End-to-end testy nyní běží v CI místo kontrol před odesláním změn."
+    }
+  },
+  {
+    "id": "2026-w35-18",
+    "week": "2026-W35",
+    "weekStart": "2026-08-24",
+    "date": "2026-08-29",
+    "tags": [
+      "tech"
+    ],
+    "text": {
+      "en": "The e2e development server no longer runs out of memory during vue-tsc checks.",
+      "sk": "E2E vývojový server už pri kontrolách vue-tsc nevyčerpá pamäť.",
+      "cs": "E2E vývojový server už při kontrolách vue-tsc nevyčerpá paměť."
+    }
+  },
+  {
+    "id": "2026-w35-12",
+    "week": "2026-W35",
+    "weekStart": "2026-08-24",
+    "date": "2026-08-27",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "The units/rem-only check now applies only to properties named by the rule.",
+      "sk": "Kontrola units/rem-only sa teraz vzťahuje iba na vlastnosti uvedené v pravidle.",
+      "cs": "Kontrola units/rem-only se nyní vztahuje pouze na vlastnosti uvedené v pravidle."
+    }
+  },
+  {
+    "id": "2026-w35-1",
+    "week": "2026-W35",
+    "weekStart": "2026-08-24",
+    "date": "2026-08-26",
+    "tags": [
+      "tech"
+    ],
+    "text": {
+      "en": "Tutorial fetching supports long-form fallback plus per-move query overrides.",
+      "sk": "Načítanie tutoriálov podporuje dlhý záložný obsah aj dotazy pre jednotlivé pohyby.",
+      "cs": "Načítání tutoriálů podporuje záložní načtení dlouhého obsahu i dotazy pro jednotlivé pohyby."
+    }
+  },
+  {
+    "id": "2026-w35-10",
+    "week": "2026-W35",
+    "weekStart": "2026-08-24",
+    "date": "2026-08-26",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "The repository now includes skill-creator plus conventions for writing skills.",
+      "sk": "Repozitár teraz obsahuje skill-creator aj pravidlá tvorby zručností.",
+      "cs": "Repozitář nyní obsahuje skill-creator i pravidla pro tvorbu dovedností."
+    }
+  },
+  {
+    "id": "2026-w35-11",
+    "week": "2026-W35",
+    "weekStart": "2026-08-24",
+    "date": "2026-08-26",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "Critical review now includes a rule-candidate sweep plus a ratchet step.",
+      "sk": "Kritická kontrola teraz zahŕňa hľadanie kandidátov na pravidlá aj ratchet krok.",
+      "cs": "Kritická kontrola nyní zahrnuje hledání kandidátů na pravidla i ratchet krok."
+    }
+  },
+  {
+    "id": "2026-w35-2",
+    "week": "2026-W35",
+    "weekStart": "2026-08-24",
+    "date": "2026-08-26",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "The reps ruler selects whole reps while typed decimals remain authoritative.",
+      "sk": "Pravítko opakovaní vyberá celé opakovania; zadané desatinné čísla zostávajú rozhodujúce.",
+      "cs": "Pravítko opakování vybírá celá opakování; zadaná desetinná čísla zůstávají rozhodující."
+    }
+  },
+  {
+    "id": "2026-w35-3",
+    "week": "2026-W35",
+    "weekStart": "2026-08-24",
+    "date": "2026-08-26",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "Training logs now accept comma decimal values.",
+      "sk": "Pri zaznamenávaní tréningu môžeš používať desatinné čiarky.",
+      "cs": "Při zaznamenávání tréninku můžeš používat desetinné čárky."
+    }
+  },
+  {
+    "id": "2026-w35-4",
+    "week": "2026-W35",
+    "weekStart": "2026-08-24",
+    "date": "2026-08-26",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "The server now keeps a separate event log for each user.",
+      "sk": "Server teraz vedie protokol udalostí oddelene pre každého používateľa.",
+      "cs": "Server nyní vede protokol událostí odděleně pro každého uživatele."
+    }
+  },
+  {
+    "id": "2026-w35-5",
+    "week": "2026-W35",
+    "weekStart": "2026-08-24",
+    "date": "2026-08-26",
+    "tags": [
+      "tech"
+    ],
+    "text": {
+      "en": "Agent documentation now defines a stateless knowledge protocol.",
+      "sk": "Dokumentácia agentov teraz definuje bezstavový protokol znalostí.",
+      "cs": "Dokumentace agentů nyní definuje bezstavový znalostní protokol."
+    }
+  },
+  {
+    "id": "2026-w35-6",
+    "week": "2026-W35",
+    "weekStart": "2026-08-24",
+    "date": "2026-08-26",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "The first rules-lint version is available behind the swap contract.",
+      "sk": "Prvá verzia rules-lint je dostupná za kontraktom výmeny.",
+      "cs": "První verze rules-lint je dostupná za kontraktem výměny."
+    }
+  },
+  {
+    "id": "2026-w35-7",
+    "week": "2026-W35",
+    "weekStart": "2026-08-24",
+    "date": "2026-08-26",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "Analytics checks now use scan:analytics instead of the analytics events table.",
+      "sk": "Analytické kontroly teraz používajú scan:analytics namiesto tabuľky analytických udalostí.",
+      "cs": "Analytické kontroly nyní používají scan:analytics místo tabulky analytických událostí."
+    }
+  },
+  {
+    "id": "2026-w35-8",
+    "week": "2026-W35",
+    "weekStart": "2026-08-24",
+    "date": "2026-08-26",
+    "tags": [
+      "tech"
+    ],
+    "text": {
+      "en": "Local agent memories are now triaged into guards and intent documents.",
+      "sk": "Lokálne pamäte agentov sú teraz roztriedené na ochranné pravidlá a dokumenty zámerov.",
+      "cs": "Lokální paměti agentů jsou nyní roztříděné do ochranných pravidel a dokumentů záměrů."
+    }
+  },
+  {
+    "id": "2026-w35-9",
+    "week": "2026-W35",
+    "weekStart": "2026-08-24",
+    "date": "2026-08-26",
+    "tags": [
+      "tech"
+    ],
+    "text": {
+      "en": "The documented pr-workflow skill is now included in the repository.",
+      "sk": "Dokumentovaná zručnosť pr-workflow je teraz zahrnutá v repozitári.",
+      "cs": "Dokumentovaná dovednost pr-workflow je nyní součástí repozitáře."
+    }
+  }
+]
