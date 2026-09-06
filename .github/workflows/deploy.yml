@@ -3,6 +3,8 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [master]
+  pull_request:
+    branches: [master]
   workflow_dispatch:
 
 permissions:
@@ -33,7 +35,10 @@ jobs:
         with:
           path: dist
 
+  # Build alone is the pull-request gate. Deploying on a pull_request event would
+  # publish unmerged code to the live site, so this job stays push/dispatch only.
   deploy:
+    if: github.event_name != 'pull_request'
     needs: build
     runs-on: ubuntu-latest
     environment:
