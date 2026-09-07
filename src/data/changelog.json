@@ -1,1 +1,198 @@
-[]
+[
+  {
+    "id": "2026-w36-9",
+    "week": "2026-W36",
+    "weekStart": "2026-08-31",
+    "date": "2026-09-06",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "Libraries now initialize automatically with a setup window.",
+      "sk": "Knižnice sa teraz inicializujú automaticky s oknom na nastavenie.",
+      "cs": "Knihovny se nyní inicializují automaticky s oknem pro nastavení."
+    }
+  },
+  {
+    "id": "2026-w36-4",
+    "week": "2026-W36",
+    "weekStart": "2026-08-31",
+    "date": "2026-09-04",
+    "tags": [
+      "tech"
+    ],
+    "text": {
+      "en": "Hidden libraries no longer regain accessory assignments during seeding.",
+      "sk": "Skryté knižnice už pri seedovaní znovu nedostanú priradené príslušenstvo.",
+      "cs": "Skryté knihovny už při seedování znovu nezískají přiřazení příslušenství."
+    }
+  },
+  {
+    "id": "2026-w36-5",
+    "week": "2026-W36",
+    "weekStart": "2026-08-31",
+    "date": "2026-09-04",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "Replayed offline workouts now show the results they produced.",
+      "sk": "Opakované offline tréningy teraz zobrazia zaznamenané výsledky.",
+      "cs": "Přehrané offline tréninky nyní zobrazí zaznamenané výsledky."
+    }
+  },
+  {
+    "id": "2026-w36-6",
+    "week": "2026-W36",
+    "weekStart": "2026-08-31",
+    "date": "2026-09-04",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "Saving a quick test now pauses its running stopwatch.",
+      "sk": "Uloženie rýchleho testu teraz pozastaví bežiace stopky.",
+      "cs": "Uložení rychlého testu nyní pozastaví spuštěné stopky."
+    }
+  },
+  {
+    "id": "2026-w36-7",
+    "week": "2026-W36",
+    "weekStart": "2026-08-31",
+    "date": "2026-09-04",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "Plan target inputs now accept decimal values written with commas.",
+      "sk": "Ciele v plánoch teraz prijímajú desatinné hodnoty zapísané s čiarkou.",
+      "cs": "Cíle v plánech nyní přijímají desetinné hodnoty zapsané s čárkou."
+    }
+  },
+  {
+    "id": "2026-w36-8",
+    "week": "2026-W36",
+    "weekStart": "2026-08-31",
+    "date": "2026-09-04",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "Waiting for library loading now guarantees that its data is available.",
+      "sk": "Počkanie na načítanie knižnice teraz zaručuje dostupnosť jej dát.",
+      "cs": "Počkání na načtení knihovny nyní zaručuje dostupnost jejích dat."
+    }
+  },
+  {
+    "id": "2026-w36-1",
+    "week": "2026-W36",
+    "weekStart": "2026-08-31",
+    "date": "2026-09-03",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "The activity-type picker now includes every library group.",
+      "sk": "Výber typu aktivity teraz obsahuje všetky skupiny knižnice.",
+      "cs": "Výběr typu aktivity nyní obsahuje všechny skupiny knihovny."
+    }
+  },
+  {
+    "id": "2026-w36-2",
+    "week": "2026-W36",
+    "weekStart": "2026-08-31",
+    "date": "2026-09-03",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "Thirteen difficulty gaps are now filled across library skill progressions.",
+      "sk": "V postupoch zručností v knižniciach je teraz vyplnených 13 medzier v náročnosti.",
+      "cs": "V postupech dovedností v knihovnách je nyní vyplněno 13 mezer v obtížnosti."
+    }
+  },
+  {
+    "id": "2026-w36-3",
+    "week": "2026-W36",
+    "weekStart": "2026-08-31",
+    "date": "2026-09-03",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "English mastery fields no longer contain Slovak text.",
+      "sk": "Anglické polia zvládnutia už neobsahujú slovenský text.",
+      "cs": "Anglická pole zvládnutí už neobsahují slovenský text."
+    }
+  },
+  {
+    "id": "2026-w35-5",
+    "week": "2026-W35",
+    "weekStart": "2026-08-24",
+    "date": "2026-08-29",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "Request limits now protect 13 authenticated account endpoints.",
+      "sk": "Limity požiadaviek teraz chránia 13 autentifikovaných endpointov účtu.",
+      "cs": "Limity požadavků nyní chrání 13 autentizovaných endpointů účtu."
+    }
+  },
+  {
+    "id": "2026-w35-1",
+    "week": "2026-W35",
+    "weekStart": "2026-08-24",
+    "date": "2026-08-26",
+    "tags": [
+      "tech"
+    ],
+    "text": {
+      "en": "Tutorial fetching now supports a long-form fallback with per-move query overrides.",
+      "sk": "Načítanie tutoriálov teraz podporuje dlhšiu záložnú verziu s prepísaním dotazu pre jednotlivé pohyby.",
+      "cs": "Načítání tutoriálů nyní podporuje delší záložní verzi s přepsáním dotazu pro jednotlivé pohyby."
+    }
+  },
+  {
+    "id": "2026-w35-2",
+    "week": "2026-W35",
+    "weekStart": "2026-08-24",
+    "date": "2026-08-26",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "The reps ruler now selects whole reps, while typed decimal values remain authoritative.",
+      "sk": "Pravítko opakovaní teraz vyberá celé opakovania, zatiaľ čo ručne zadané desatinné hodnoty majú naďalej prednosť.",
+      "cs": "Pravítko opakování nyní vybírá celá opakování, zatímco ručně zadané desetinné hodnoty mají nadále přednost."
+    }
+  },
+  {
+    "id": "2026-w35-3",
+    "week": "2026-W35",
+    "weekStart": "2026-08-24",
+    "date": "2026-08-26",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "You can now enter decimal values with commas in training and quick-test inputs.",
+      "sk": "V tréningových a rýchlych testoch teraz môžeš zadávať desatinné hodnoty s čiarkou.",
+      "cs": "V trénincích a rychlých testech teď můžeš zadávat desetinné hodnoty s čárkou."
+    }
+  },
+  {
+    "id": "2026-w35-4",
+    "week": "2026-W35",
+    "weekStart": "2026-08-24",
+    "date": "2026-08-26",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "User events are now logged per account on the server.",
+      "sk": "Udalosti používateľa sa teraz zaznamenávajú na serveri pre každý účet zvlášť.",
+      "cs": "Události uživatele se nyní zaznamenávají na serveru pro každý účet zvlášť."
+    }
+  }
+]
