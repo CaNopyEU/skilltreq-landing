@@ -1,5 +1,201 @@
 [
   {
+    "id": "2026-w37-10",
+    "week": "2026-W37",
+    "weekStart": "2026-09-07",
+    "date": "2026-09-12",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "Analytics checks now automatically enforce the required event shape.",
+      "sk": "Kontroly analytiky teraz automaticky vynucujú požadovaný tvar udalostí.",
+      "cs": "Kontroly analytiky teď automaticky vynucují požadovaný tvar událostí."
+    }
+  },
+  {
+    "id": "2026-w37-11",
+    "week": "2026-W37",
+    "weekStart": "2026-09-07",
+    "date": "2026-09-12",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "Mastery criteria now consistently parse into metrics tracked by each move.",
+      "sk": "Kritériá zvládnutia sa teraz vždy správne preložia na metriky sledované daným pohybom.",
+      "cs": "Kritéria zvládnutí se teď vždy správně převedou na metriky sledované daným pohybem."
+    }
+  },
+  {
+    "id": "2026-w37-12",
+    "week": "2026-W37",
+    "weekStart": "2026-09-07",
+    "date": "2026-09-12",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "Translation checks now catch missing English locale keys used by the app.",
+      "sk": "Kontroly prekladov teraz zachytia chýbajúce anglické lokalizačné kľúče použité v aplikácii.",
+      "cs": "Kontroly překladů teď zachytí chybějící anglické lokalizační klíče použité v aplikaci."
+    }
+  },
+  {
+    "id": "2026-w37-13",
+    "week": "2026-W37",
+    "weekStart": "2026-09-07",
+    "date": "2026-09-12",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "The journey timeline now shows advances between steps.",
+      "sk": "Časová os cesty teraz zobrazuje postupy medzi jednotlivými krokmi.",
+      "cs": "Časová osa cesty teď zobrazuje postupy mezi jednotlivými kroky."
+    }
+  },
+  {
+    "id": "2026-w37-14",
+    "week": "2026-W37",
+    "weekStart": "2026-09-07",
+    "date": "2026-09-12",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "Mastery data now correctly parses criteria that begin with a number.",
+      "sk": "Údaje o zvládnutí teraz správne spracujú kritériá začínajúce číslom.",
+      "cs": "Data o zvládnutí teď správně zpracují kritéria začínající číslem."
+    }
+  },
+  {
+    "id": "2026-w37-9",
+    "week": "2026-W37",
+    "weekStart": "2026-09-07",
+    "date": "2026-09-12",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "Locale checks now automatically enforce the allowed translation-key nesting depth.",
+      "sk": "Kontroly lokalizácie teraz automaticky vynucujú povolenú hĺbku vnorenia prekladových kľúčov.",
+      "cs": "Kontroly lokalizace teď automaticky vynucují povolenou hloubku vnoření překladových klíčů."
+    }
+  },
+  {
+    "id": "2026-w37-1",
+    "week": "2026-W37",
+    "weekStart": "2026-09-07",
+    "date": "2026-09-11",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "The Ko-fi section is now hidden in the native app.",
+      "sk": "Sekcia Ko-fi je teraz v natívnej aplikácii skrytá.",
+      "cs": "Sekce Ko-fi je teď v nativní aplikaci skrytá."
+    }
+  },
+  {
+    "id": "2026-w37-2",
+    "week": "2026-W37",
+    "weekStart": "2026-09-07",
+    "date": "2026-09-11",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "Move search results now report the total matches found before the result limit.",
+      "sk": "Vyhľadávanie pohybov teraz uvádza celkový počet nájdených zhôd pred uplatnením limitu výsledkov.",
+      "cs": "Vyhledávání pohybů teď uvádí celkový počet nalezených shod před uplatněním limitu výsledků."
+    }
+  },
+  {
+    "id": "2026-w37-3",
+    "week": "2026-W37",
+    "weekStart": "2026-09-07",
+    "date": "2026-09-11",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "Awaiting plan loading now guarantees that the plan store has data.",
+      "sk": "Čakanie na načítanie plánov teraz zaručuje, že úložisko plánov obsahuje údaje.",
+      "cs": "Počkání na načtení plánů teď zaručuje, že úložiště plánů obsahuje data."
+    }
+  },
+  {
+    "id": "2026-w37-4",
+    "week": "2026-W37",
+    "weekStart": "2026-09-07",
+    "date": "2026-09-11",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "Onboarding no longer asks for a language and follows your browser locale.",
+      "sk": "Úvodné nastavenie sa už nepýta na jazyk a používa jazyk prehliadača.",
+      "cs": "Úvodní nastavení se už neptá na jazyk a používá jazyk prohlížeče."
+    }
+  },
+  {
+    "id": "2026-w37-5",
+    "week": "2026-W37",
+    "weekStart": "2026-09-07",
+    "date": "2026-09-11",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "The iOS app now uses the SkillTreq branding for its icon and splash screen.",
+      "sk": "Aplikácia pre iOS teraz používa značku SkillTreq pre ikonu a úvodnú obrazovku.",
+      "cs": "Aplikace pro iOS teď používá značku SkillTreq pro ikonu a úvodní obrazovku."
+    }
+  },
+  {
+    "id": "2026-w37-6",
+    "week": "2026-W37",
+    "weekStart": "2026-09-07",
+    "date": "2026-09-11",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "iOS users now receive reminders for missed workouts through APNs.",
+      "sk": "Používatelia iOS teraz dostávajú pripomienky vynechaných tréningov cez APNs.",
+      "cs": "Uživatelé iOS teď dostávají připomínky vynechaných tréninků přes APNs."
+    }
+  },
+  {
+    "id": "2026-w37-7",
+    "week": "2026-W37",
+    "weekStart": "2026-09-07",
+    "date": "2026-09-11",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "Plans now report completion when they end on their scheduled date.",
+      "sk": "Plány teraz hlásia dokončenie, keď sa skončia v naplánovaný dátum.",
+      "cs": "Plány teď hlásí dokončení, když skončí v naplánovaný den."
+    }
+  },
+  {
+    "id": "2026-w37-8",
+    "week": "2026-W37",
+    "weekStart": "2026-09-07",
+    "date": "2026-09-11",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "Finished plans now show changes in bodyweight, personal records, skills, and training stats.",
+      "sk": "Dokončené plány teraz zobrazujú zmeny hmotnosti, osobných rekordov, zručností a tréningových štatistík.",
+      "cs": "Dokončené plány teď zobrazují změny hmotnosti, osobních rekordů, dovedností a tréninkových statistik."
+    }
+  },
+  {
     "id": "2026-w36-9",
     "week": "2026-W36",
     "weekStart": "2026-08-31",
