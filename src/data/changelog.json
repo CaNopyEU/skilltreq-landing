@@ -1,5 +1,33 @@
 [
   {
+    "id": "2026-w38-1",
+    "week": "2026-W38",
+    "weekStart": "2026-09-14",
+    "date": "2026-09-20",
+    "tags": [
+      "tech"
+    ],
+    "text": {
+      "en": "Added the FPV drone beginner library with control, navigation, and acrobatics skills.",
+      "sk": "Pribudla knižnica FPV dronu pre začiatočníkov so zručnosťami ovládania, navigácie a akrobacie.",
+      "cs": "Přibyla knihovna FPV dronu pro začátečníky se dovednostmi ovládání, navigace a akrobacie."
+    }
+  },
+  {
+    "id": "2026-w38-2",
+    "week": "2026-W38",
+    "weekStart": "2026-09-14",
+    "date": "2026-09-20",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "GitHub sign-in callbacks now validate correctly under RFC 9207.",
+      "sk": "Spätné volania prihlásenia cez GitHub sa teraz správne overujú podľa RFC 9207.",
+      "cs": "Callbacky přihlášení přes GitHub se nyní správně ověřují podle RFC 9207."
+    }
+  },
+  {
     "id": "2026-w37-10",
     "week": "2026-W37",
     "weekStart": "2026-09-07",
