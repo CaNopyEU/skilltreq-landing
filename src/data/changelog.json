@@ -1,5 +1,61 @@
 [
   {
+    "id": "2026-w41-2",
+    "week": "2026-W41",
+    "weekStart": "2026-10-05",
+    "date": "2026-10-09",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "Replacing a training plan now refreshes its session and statistics data.",
+      "sk": "Po nahradení tréningového plánu sa teraz obnovia údaje o tréningoch a štatistikách.",
+      "cs": "Po nahrazení tréninkového plánu se nyní obnoví data o trénincích a statistikách."
+    }
+  },
+  {
+    "id": "2026-w41-3",
+    "week": "2026-W41",
+    "weekStart": "2026-10-05",
+    "date": "2026-10-09",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "The app now reports when rate limiting falls back to in-memory storage.",
+      "sk": "Aplikácia teraz oznámi, keď obmedzovanie požiadaviek prejde na úložisko v pamäti.",
+      "cs": "Aplikace nyní oznámí, když omezení počtu požadavků přejde na úložiště v paměti."
+    }
+  },
+  {
+    "id": "2026-w41-4",
+    "week": "2026-W41",
+    "weekStart": "2026-10-05",
+    "date": "2026-10-09",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "A pending local language choice now takes precedence over the saved account setting.",
+      "sk": "Čakajúca lokálna voľba jazyka má teraz prednosť pred nastavením uloženým v účte.",
+      "cs": "Čekající místní volba jazyka má nyní přednost před nastavením uloženým v účtu."
+    }
+  },
+  {
+    "id": "2026-w41-1",
+    "week": "2026-W41",
+    "weekStart": "2026-10-05",
+    "date": "2026-10-05",
+    "tags": [
+      "tech"
+    ],
+    "text": {
+      "en": "Added explosive-power exercises for plyometrics, medicine-ball work, trap-bar work, and handstand hops.",
+      "sk": "Pribudli cviky na výbušnú silu: plyometria, cviky s medicinbalom, trap barom a poskoky v stojke.",
+      "cs": "Přibyly cviky na výbušnou sílu: plyometrie, cviky s medicinbalem, trap barem a poskoky ve stojce."
+    }
+  },
+  {
     "id": "2026-w38-1",
     "week": "2026-W38",
     "weekStart": "2026-09-14",
