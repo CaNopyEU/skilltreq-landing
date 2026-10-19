@@ -1,5 +1,61 @@
 [
   {
+    "id": "2026-w42-1",
+    "week": "2026-W42",
+    "weekStart": "2026-10-12",
+    "date": "2026-10-15",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "Completed and paused plan cards now show adherence.",
+      "sk": "Karty dokončených a pozastavených plánov teraz zobrazujú plnenie plánu.",
+      "cs": "Karty dokončených a pozastavených plánů nyní zobrazují plnění plánu."
+    }
+  },
+  {
+    "id": "2026-w42-2",
+    "week": "2026-W42",
+    "weekStart": "2026-10-12",
+    "date": "2026-10-15",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "You can now manually finish a training plan.",
+      "sk": "Tréningový plán teraz môžeš dokončiť ručne.",
+      "cs": "Tréninkový plán teď můžeš dokončit ručně."
+    }
+  },
+  {
+    "id": "2026-w42-3",
+    "week": "2026-W42",
+    "weekStart": "2026-10-12",
+    "date": "2026-10-15",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "Plan sessions now catch up automatically so adherence reflects completed training.",
+      "sk": "Tréningy v pláne sa teraz automaticky doplnia, aby plnenie odrážalo skutočne odtrénované tréningy.",
+      "cs": "Tréninky v plánu se nyní automaticky doplní, aby plnění odráželo skutečně odcvičené tréninky."
+    }
+  },
+  {
+    "id": "2026-w42-4",
+    "week": "2026-W42",
+    "weekStart": "2026-10-12",
+    "date": "2026-10-15",
+    "tags": [
+      "tech"
+    ],
+    "text": {
+      "en": "The content security policy now hashes the import map so production can start.",
+      "sk": "Content Security Policy teraz používa hash importnej mapy, takže produkcia sa môže spustiť.",
+      "cs": "Content Security Policy nyní používá hash importní mapy, takže produkce se může spustit."
+    }
+  },
+  {
     "id": "2026-w41-2",
     "week": "2026-W41",
     "weekStart": "2026-10-05",
