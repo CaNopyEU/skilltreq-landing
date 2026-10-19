@@ -1,7 +1,7 @@
 ---
 author: SkillTreq Team
 date: '2026-10-19'
-description: Tréningové plány teraz presnejšie zohľadňujú dokončené tréningy, zatiaľ čo prístup k účtu, lokalizácia a spoľahlivosť nasadenia prešli cielenými opravami.
+description: Tréningové plány teraz presnejšie zohľadňujú dokončené tréningy, zatiaľ čo prihlasovanie a lokalizácia prešli cielenými opravami.
 has_value_for_reader: true
 locale: sk
 matches_brand_voice: true
@@ -36,7 +36,6 @@ Opravili sme aj niekoľko menších problémov:
 - Najnovšia voľba lokalizácie má teraz počas ukladania prednosť. Rozhranie by sa už nemalo na chvíľu vrátiť k staršej hodnote z databázy.
 - Callbacky pri prihlasovaní cez GitHub sa teraz overujú voči nakonfigurovanému GitHub issueru.
 - Zmeny plánu teraz vymažú súvisiace cache relácií a štatistík, takže upravené plány budú menej často zobrazovať staré údaje.
-- Ak sa rate limiting musí uchýliť k úložisku v pamäti, konfigurácia nasadenia teraz toto správanie jasne uvádza.
 
 ## Prečo sme tieto zmeny urobili
 
@@ -48,7 +47,7 @@ Manuálne dokončenie rieši inú situáciu. Nie každý plán sa skončí rovna
 
 Zobrazenie miery plnenia na dokončených a pozastavených kartách uľahčuje spätné vyhodnotenie po skončení plánu. Tréningová história nie je užitočná iba počas aktívneho plánu. Pomáha ti tiež porovnať zamýšľaný rozvrh s tým, čo sa v priebehu času skutočne stalo.
 
-Oprava lokalizácie vychádza z rovnakého princípu. Tvoja aktuálna voľba by mala byť viditeľná okamžite, aj keď sa uložená preferencia ešte zapisuje. Opravy účtu a nasadenia sme pridali preto, že nekonzistentné overovanie pri prihlasovaní alebo nejasné správanie rate limitingu môžu sťažiť používanie inak správne fungujúcich tréningových funkcií.
+Oprava lokalizácie vychádza z rovnakého princípu. Tvoja aktuálna voľba by mala byť viditeľná okamžite, aj keď sa uložená preferencia ešte zapisuje. Opravu prihlasovania sme pridali preto, že nekonzistentné overovanie callbackov môže sťažiť prístup k inak správne fungujúcim tréningovým funkciám.
 
 ## Technické detaily
 
@@ -58,11 +57,9 @@ Výpočty miery plnenia zdieľajú aktívne, dokončené a pozastavené zobrazen
 
 Konfigurácia GitHub OAuth teraz pri autentifikácii obsahuje issuer potrebný na overenie callbacku podľa príslušného štandardu. Zmenu pokrýva guard test pre issuer poskytovateľa.
 
-Rate limiting teraz hlási, keď konfigurácia trvalého úložiska nie je dostupná a aplikácia prejde na správanie založené na úložisku v pamäti. Limiting v pamäti je užitočná záloha, ale platí iba pre bežiaci proces. Zviditeľnenie tohto obmedzenia pomáha kontrolám nasadenia odhaliť konfigurácie, ktoré si vyžadujú pozornosť.
-
 Odstránili sme aj nepoužívaný databázový stĺpec `personal_records.context`. Odstránenie nevyužívanej časti schémy znižuje počet polí, s ktorými musí budúci kód a migrácie počítať.
 
-Túto verziu podporuje aj niekoľko údržbových zmien. Aktualizovali sme závislosti aplikácie a testov, Content Security Policy teraz používa hash pre import map potrebnú pri spustení v produkcii a kontroly continuous integration dostali širšie pokrytie pravidiel auditu a type safety. Pridali sme aj nové dáta o pohyboch zameraných na explozívnu silu a o ovládaní, navigácii a akrobacii dronov z pohľadu prvej osoby pre začiatočníkov.
+Content Security Policy teraz používa aj hash pre import map potrebnú pri spustení v produkcii. Pridali sme aj nové dáta o pohyboch zameraných na explozívnu silu a o ovládaní, navigácii a akrobacii dronov z pohľadu prvej osoby pre začiatočníkov.
 
 ## Čo bude ďalej
 

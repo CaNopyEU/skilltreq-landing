@@ -1,7 +1,7 @@
 ---
 author: SkillTreq Team
 date: '2026-10-19'
-description: Tréninkové plány nyní přesněji zohledňují dokončenou práci. Cílené opravy se zároveň zaměřily na přístup k účtu, lokalizaci a spolehlivost nasazení.
+description: Tréninkové plány nyní přesněji zohledňují dokončenou práci. Cílené opravy se zároveň zaměřily na přihlášení a lokalizaci.
 has_value_for_reader: true
 locale: cs
 matches_brand_voice: true
@@ -36,7 +36,6 @@ Opravili jsme také několik menších problémů:
 - Nedávno zvolená lokalizace má nyní přednost po dobu ukládání. Rozhraní by se už nemělo krátce vracet ke starší hodnotě z databáze.
 - Callbacky přihlášení přes GitHub nyní ověřují nastaveného GitHub issuer.
 - Změny plánu nyní mažou související cache relací a statistik, takže aktualizované plány méně často zobrazí staré informace.
-- Pokud se omezení počtu požadavků musí uchýlit k úložišti v paměti, konfigurace nasazení to nyní jasně uvádí.
 
 ## Proč jsme tyto změny udělali
 
@@ -48,7 +47,7 @@ Ruční dokončení řeší jinou situaci. Ne každý plán končí stejnou auto
 
 Zobrazení adherence na kartách dokončených a pozastavených plánů usnadňuje kontrolu po skončení plánu. Historie tréninku není užitečná jen během aktivního plánu. Pomáhá ti také porovnat zamýšlený rozvrh s tím, co se v průběhu času skutečně stalo.
 
-Oprava lokalizace vychází ze stejného principu. Tvoje aktuální volba by měla být vidět okamžitě, i když se uložené nastavení teprve zapisuje. Opravy účtu a nasazení jsme přidali také proto, že nekonzistentní ověřování přihlášení nebo nejasné chování při omezení počtu požadavků mohou ztížit používání jinak správně fungujících tréninkových funkcí.
+Oprava lokalizace vychází ze stejného principu. Tvoje aktuální volba by měla být vidět okamžitě, i když se uložené nastavení teprve zapisuje. Opravu přihlášení jsme přidali proto, že nekonzistentní ověřování callbacků může ztížit přístup k jinak správně fungujícím tréninkovým funkcím.
 
 ## Technické detaily
 
@@ -58,11 +57,9 @@ Výpočty adherence sdílejí aktivní, dokončené a pozastavené zobrazení pl
 
 Konfigurace GitHub OAuth nyní obsahuje issuer vyžadovaný pro ověření callbacku podle příslušného standardu. Změnu pokrývá guard test pro issuer poskytovatele.
 
-Omezení počtu požadavků nyní hlásí, když není dostupná konfigurace trvalého úložiště a aplikace přechází na chování založené na paměti. Omezení v paměti je užitečná záložní možnost, ale platí pouze pro jeden běžící proces. Zviditelnění tohoto omezení pomáhá kontrolám nasazení odhalit konfigurace, které vyžadují pozornost.
-
 Odstranili jsme také nepoužívaný databázový sloupec `personal_records.context`. Odstranění nevyužívaného schématu snižuje počet polí, se kterými musí budoucí kód a migrace počítat.
 
-Stejné vydání podporuje několik údržbových změn. Aktualizovali jsme závislosti aplikace a testů, Content-Security Policy nyní hash-uje import map potřebnou pro spuštění v produkci a kontroly continuous integration mají lepší pokrytí pravidel pro audit a type safety. Přidali jsme také nová data pohybů pro práci na explozivní síle a začátečnické ovládání dronu z pohledu první osoby, navigaci a akrobacii.
+Content-Security Policy nyní pokrývá hashem i import map potřebnou pro spuštění v produkci. Přidali jsme také nová data pohybů pro práci na explozivní síle a začátečnické ovládání dronu z pohledu první osoby, navigaci a akrobacii.
 
 ## Co bude dál
 

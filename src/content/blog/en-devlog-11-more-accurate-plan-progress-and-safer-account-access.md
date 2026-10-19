@@ -1,8 +1,8 @@
 ---
 author: SkillTreq Team
 date: '2026-10-19'
-description: Training plans now reflect completed work more accurately, while account
-  access, localization, and deployment reliability have received targeted fixes.
+description: Training plans now reflect completed work more accurately, while sign-in
+  and localization have received targeted fixes.
 has_value_for_reader: true
 locale: en
 matches_brand_voice: true
@@ -37,7 +37,6 @@ We also fixed several smaller issues:
 - A recent locale choice now takes priority while it is being saved. The interface should no longer briefly return to the older database value.
 - GitHub sign-in callbacks now validate against the configured GitHub issuer.
 - Plan changes now clear related session and statistics caches, so updated plans are less likely to display old information.
-- If rate limiting has to fall back to in-memory storage, the deployment configuration now states that behavior clearly.
 
 ## Why we made these changes
 
@@ -49,7 +48,7 @@ Manual completion addresses a different situation. Not every plan ends through t
 
 Showing adherence on completed and paused cards supports review after a plan ends. Training history is not only useful during an active plan. It also helps you compare your intended schedule with what happened over time.
 
-The locale fix follows the same principle. Your current choice should be visible immediately, even while the saved preference is still being written. We also made the account and deployment fixes because inconsistent sign-in validation or unclear rate-limit behavior can make otherwise correct training features harder to use.
+The locale fix follows the same principle. Your current choice should be visible immediately, even while the saved preference is still being written. We also made the sign-in fix because inconsistent callback validation can make otherwise correct training features harder to reach.
 
 ## Technical details
 
@@ -59,11 +58,9 @@ Adherence calculations are shared by active, completed, and paused plan views. T
 
 For authentication, the GitHub OAuth configuration now includes the issuer required for callback validation under the relevant standard. The change is covered by a guard test for the provider issuer.
 
-Rate limiting now reports when its durable storage configuration is unavailable and the application falls back to in-memory behavior. In-memory limiting is useful as a fallback, but it is local to a running process. Making that limitation visible helps deployment checks identify configurations that need attention.
-
 We also removed the unused `personal_records.context` database column. Removing dead schema reduces the number of fields that future code and migrations need to account for.
 
-Several maintenance changes support the same release. The application and test dependencies were updated, the content-security policy now hashes the import map required for production startup, and the continuous integration checks received stronger coverage for audit and type-safety rules. We also added new movement data covering explosive power work and beginner first-person-view drone control, navigation, and acrobatics.
+The content-security policy now also hashes the import map required for production startup. We also added new movement data covering explosive power work and beginner first-person-view drone control, navigation, and acrobatics.
 
 ## What's next
 
