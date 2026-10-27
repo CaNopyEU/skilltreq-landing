@@ -1,5 +1,47 @@
 [
   {
+    "id": "2026-w43-1",
+    "week": "2026-W43",
+    "weekStart": "2026-10-19",
+    "date": "2026-10-20",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "The weekly digest is now sent on Monday for the week that just ended.",
+      "sk": "Týždenný prehľad teraz dostaneš v pondelok za práve skončený týždeň.",
+      "cs": "Týdenní přehled teď dostaneš v pondělí za právě skončený týden."
+    }
+  },
+  {
+    "id": "2026-w43-2",
+    "week": "2026-W43",
+    "weekStart": "2026-10-19",
+    "date": "2026-10-20",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "Accessory moves no longer block library completion.",
+      "sk": "Doplnkové cviky už neblokujú dokončenie knižnice.",
+      "cs": "Doplňkové cviky už neblokují dokončení knihovny."
+    }
+  },
+  {
+    "id": "2026-w43-3",
+    "week": "2026-W43",
+    "weekStart": "2026-10-19",
+    "date": "2026-10-20",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "Library group order no longer changes with subscription status.",
+      "sk": "Poradie skupín v knižnici sa už nemení podľa stavu predplatného.",
+      "cs": "Pořadí skupin v knihovně se už nemění podle stavu předplatného."
+    }
+  },
+  {
     "id": "2026-w42-1",
     "week": "2026-W42",
     "weekStart": "2026-10-12",
