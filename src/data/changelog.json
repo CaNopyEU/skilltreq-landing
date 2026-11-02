@@ -1,5 +1,19 @@
 [
   {
+    "id": "2026-w44-1",
+    "week": "2026-W44",
+    "weekStart": "2026-10-26",
+    "date": "2026-10-27",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "Progress libraries are now sorted by completion; finished libraries are hidden.",
+      "sk": "Knižnice pokroku sa teraz zoradia podľa dokončenia; dokončené knižnice sa skryjú.",
+      "cs": "Knihovny pokroku se nyní řadí podle dokončení; dokončené knihovny se skryjí."
+    }
+  },
+  {
     "id": "2026-w43-1",
     "week": "2026-W43",
     "weekStart": "2026-10-19",
