@@ -1,5 +1,19 @@
 [
   {
+    "id": "2026-w45-1",
+    "week": "2026-W45",
+    "weekStart": "2026-11-02",
+    "date": "2026-11-06",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "Navigation overlays now use focus trapping, reduced-motion settings, and device safe-area tokens.",
+      "sk": "Navigačné prekrytia teraz používajú zachytenie fokusu, nastavenia obmedzenia pohybu a bezpečné okraje zariadenia.",
+      "cs": "Navigační překryvy teď používají zachycení fokusu, nastavení omezení pohybu a bezpečné okraje zařízení."
+    }
+  },
+  {
     "id": "2026-w44-1",
     "week": "2026-W44",
     "weekStart": "2026-10-26",
