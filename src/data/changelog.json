@@ -1,5 +1,341 @@
 [
   {
+    "id": "2026-w46-23",
+    "week": "2026-W46",
+    "weekStart": "2026-11-09",
+    "date": "2026-11-14",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "Plans now count the slots actually created by the generator.",
+      "sk": "Plány teraz počítajú sloty, ktoré generátor skutočne vytvoril.",
+      "cs": "Plány nyní počítají sloty, které generátor skutečně vytvořil."
+    }
+  },
+  {
+    "id": "2026-w46-24",
+    "week": "2026-W46",
+    "weekStart": "2026-11-09",
+    "date": "2026-11-14",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "All bottom sheets now use a shared shell.",
+      "sk": "Všetky spodné panely teraz používajú spoločný základ.",
+      "cs": "Všechny spodní panely nyní používají společný základ."
+    }
+  },
+  {
+    "id": "2026-w46-21",
+    "week": "2026-W46",
+    "weekStart": "2026-11-09",
+    "date": "2026-11-13",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "Sessions now use three panes; pausing replaces destructive undo.",
+      "sk": "Relácie teraz používajú tri panely; pauza nahrádza deštruktívne vrátenie späť.",
+      "cs": "Relace nyní používají tři panely; pozastavení nahrazuje destruktivní krok zpět."
+    }
+  },
+  {
+    "id": "2026-w46-22",
+    "week": "2026-W46",
+    "weekStart": "2026-11-09",
+    "date": "2026-11-13",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "You can now preview the next move before opening its setup and notes.",
+      "sk": "Nasledujúci cvik si teraz môžeš pozrieť pred otvorením jeho nastavení a poznámok.",
+      "cs": "Následující cvik si nyní můžeš prohlédnout před otevřením jeho nastavení a poznámek."
+    }
+  },
+  {
+    "id": "2026-w46-18",
+    "week": "2026-W46",
+    "weekStart": "2026-11-09",
+    "date": "2026-11-12",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "In-set metric inputs now persist through a completed set.",
+      "sk": "Hodnoty metrík zadané počas série zostávajú zachované po jej dokončení.",
+      "cs": "Hodnoty metrik zadané během série zůstávají zachované po jejím dokončení."
+    }
+  },
+  {
+    "id": "2026-w46-19",
+    "week": "2026-W46",
+    "weekStart": "2026-11-09",
+    "date": "2026-11-12",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "Prep chips now appear on every rest that changes the move.",
+      "sk": "Prípravné štítky sa teraz zobrazia pri každom odpočinku, ktorý mení cvik.",
+      "cs": "Přípravné štítky se nyní zobrazí při každém odpočinku, který mění cvik."
+    }
+  },
+  {
+    "id": "2026-w46-20",
+    "week": "2026-W46",
+    "weekStart": "2026-11-09",
+    "date": "2026-11-12",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "Workout sessions now use a consistent structure.",
+      "sk": "Tréningové relácie teraz používajú jednotnú štruktúru.",
+      "cs": "Tréninkové relace nyní používají jednotnou strukturu."
+    }
+  },
+  {
+    "id": "2026-w46-10",
+    "week": "2026-W46",
+    "weekStart": "2026-11-09",
+    "date": "2026-11-11",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "Accessory libraries are now hidden regardless of subscription status.",
+      "sk": "Doplnkové knižnice sú teraz skryté bez ohľadu na stav predplatného.",
+      "cs": "Doplňkové knihovny jsou nyní skryté bez ohledu na stav předplatného."
+    }
+  },
+  {
+    "id": "2026-w46-11",
+    "week": "2026-W46",
+    "weekStart": "2026-11-09",
+    "date": "2026-11-11",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "Nameless accounts no longer show an orphaned comma.",
+      "sk": "Účet bez mena už nezobrazuje osamotenú čiarku.",
+      "cs": "Účet bez jména už nezobrazuje osamocenou čárku."
+    }
+  },
+  {
+    "id": "2026-w46-12",
+    "week": "2026-W46",
+    "weekStart": "2026-11-09",
+    "date": "2026-11-11",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "Touch controls now use a 44px hit target.",
+      "sk": "Dotykové ovládacie prvky teraz používajú 44 px veľkú dotykovú plochu.",
+      "cs": "Dotykové ovládací prvky nyní používají dotykovou plochu o velikosti 44 px."
+    }
+  },
+  {
+    "id": "2026-w46-13",
+    "week": "2026-W46",
+    "weekStart": "2026-11-09",
+    "date": "2026-11-11",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "Added consistent visual elements for workout sessions.",
+      "sk": "Pribudli jednotné vizuálne prvky pre tréningové relácie.",
+      "cs": "Přibyly jednotné vizuální prvky pro tréninkové relace."
+    }
+  },
+  {
+    "id": "2026-w46-14",
+    "week": "2026-W46",
+    "weekStart": "2026-11-09",
+    "date": "2026-11-11",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "Typed metric precision is now independent of the tape step.",
+      "sk": "Presnosť zadanej metriky už nezávisí od kroku pásu.",
+      "cs": "Přesnost zadané metriky už nezávisí na kroku pásu."
+    }
+  },
+  {
+    "id": "2026-w46-15",
+    "week": "2026-W46",
+    "weekStart": "2026-11-09",
+    "date": "2026-11-11",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "Session mode is now resolved correctly from the session menu.",
+      "sk": "Režim relácie sa teraz správne určuje z ponuky relácie.",
+      "cs": "Režim relace se nyní správně určuje z nabídky relace."
+    }
+  },
+  {
+    "id": "2026-w46-16",
+    "week": "2026-W46",
+    "weekStart": "2026-11-09",
+    "date": "2026-11-11",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "The workout session now uses shared button controls.",
+      "sk": "Tréningová relácia teraz používa spoločné tlačidlové ovládanie.",
+      "cs": "Tréninková relace nyní používá společné tlačítkové ovládání."
+    }
+  },
+  {
+    "id": "2026-w46-17",
+    "week": "2026-W46",
+    "weekStart": "2026-11-09",
+    "date": "2026-11-11",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "Warm-up and deload sessions now use an ambient tint.",
+      "sk": "Rozcvičenie a deload teraz označuje jemné farebné zafarbenie obrazovky.",
+      "cs": "Rozcvičení a deload nyní označuje jemné barevné zabarvení obrazovky."
+    }
+  },
+  {
+    "id": "2026-w46-8",
+    "week": "2026-W46",
+    "weekStart": "2026-11-09",
+    "date": "2026-11-11",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "Repeated activity and notebook submissions no longer create duplicates.",
+      "sk": "Opakované odoslanie aktivity alebo zápisníka už nevytvára duplikáty.",
+      "cs": "Opakované odeslání aktivity nebo zápisníku už nevytváří duplicity."
+    }
+  },
+  {
+    "id": "2026-w46-9",
+    "week": "2026-W46",
+    "weekStart": "2026-11-09",
+    "date": "2026-11-11",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "The rest countdown now shows setup information for the next exercise.",
+      "sk": "Odpočítavanie odpočinku teraz zobrazuje informácie o nastavení nasledujúceho cviku.",
+      "cs": "Odpočet odpočinku nyní zobrazuje informace k nastavení následujícího cviku."
+    }
+  },
+  {
+    "id": "2026-w46-7",
+    "week": "2026-W46",
+    "weekStart": "2026-11-09",
+    "date": "2026-11-10",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "Tests now pass noUncheckedIndexedAccess type checks.",
+      "sk": "Testy teraz prejdú typovou kontrolou noUncheckedIndexedAccess.",
+      "cs": "Testy nyní projdou typovou kontrolou noUncheckedIndexedAccess."
+    }
+  },
+  {
+    "id": "2026-w46-1",
+    "week": "2026-W46",
+    "weekStart": "2026-11-09",
+    "date": "2026-11-09",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "Server code now passes noUncheckedIndexedAccess type checks.",
+      "sk": "Serverový kód teraz prejde typovou kontrolou noUncheckedIndexedAccess.",
+      "cs": "Kód serveru nyní projde typovou kontrolou noUncheckedIndexedAccess."
+    }
+  },
+  {
+    "id": "2026-w46-2",
+    "week": "2026-W46",
+    "weekStart": "2026-11-09",
+    "date": "2026-11-09",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "Production deployment no longer runs out of memory.",
+      "sk": "Produkčné nasadenie už nekončí nedostatkom pamäte.",
+      "cs": "Produkční nasazení už nekončí nedostatkem paměti."
+    }
+  },
+  {
+    "id": "2026-w46-3",
+    "week": "2026-W46",
+    "weekStart": "2026-11-09",
+    "date": "2026-11-09",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "Frontend utilities and composables now pass noUncheckedIndexedAccess type checks.",
+      "sk": "Pomocné funkcie a composables na frontende teraz prejdú typovou kontrolou noUncheckedIndexedAccess.",
+      "cs": "Pomocné funkce a composables na frontendu nyní projdou typovou kontrolou noUncheckedIndexedAccess."
+    }
+  },
+  {
+    "id": "2026-w46-4",
+    "week": "2026-W46",
+    "weekStart": "2026-11-09",
+    "date": "2026-11-09",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "Frontend components, stores, and pages now pass noUncheckedIndexedAccess type checks.",
+      "sk": "Komponenty, store a stránky na frontende teraz prejdú typovou kontrolou noUncheckedIndexedAccess.",
+      "cs": "Komponenty, store a stránky na frontendu nyní projdou typovou kontrolou noUncheckedIndexedAccess."
+    }
+  },
+  {
+    "id": "2026-w46-5",
+    "week": "2026-W46",
+    "weekStart": "2026-11-09",
+    "date": "2026-11-09",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "Database seed data now passes noUncheckedIndexedAccess type checks.",
+      "sk": "Seed dáta databázy teraz prejdú typovou kontrolou noUncheckedIndexedAccess.",
+      "cs": "Seed data databáze nyní projdou typovou kontrolou noUncheckedIndexedAccess."
+    }
+  },
+  {
+    "id": "2026-w46-6",
+    "week": "2026-W46",
+    "weekStart": "2026-11-09",
+    "date": "2026-11-09",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "The library now includes an Olympic weightlifting tree and accessory trees.",
+      "sk": "Knižnica teraz obsahuje strom olympijského vzpierania a stromy doplnkových cvikov.",
+      "cs": "Knihovna nyní obsahuje strom olympijského vzpírání a stromy doplňkových cviků."
+    }
+  },
+  {
     "id": "2026-w45-1",
     "week": "2026-W45",
     "weekStart": "2026-11-02",
