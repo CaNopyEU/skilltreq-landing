@@ -2,7 +2,7 @@
 author: SkillTreq Team
 date: '2026-11-16'
 description: Tréninkové seance nyní nabízejí přehlednější navigaci, bezpečnější zaznamenávání sérií,
-lepší pokyny k přípravě a jednotnější ovládání napříč aplikací.
+  lepší pokyny k přípravě a jednotnější ovládání napříč aplikací.
 has_value_for_reader: true
 locale: cs
 matches_brand_voice: true
