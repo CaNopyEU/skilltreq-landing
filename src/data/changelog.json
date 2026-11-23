@@ -1,5 +1,117 @@
 [
   {
+    "id": "2026-w47-8",
+    "week": "2026-W47",
+    "weekStart": "2026-11-16",
+    "date": "2026-11-22",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "Internal configuration and access-control maintenance.",
+      "sk": "Interná údržba konfigurácie a riadenia prístupu.",
+      "cs": "Interní údržba konfigurace a řízení přístupu."
+    }
+  },
+  {
+    "id": "2026-w47-4",
+    "week": "2026-W47",
+    "weekStart": "2026-11-16",
+    "date": "2026-11-21",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "Plan imports now report how well exercises matched existing skills.",
+      "sk": "Import plánu teraz ukazuje, ako dobre sa cviky priradili k existujúcim zručnostiam.",
+      "cs": "Import plánu teď ukazuje, jak dobře se cviky přiřadily k existujícím dovednostem."
+    }
+  },
+  {
+    "id": "2026-w47-5",
+    "week": "2026-W47",
+    "weekStart": "2026-11-16",
+    "date": "2026-11-21",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "Error notifications now use the correct dark-mode styling.",
+      "sk": "Chybové oznámenia teraz používajú správny vzhľad v tmavom režime.",
+      "cs": "Chybová oznámení teď používají správný vzhled v tmavém režimu."
+    }
+  },
+  {
+    "id": "2026-w47-6",
+    "week": "2026-W47",
+    "weekStart": "2026-11-16",
+    "date": "2026-11-21",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "Responsive layouts now switch between mobile and desktop without a breakpoint gap.",
+      "sk": "Responzívne rozloženia sa teraz prepínajú medzi mobilným a desktopovým zobrazením bez medzery medzi breakpointmi.",
+      "cs": "Responzivní rozvržení se teď přepínají mezi mobilním a desktopovým zobrazením bez mezery mezi breakpointy."
+    }
+  },
+  {
+    "id": "2026-w47-7",
+    "week": "2026-W47",
+    "weekStart": "2026-11-16",
+    "date": "2026-11-21",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "Progress syncs no longer report success when the server rolls them back.",
+      "sk": "Synchronizácia pokroku už nehlási úspech, keď ju server vráti späť.",
+      "cs": "Synchronizace pokroku už nehlásí úspěch, když ji server vrátí zpět."
+    }
+  },
+  {
+    "id": "2026-w47-1",
+    "week": "2026-W47",
+    "weekStart": "2026-11-16",
+    "date": "2026-11-19",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "You now get notified when a mid-session capture is saved.",
+      "sk": "Teraz dostaneš upozornenie, keď sa uloží záznam vytvorený počas tréningu.",
+      "cs": "Upozornění se ti teď zobrazí, když se uloží záznam pořízený během tréninku."
+    }
+  },
+  {
+    "id": "2026-w47-2",
+    "week": "2026-W47",
+    "weekStart": "2026-11-16",
+    "date": "2026-11-19",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "Reversible actions now show an Undo option in their toast.",
+      "sk": "Pri vratných akciách sa teraz v oznámení zobrazuje možnosť Vrátiť späť.",
+      "cs": "U vratných akcí se teď v oznámení zobrazuje možnost Vrátit zpět."
+    }
+  },
+  {
+    "id": "2026-w47-3",
+    "week": "2026-W47",
+    "weekStart": "2026-11-16",
+    "date": "2026-11-19",
+    "tags": [
+      "features"
+    ],
+    "text": {
+      "en": "Corrected interface state checks for coverage, onboarding, and empty views.",
+      "sk": "Opravili sa kontroly stavov rozhrania pre pokrytie, úvod a prázdne zobrazenia.",
+      "cs": "Opravily se kontroly stavů rozhraní pro pokrytí, úvod a prázdná zobrazení."
+    }
+  },
+  {
     "id": "2026-w46-23",
     "week": "2026-W46",
     "weekStart": "2026-11-09",
